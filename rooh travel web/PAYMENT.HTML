@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rooh Travel - Payment</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: antiquewhite;
+        background-size: 100px;
+        background-position: center;
+        min-height: 100vh;
+        font-family: "Ubuntu", sans-serif;
+        position: relative;
+        color: #333;
+      }
+
+      nav {
+        background-color: rgba(0, 150, 136, 0.9);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        background-color: rgba(0, 77, 64, 0.85);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 56px;
+        font-size: 2rem;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .payment-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .payment-container h2 {
+        text-align: center;
+        color: #00796b;
+        margin-bottom: 1rem;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #004d40;
+        font-weight: bold;
+      }
+
+      form input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1.2rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      .pay-btn {
+        background-color: #009688;
+        color: white;
+        padding: 0.7rem;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .pay-btn:hover {
+        background-color: #00796b;
+      }
+
+      .payment-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .payment-icons img {
+        width: 50px;
+        height: auto;
+        transition: transform 0.2s;
+      }
+
+      .payment-icons img:hover {
+        transform: scale(1.1);
+      }
+
+      footer {
+        background-color: rgba(0, 150, 136, 0.8);
+        color: white;
+        padding: 2rem 1rem 1rem;
+        margin-top: 3rem;
+        font-size: 0.95rem;
+      }
+
+      footer .contact-info {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+        line-height: 2.2;
+      }
+
+      footer .social-links {
+        margin-top: 0.8rem;
+      }
+
+      footer .social-links a {
+        color: #e0f2f1;
+        margin: 0 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-links a:hover {
+        color: #a7ffeb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="home.html">🏠 Home</a>
+      <a href="map.html">🗺️ Map</a>
+      <a href="activities.html">🧭 Activities</a>
+      <a href="costs.html">💰 Costs</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="booking.html">✈ Booking</a>
+      <a href="payment.html">💳 Payment</a>
+      <a href="chatAI.html"> 🗨 AI ChatBot</a>
+    </nav>
+
+    <!-- Header -->
+    <header>💳 Payment Portal</header>
+
+    <!-- Payment Form -->
+    <div class="payment-container">
+      <h2>Complete Your Payment</h2>
+      <form>
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Your full name"
+          required
+        />
+
+        <label for="cardnumber">Card Number</label>
+        <input
+          type="text"
+          id="cardnumber"
+          placeholder="1234 5678 9012 3456"
+          required
+        />
+
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" placeholder="MM/YY" required />
+
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" placeholder="123" required />
+
+        <button type="submit" class="pay-btn">Confirm Payment</button>
+      </form>
+
+      <div class="payment-icons">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+          alt="Visa"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MasterCard_logo.png"
+          alt="MasterCard"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+          alt="PayPal"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+          alt="Apple Pay"
+        />
+      </div>
+    </div>
+
+    <footer>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@roohtravel.com</p>
+        <p><strong>Phone:</strong> +962 7 1234 5678</p>
+        <p><strong>Office Location:</strong> 123 Travel St, Amman, Jordan</p>
+        <div class="social-links">
+          <a href="https://facebook.com/roohtravel" target="_blank"
+            >📘 Facebook</a
+          >
+          <a href="https://instagram.com/roohtravel" target="_blank"
+            >📸 Instagram</a
+          >
+          <a href="https://snapchat.com/add/roohtravel" target="_blank"
+            >👻 Snapchat</a
+          >
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 1rem">
+        © 2025 Rooh Travel. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

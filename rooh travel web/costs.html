@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rooh Travel - Costs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Ubuntu", sans-serif;
+        background-color: #f9fcfb;
+        color: #333;
+      }
+      nav {
+        background-color: #009688;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      header {
+        background-color: rgba(0, 77, 64, 0.85);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 56px;
+        font-size: 2rem;
+        border-radius: 0 0 12px 12px;
+      }
+      .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem 2rem;
+      }
+      h2 {
+        color: #00796b;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #009688;
+        padding-bottom: 0.3rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+      }
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      th {
+        background-color: #009688;
+        color: white;
+      }
+      p.description {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      footer {
+        background-color: rgba(0, 150, 136, 0.8);
+        color: white;
+        padding: 2rem 1rem 1rem;
+        margin-top: 3rem;
+        font-size: 0.95rem;
+      }
+
+      footer .contact-info {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      footer .social-links {
+        margin-top: 0.8rem;
+      }
+
+      footer .social-links a {
+        color: #e0f2f1;
+        margin: 0 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-links a:hover {
+        color: #a7ffeb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="home.html">🏠 Home</a>
+      <a href="map.html">🗺️ Map</a>
+      <a href="activities.html">🧭 Activities</a>
+      <a href="costs.html">💰 Costs</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="booking.html">✈ Booking</a>
+      <a href="PAYMENT.HTML">💳 PAYMENT</a>
+      <a href="chatAI.html"> 🗨 AI ChatBot</a>
+    </nav>
+
+    <!-- Header -->
+    <header>💰 Travel Costs Overview</header>
+
+    <div class="container">
+      <p class="description">
+        Planning your trip budget is crucial for a smooth and enjoyable
+        experience. Below you'll find estimated costs for accommodation, food,
+        transportation, and essentials commonly needed during travels.
+      </p>
+
+      <h2>🏨 Lodging Costs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Average Cost (Per Night)</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Budget Hostel</td>
+            <td>$15 - $30</td>
+            <td>Shared rooms, basic facilities, great for backpackers.</td>
+          </tr>
+          <tr>
+            <td>Mid-Range Hotel</td>
+            <td>$50 - $100</td>
+            <td>Comfortable rooms with amenities like Wi-Fi, breakfast.</td>
+          </tr>
+          <tr>
+            <td>Luxury Hotel</td>
+            <td>$150+</td>
+            <td>High-end services, pools, spas, and premium rooms.</td>
+          </tr>
+          <tr>
+            <td>Vacation Rentals</td>
+            <td>$70 - $200</td>
+            <td>Entire apartments or homes, suitable for groups/families.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>🍽️ Food Costs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Average Cost (Per Meal)</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Street Food</td>
+            <td>$3 - $7</td>
+            <td>Local snacks and quick meals, affordable and tasty.</td>
+          </tr>
+          <tr>
+            <td>Casual Dining</td>
+            <td>$10 - $20</td>
+            <td>Simple restaurants with a variety of dishes.</td>
+          </tr>
+          <tr>
+            <td>Fine Dining</td>
+            <td>$40+</td>
+            <td>Upscale restaurants offering gourmet experiences.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>🚗 Transportation Costs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Average Cost</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Public Transport</td>
+            <td>$1 - $3 per ride</td>
+            <td>Buses, metro, and trams commonly available in cities.</td>
+          </tr>
+          <tr>
+            <td>Taxi / Ride-sharing</td>
+            <td>$5 - $20 per trip</td>
+            <td>Convenient but can vary by distance and city.</td>
+          </tr>
+          <tr>
+            <td>Car Rental</td>
+            <td>$40 - $70 per day</td>
+            <td>Good for exploring rural areas or road trips.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>🎒 Essentials & Miscellaneous</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Average Cost</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SIM Card / Mobile Data</td>
+            <td>$10 - $30</td>
+            <td>Local SIM for internet and calls.</td>
+          </tr>
+          <tr>
+            <td>Travel Insurance</td>
+            <td>$50 - $100</td>
+            <td>Recommended for safety and emergencies.</td>
+          </tr>
+          <tr>
+            <td>Souvenirs</td>
+            <td>$5 - $50+</td>
+            <td>Gifts and local crafts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@roohtravel.com</p>
+        <p><strong>Phone:</strong> +962 7 1234 5678</p>
+        <p><strong>Office Location:</strong> 123 Travel St, Amman, Jordan</p>
+        <div class="social-links">
+          <a href="https://facebook.com/roohtravel" target="_blank"
+            >📘 Facebook</a
+          >
+          <a href="https://instagram.com/roohtravel" target="_blank"
+            >📸 Instagram</a
+          >
+          <a href="https://snapchat.com/add/roohtravel" target="_blank"
+            >👻 Snapchat</a
+          >
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 1rem">
+        © 2025 Rooh Travel. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

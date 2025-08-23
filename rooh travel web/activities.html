@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rooh Travel - Activities</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Ubuntu", sans-serif;
+        background-image: url("https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1470&q=80");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #333;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: -1;
+      }
+
+      nav {
+        background-color: #009688;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        background-color: rgba(0, 77, 64, 0.85);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 56px;
+        font-size: 2rem;
+        border-radius: 0 0 12px 12px;
+      }
+
+      .search-bar {
+        text-align: center;
+        margin: 2rem auto;
+      }
+
+      .search-bar input {
+        padding: 0.7rem 1rem;
+        border: 2px solid #009688;
+        border-radius: 8px;
+        width: 60%;
+        font-size: 1rem;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 1rem;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        padding: 1.2rem;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      }
+
+      .card.highlight {
+        background-color: #e0f7fa;
+        border: 2px solid #009688;
+      }
+
+      .card h3 {
+        color: #00796b;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        color: #444;
+      }
+
+      .emoji {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .countries-section {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 3rem auto 2rem;
+        max-width: 1000px;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .countries-section h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #004d40;
+        font-size: 1.8rem;
+      }
+
+      .country {
+        margin-bottom: 1.2rem;
+        background-color: #f5f5f5;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .country strong {
+        color: #00796b;
+      }
+
+      .activities-table-section {
+        max-width: 900px;
+        margin: 3rem auto 4rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .activities-table-section h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #004d40;
+        font-size: 1.8rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background-color: #009688;
+        color: white;
+        font-weight: bold;
+      }
+
+      tbody tr:hover {
+        background-color: #e0f7fa;
+      }
+      footer {
+        background-color: rgba(0, 150, 136, 0.8);
+        color: white;
+        padding: 2rem 1rem 1rem;
+        margin-top: 3rem;
+        font-size: 0.95rem;
+      }
+
+      footer .contact-info {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      footer .social-links {
+        margin-top: 0.8rem;
+      }
+
+      footer .social-links a {
+        color: #e0f2f1;
+        margin: 0 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-links a:hover {
+        color: #a7ffeb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="home.html">🏠 Home</a>
+      <a href="map.html">🗺️ Map</a>
+      <a href="activities.html">🧭 Activities</a>
+      <a href="costs.html">💰 Costs</a>
+      <a href="contact.html">📞 Contact</a>
+      <a href="booking.html">✈ Booking</a>
+      <a href="PAYMENT.HTML">💳 PAYMENT</a>
+      <a href="chatAI.html"> 🗨 AI ChatBot</a>
+    </nav>
+
+    <!-- Header -->
+    <header>🧭 Explore Activities</header>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input
+        type="text"
+        id="activitySearch"
+        placeholder="🔍 Search for an activity (e.g. hiking, beach, food...)"
+        oninput="filterActivities()"
+      />
+    </div>
+
+    <!-- Activities Grid -->
+    <div class="container" id="activityCards">
+      <div class="card" onclick="searchImages('Beach Activities')">
+        <div class="emoji">🌊</div>
+        <h3>Beach & Water Activities</h3>
+        <p>
+          Snorkeling, diving, jet-skiing, and sunset cruises in coastal spots
+          like Aqaba or Bali.
+        </p>
+      </div>
+      <div class="card" onclick="searchImages('Hiking Adventure Travel')">
+        <div class="emoji">⛰️</div>
+        <h3>Hiking & Adventure</h3>
+        <p>
+          Hike mountain trails, explore deserts, or climb cliffs in Wadi Rum and
+          Petra.
+        </p>
+      </div>
+      <div class="card" onclick="searchImages('Cultural Tours Travel')">
+        <div class="emoji">🏛️</div>
+        <h3>Cultural Tours</h3>
+        <p>
+          Walk through historic ruins, local souks, and traditional villages.
+        </p>
+      </div>
+      <div class="card" onclick="searchImages('Wellness Relaxation Retreats')">
+        <div class="emoji">🧘</div>
+        <h3>Wellness & Relaxation</h3>
+        <p>
+          Join yoga retreats, hot springs, and spa days in nature-friendly
+          resorts.
+        </p>
+      </div>
+      <div class="card" onclick="searchImages('Food Travel Experiences')">
+        <div class="emoji">🍽️</div>
+        <h3>Food Experiences</h3>
+        <p>
+          Discover authentic flavors through cooking classes and street food
+          tours.
+        </p>
+      </div>
+      <div class="card" onclick="searchImages('Outdoor Sports Travel')">
+        <div class="emoji">🚴</div>
+        <h3>Outdoor Sports</h3>
+        <p>Cycle, kayak, or ride through scenic landscapes for a thrill.</p>
+      </div>
+    </div>
+
+    <!-- Countries Section -->
+    <section class="countries-section">
+      <h2>🌍 Countries & Their Vibes</h2>
+      <div class="country">
+        <p>
+          <strong>🇯🇴 Jordan:</strong> Desert beauty, ancient wonders, warm
+          hospitality.
+        </p>
+      </div>
+      <div class="country">
+        <p>
+          <strong>🇮🇩 Indonesia:</strong> Tropical islands, surfing, volcano
+          hikes.
+        </p>
+      </div>
+      <div class="country">
+        <p><strong>🇹🇷 Turkey:</strong> Bazaars, cuisine, and coastlines.</p>
+      </div>
+      <div class="country">
+        <p><strong>🇮🇹 Italy:</strong> Romance, history, and vineyards.</p>
+      </div>
+      <div class="country">
+        <p><strong>🇹🇭 Thailand:</strong> Temples, beaches, and street food.</p>
+      </div>
+    </section>
+
+    <!-- Activities Table -->
+    <section class="activities-table-section">
+      <h2>📋 Activities Categories Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Popular Locations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beach & Water</td>
+            <td>Snorkeling, diving, jet-skiing</td>
+            <td>Aqaba, Bali, Maldives</td>
+          </tr>
+          <tr>
+            <td>Hiking & Adventure</td>
+            <td>Trails, desert, cliff climbing</td>
+            <td>Wadi Rum, Petra, Himalayas</td>
+          </tr>
+          <tr>
+            <td>Cultural Tours</td>
+            <td>Historic ruins, souks, villages</td>
+            <td>Rome, Marrakech, Kyoto</td>
+          </tr>
+          <tr>
+            <td>Wellness & Relaxation</td>
+            <td>Yoga, spa, hot springs</td>
+            <td>Bali, Sedona, Iceland</td>
+          </tr>
+          <tr>
+            <td>Food Experiences</td>
+            <td>Cooking, street food, tastings</td>
+            <td>Bangkok, Istanbul, Mexico City</td>
+          </tr>
+          <tr>
+            <td>Outdoor Sports</td>
+            <td>Kayaking, cycling, riding</td>
+            <td>Swiss Alps, New Zealand</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@roohtravel.com</p>
+        <p><strong>Phone:</strong> +962 7 1234 5678</p>
+        <p><strong>Office Location:</strong> 123 Travel St, Amman, Jordan</p>
+        <div class="social-links">
+          <a href="https://facebook.com/roohtravel" target="_blank"
+            >📘 Facebook</a
+          >
+          <a href="https://instagram.com/roohtravel" target="_blank"
+            >📸 Instagram</a
+          >
+          <a href="https://snapchat.com/add/roohtravel" target="_blank"
+            >👻 Snapchat</a
+          >
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 1rem">
+        © 2025 Rooh Travel. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function filterActivities() {
+        const input = document
+          .getElementById("activitySearch")
+          .value.toLowerCase();
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          card.classList.toggle("highlight", text.includes(input));
+        });
+      }
+
+      function searchImages(query) {
+        const url = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(
+          query
+        )}`;
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>

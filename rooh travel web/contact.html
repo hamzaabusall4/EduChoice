@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rooh Travel - Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("https://media.istockphoto.com/id/1430915713/photo/support-training-and-coaching-a-call-center-manager-is-happy-to-help-her-team-collaboration.jpg?s=612x612&w=0&k=20&c=hhpgvB-13sg1T7QxYm3FZOt98I8JiQJM-9uvEizlge8=");
+        background-size: contain;
+        background-position: center;
+        min-height: 100vh;
+        font-family: "Ubuntu", sans-serif;
+        position: relative;
+        color: #333;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(14, 22, 21, 0.4);
+        z-index: -1;
+      }
+      nav {
+        background-color: rgba(0, 150, 136, 0.85);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      nav a:hover,
+      nav a:focus {
+        text-decoration: underline;
+        outline: none;
+      }
+      header {
+        background-color: rgba(0, 77, 64, 0.85);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 56px;
+        font-size: 2rem;
+        border-radius: 0 0 12px 12px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem 1.5rem;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      label {
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: #00796b;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 121, 107, 0.7);
+      }
+      button {
+        background-color: #00796b;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      button:disabled {
+        background-color: #80bcb3;
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+      button:hover:not(:disabled),
+      button:focus:not(:disabled) {
+        background-color: #004d40;
+        box-shadow: 0 0 8px #004d40;
+        outline: none;
+      }
+      .spinner {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid white;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .message {
+        text-align: center;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      .message.error {
+        color: #d32f2f;
+      }
+      .message.success {
+        color: #388e3c;
+      }
+      footer {
+        background-color: rgba(0, 150, 136, 0.8);
+        color: white;
+        padding: 2rem 1rem 1rem;
+        margin-top: 3rem;
+        font-size: 0.95rem;
+      }
+
+      footer .contact-info {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      footer .social-links {
+        margin-top: 0.8rem;
+      }
+
+      footer .social-links a {
+        color: #e0f2f1;
+        margin: 0 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      footer .social-links a:hover {
+        color: #a7ffeb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="home.html" tabindex="1">🏠 Home</a>
+      <a href="map.html" tabindex="2">🗺️ Map</a>
+      <a href="activities.html" tabindex="3">🧭 Activities</a>
+      <a href="costs.html" tabindex="4">💰 Costs</a>
+      <a href="contact.html" tabindex="5">📞 Contact</a>
+      <a href="booking.html" tabindex="6">✈ Booking</a>
+      <a href="PAYMENT.HTML" tabindex="7">💳 PAYMENT</a>
+      <a href="chatAI.html" tabindex="8"> 🗨 AI ChatBot</a>
+    </nav>
+
+    <!-- Header -->
+    <header>📞 Contact Us</header>
+
+    <div class="container" role="main">
+      <form id="contactForm" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          aria-required="true"
+          placeholder="Your Name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          aria-required="true"
+          placeholder="Your Email"
+          required
+          autocomplete="email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address"
+        />
+
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          aria-required="true"
+          placeholder="Subject"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          rows="5"
+          aria-required="true"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit" aria-live="polite" id="submitBtn">
+          Send Message
+        </button>
+        <div
+          id="formMessage"
+          class="message"
+          role="alert"
+          aria-live="assertive"
+        ></div>
+      </form>
+    </div>
+    <footer>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@roohtravel.com</p>
+        <p><strong>Phone:</strong> +962 7 1234 5678</p>
+        <p><strong>Office Location:</strong> 123 Travel St, Amman, Jordan</p>
+        <div class="social-links">
+          <a href="https://facebook.com/roohtravel" target="_blank"
+            >📘 Facebook</a
+          >
+          <a href="https://instagram.com/roohtravel" target="_blank"
+            >📸 Instagram</a
+          >
+          <a href="https://snapchat.com/add/roohtravel" target="_blank"
+            >👻 Snapchat</a
+          >
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 1rem">
+        © 2025 Rooh Travel. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const formMessage = document.getElementById("formMessage");
+      const submitBtn = document.getElementById("submitBtn");
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        formMessage.textContent = "";
+        formMessage.className = "message";
+        submitBtn.disabled = true;
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const subject = form.subject.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !subject || !message) {
+          formMessage.textContent = "Please fill in all fields.";
+          formMessage.classList.add("error");
+          submitBtn.disabled = false;
+          return;
+        }
+        if (!validateEmail(email)) {
+          formMessage.textContent = "Please enter a valid email address.";
+          formMessage.classList.add("error");
+          submitBtn.disabled = false;
+          return;
+        }
+
+        // عرض مؤقت تحميل داخل الزر
+        submitBtn.innerHTML = `<div class="spinner" aria-hidden="true"></div> Sending...`;
+
+        // محاكاة إرسال البيانات مع تأخير 2 ثانية
+        setTimeout(() => {
+          formMessage.textContent =
+            "Thank you for your message! We will get back to you soon.";
+          formMessage.classList.add("success");
+          submitBtn.innerHTML = "Send Message";
+          submitBtn.disabled = false;
+          form.reset();
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
