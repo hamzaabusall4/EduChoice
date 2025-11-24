@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduChoice — Schools Finder (Jordan)</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="app">
+  <div class="container nav" role="navigation" aria-label="Main">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <img src="photos/cab761e4-4b79-4bf6-a7e9-9c5837ff1729 (1).png" alt="">
+      </div>
+      <h1 id="brand-title">EduChoice · Jordan</h1>
+    </div>
+
+    <!-- القائمة الأساسية (للديسكتوب) -->
+    <nav class="menu" id="menu">
+      <a href="#home" data-i18n="nav_home" class="active">Home</a>
+      <a href="#systems" data-i18n="nav_systems">Systems</a>
+      <a href="#schools" data-i18n="nav_schools">Schools</a>
+      <a href="#community" data-i18n="nav_community">Community</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#login" data-i18n="nav_login">Login</a>
+      <a href="#parant" data-i18n="nav_parant">Parent</a>
+      <a href="#payment" data-i18n="nav_payment">Payment</a>
+      <a href="#profile" data-i18n="nav_profile">Profile</a>
+    </nav>
+
+    <div class="right">
+      <div class="lang">
+        <span class="muted" style="margin-right:8px">EN</span>
+        <button id="toggleLang" class="switch" role="switch" aria-checked="false" aria-label="Toggle language">
+          <span class="knob" aria-hidden="true"></span>
+        </button>
+        <span class="muted" style="margin-left:8px">AR</span>
+      </div>
+
+      <!-- زر الثلاث شحطات بجانب اللغة -->
+      <div class="menu-btn" id="menuBtn">☰</div>
+    </div>
+  </div>
+</header>
+
+<!-- المنيو الجانبية -->
+<nav class="sidebar" id="sidebar">
+  <a href="#home" data-i18n="nav_home" class="active">Home</a>
+  <a href="#systems" data-i18n="nav_systems">Systems</a>
+  <a href="#schools" data-i18n="nav_schools">Schools</a>
+  <a href="#community" data-i18n="nav_community">Community</a>
+  <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#parant" data-i18n="nav_parant">Parent</a>
+  <a href="#payment" data-i18n="nav_payment">Payment</a>
+  <a href="#profile" data-i18n="nav_profile">Profile</a>
+</nav>
+
+<!-- خلفية عند الفتح -->
+<div id="overlay"></div>
+
+<div class="spacer"></div>
+
+
+
+  <!-- ===== Community Modal ===== -->
+<div id="campModal" class="modal-overlay" aria-hidden="true" >
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="campModalTitle">
+    <button class="modal-close" id="campModalClose" aria-label="Close">✖</button>
+    <div id="campModalBody"></div>
+  </div>
+</div>
+  <main>
+
+
+      
+    
+    <section id="home" class="container"  >
+      <div class="home-hero-image">
+  <!-- <img src="https://58v76y8z87lo.hellomagazine.com/horizon/landscape/445f0875f0ff-secondary-school.jpg" style="width: 2230px; height: 490px; margin-top: -40px ;"    alt="Schools in Jordan" > -->
+  <div class="overlay">
+  </div>
+</div>
+
+
+        <div class="gap" style="width: 200px; height: 0px;"  ></div>
+      <div class="hero card" style="padding:50px;border-radius:20px;box-shadow:0 10px 30px rgba(31, 37, 99, 0.966)" >
+        <div class="bg"></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <h2 data-i18n="home_head">Find the right school for your child in Jordan</h2>
+          <p class="muted" data-i18n="home_sub">Search by name, explore by educational system, or discover summer camps.</p>
+
+          
+          
+
+
+          <!-- SEARCH BOX -->
+          <div class="search-box">
+            <div class="search-left">
+              <input id="searchInput" type="text" placeholder="Search school name…" data-i18n-ph="ph_search"/>
+              <button class="btn primary" id="btnSearch" data-i18n="btn_search">Search</button>
+            </div>
+            <div class="search-right">
+              <button class="btn white" id="btnSystems" data-i18n="btn_systems">By System</button>
+              <button class="btn white" id="btnCamps" data-i18n="btn_camps">Summer Camps</button>
+            </div>
+          </div>
+
+
+          <!-- SYSTEMS SEPARATE BOX -->
+          <div class="systems-box">
+            <div class="chip" data-system="IB">IB</div>
+            <div class="chip" data-system="IGCSE">IGCSE</div>
+            <div class="chip" data-system="SAT/AP">SAT/AP</div>
+            <div class="chip" data-system="National">National</div>
+            <div class="chip" data-system="Montessori">Montessori</div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+      
+
+
+      <!-- Summer Camps Slider -->
+      <div class="camps-slider card">
+        <h3 class="slider-title" data-i18n="camp_ads" > Summer Camps Ads</h3>
+        <div class="slider-container">
+          <div class="slider-track" id="sliderTrack">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="Camp 1">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=60" alt="Camp 2">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=60" alt="Camp 3">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Camp 4">
+          </div>
+        </div>
+      </div>
+
+      <div class="text card" style="padding:50px;border-radius:20px;box-shadow:0 10px 30px rgba(31, 37, 99, 0.966); background-color: rgb(255, 255, 255);">
+        <p style="font-size:28px;font-weight:800;margin-bottom:10px; color: rgb(44, 64, 138); text-align: center;
+        ">🎓 EduChoice — The Smart Way to Find the Right School in Jordan</p>
+        <p style="font-size:28px;font-weight:800;margin-bottom:10px; color: rgb(0, 0, 0); text-align: center;
+        ">We help parents compare schools by system, city, and rating, and apply in minutes.
+        </p>
+      
+      </div>
+
+      
+      
+    </section>
+
+
+    <!-- ===== COUNTERS (Home Only) ===== -->
+<div id="homeCounters" class="home-counters">
+  <div class="counter-box" >
+    <div class="counter" data-target="120">0</div>
+    <p class="label">Schools</p>
+  </div>
+  <div class="counter-box">
+    <div class="counter" data-target="45">0</div>
+    <p class="label">Camps</p>
+  </div>
+  <div class="counter-box">
+    <div class="counter" data-target="310">0</div>
+    <p class="label">Registered Users</p>
+  </div>
+</div>
+
+    
+    
+    
+
+    <!-- SYSTEMS -->
+    <section id="systems" class="container">
+      <h3 class="title" data-i18n="sys_title" style="text-align: center">Educational Systems</h3>
+      <p class="subtitle" data-i18n="sys_sub" style="font-size:28px;font-weight:800;margin-bottom:10px; color: rgb(0, 0, 0) ; text-align: center">Tap a system to see schools that teach it.</p>
+      <div class="grid">
+
+
+        <div class="sys card" data-system="IB">
+          <div class="row" style="align-items:center">
+            <div class="icon big" aria-hidden="true"></div>
+            <h3>IB – International Baccalaureate</h3>
+          </div>
+          <p class="muted">Inquiry-based global program for K–12.</p>
+          <button class="btn black go">See IB Schools →</button>
+        </div>
+
+
+        <div class="sys card" data-system="IGCSE">
+          <div class="row" style="align-items:center">
+            <div class="icon big"></div>
+            <h3>IGCSE / A-Level</h3>
+          </div>
+          <p class="muted">British curriculum with subject depth.</p>
+          <button class="btn black go">See IGCSE Schools →</button>
+        </div>
+
+
+        <div class="sys card" data-system="SAT/AP">
+          <div class="row" style="align-items:center">
+            <div class="icon big"></div>
+            <h3>American (SAT / AP)</h3>
+          </div>
+          <p class="muted">Standards-based American track.</p>
+          <button class="btn black go">See American Schools →</button>
+        </div>
+
+
+        <div class="sys card" data-system="National">
+          <div class="row" style="align-items:center">
+            <div class="icon big"></div>
+            <h3>Jordanian National</h3>
+          </div>
+          <p class="muted">Ministry of Education curriculum.</p>
+          <button class="btn black go">See National Schools →</button>
+        </div>
+
+
+        <div class="sys card" data-system="Montessori">
+          <div class="row" style="align-items:center">
+            <div class="icon big"></div>
+            <h3>Montessori (Early Years)</h3>
+          </div>
+          <p class="muted">Child-led learning environments.</p>
+          <button class="btn black go">See Montessori →</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SCHOOLS (RESULTS) -->
+    <section id="schools" class="container">
+      <h3 class="title" data-i18n="sch_title" style="text-align: center;" >Schools</h3>
+      <p class="subtitle" data-i18n="sch_sub" style="text-align: center;">Results are organized vertically with image, name, five-star rating, and info button.</p>
+      
+
+      <div class="card" style="padding:14px">
+        <div class="filters">
+          <div>
+            <label data-i18n="f_system">System</label>
+            <select id="fSystem">
+              <option value="">All</option>
+              <option>IB</option>
+              <option>IGCSE</option>
+              <option>SAT/AP</option>
+              <option>National</option>
+              <option>Montessori</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="f_city">City</label>
+            <select id="fCity">
+              <option value="">All</option>
+              <option>Amman</option>
+              <option>Zarqa</option>
+              <option>Irbid</option>
+              <option>Madaba</option>
+              <option>Aqaba</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="f_min">Min. Rating</label>
+            <select id="fMin">
+              <option value="0">0</option>
+              <option value="0.5">0.5</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+              <option value="3.5">3.5</option>
+              <option value="4">4</option>
+              <option value="4.5">4.5</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="f_sort">Sort</label>
+            <select id="fSort">
+              <option value="rating">Top Rated</option>
+              <option value="name">Name (A–Z)</option>
+              <option value="city">City</option>
+            </select>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:8px">
+            <button class="btn" id="btnClear">Clear</button>
+            <button class="btn primary" id="btnApply">Apply</button>
+          </div>
+        </div>
+      </div>
+
+      
+      
+          <div id="results" class="grid"  style="margin-top:12px;grid-template-columns:1fr" aria-live="polite" >
+            
+      </div>
+
+
+
+    </section>
+  
+      
+    
+
+    <!-- SCHOOL DETAIL -->
+
+
+    <section id="school" class="container hide">
+      <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:6px">
+
+        <h3 class="title"  id="schoolName">School</h3>
+        <div class="row">
+          <button class="btn" id="backToList">← <span data-i18n="back">Back</span></button>
+          <button class="btn accent" id="applyNow" data-i18n="apply_now">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="top">
+        <div class="card" style="padding:16px">
+          <div class="row" style="align-items:center;gap:12px;margin-bottom:10px">
+            <div id="schoolRating" class="rating"></div>
+            <span class="muted" id="schoolMeta"></span>
+          </div>
+          <div class="gallery" id="schoolGallery">
+            <img src="photos/download (2).jpeg">
+          </div>
+          <p id="schoolDesc" style="margin-top:10px"></p>
+        </div>
+        <!-- 🗺️ خريطة المدرسة -->
+<div class="card school">
+  <div id="schoolMap" style="height:350px; width: 335px; border-radius:12px;"></div>
+</div>
+
+<!-- تحميل مكتبة Leaflet (يفضّل وضعها مرة واحدة فقط داخل <head> بالصفحة) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- تفعيل الخريطة -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const map = L.map("schoolMap").setView([31.9539, 35.9106], 13); // 📍 موقع عمان
+
+  // خلفية الخريطة من OpenStreetMap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+
+  // مؤشر موقع المدرسة
+  L.marker([31.9539, 35.9106])
+    .addTo(map)
+    .bindPopup("<b>Amman Activity Center</b><br>Amman, Jordan")
+    .openPopup();
+});
+</script>
+
+
+      <div class="row">
+        <div class="card" style="padding:16px;flex:1">
+          <h4 style="margin-bottom:8px" data-i18n="programs">Programs & Highlights</h4>
+          <ul id="schoolPrograms" style="margin-left:16px;line-height:1.7"></ul>
+        </div>
+        <div class="card" style="padding:16px;min-width:320px">
+          <h4 style="margin-bottom:8px" data-i18n="contact">Contact</h4>
+          <div id="schoolContact"></div>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- summer camps   -->
+
+
+
+    <section id="community" class="container hide"  >
+
+      <h3 class="title"  data-i18n="camp_title" style="text-align: center;">Community & Summer Camps</h3>
+      <p class="subtitle" data-i18n="camp_sub"style="text-align: center;">Centers and schools offering seasonal camps and activities.</p>
+
+
+      
+
+      <!-- Ready-to-view camp cards -->
+      <div class="card" style="padding:16px">
+        <div id="campList" class="grid" style="grid-template-columns:1fr"></div>
+
+        <!-- Camp Application Page -->
+<section id="campApplay" class="container" style="display:none">
+  <div class="card">
+    <h2>Apply for Camp</h2>
+    <p id="campName" class="muted" style="margin-bottom:10px"></p>
+    <form id="campAppForm">
+      <input type="text" placeholder="Child Name" required />
+      <input type="number" placeholder="Age" required />
+      <input type="text" placeholder="Parent Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <textarea placeholder="Notes..." rows="4"></textarea>
+      <button type="submit" class="btn blue">Submit</button>
+    </form>
+  </div>
+</section>
+
+      </div>
+    </section>
+
+
+
+    <!-- APPLY -->
+    <section id="apply" class="container hide">
+      <h3 class="title" data-i18n="apply_title">Enrollment Request</h3>
+      <p class="subtitle" data-i18n="apply_sub">Fill in the form and the school will receive your request by email.</p>
+      <form id="applyForm" class="card" style="padding:16px">
+        <div class="grid2">
+          <div>
+            <label data-i18n="af_child">Child Full Name</label>
+            <input type="text" name="child" required />
+          </div>
+          <div>
+            <label data-i18n="af_age">Age</label>
+            <input type="text" name="age" required />
+          </div>
+          <div>
+            <label data-i18n="af_gender">Gender</label>
+            <select name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="af_grade">Desired Grade</label>
+            <select name="grade">
+              <option>KG1</option><option>KG2</option>
+              <option>G1</option><option>G2</option><option>G3</option><option>G4</option><option>G5</option>
+              <option>G6</option><option>G7</option><option>G8</option><option>G9</option><option>G10</option>
+              <option>G11</option><option>G12</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="af_parent">Parent Full Name</label>
+            <input type="text" name="parent" required />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div>
+            <label data-i18n="af_phone">Phone</label>
+            <input type="tel" name="phone" required />
+          </div>
+          <div>
+            <label data-i18n="af_school">Target School</label>
+            <input type="text" name="school" id="applySchool" />
+          </div>
+          <div style="grid-column:1/-1">
+            <label data-i18n="af_note">Notes</label>
+            <textarea name="notes" placeholder="Any additional info…"></textarea>
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px;justify-content:flex-end">
+         <button type="button" class="btn" onclick="goBack()">
+
+          <button class="btn primary" type="submit" data-i18n="af_submit">Submit & Continue to Login</button>
+        </div>
+      </form>
+    </section>
+
+
+
+
+    <!--camp apply-->
+
+       <section id="apply" class="container hide">
+      <h3 class="title" data-i18n="apply_title">Enrollment Request</h3>
+      <p class="subtitle" data-i18n="apply_sub">Fill in the form and the school will receive your request by email.</p>
+      <form id="applyForm" class="card" style="padding:16px">
+        <div class="grid2">
+          <div>
+            <label data-i18n="af_child">Child Full Name</label>
+            <input type="text" name="child" required />
+          </div>
+          <div>
+            <label data-i18n="af_age">Age</label>
+            <input type="text" name="age" required />
+          </div>
+          <div>
+            <label data-i18n="af_gender">Gender</label>
+            <select name="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="af_grade">Desired Grade</label>
+            <select name="grade">
+              <option>KG1</option><option>KG2</option>
+              <option>G1</option><option>G2</option><option>G3</option><option>G4</option><option>G5</option>
+              <option>G6</option><option>G7</option><option>G8</option><option>G9</option><option>G10</option>
+              <option>G11</option><option>G12</option>
+            </select>
+          </div>
+          <div>
+            <label data-i18n="af_parent">Parent Full Name</label>
+            <input type="text" name="parent" required />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div>
+            <label data-i18n="af_phone">Phone</label>
+            <input type="tel" name="phone" required />
+          </div>
+          <div>
+            <label data-i18n="af_school">Target School</label>
+            <input type="text" name="school" id="applySchool" />
+          </div>
+          <div style="grid-column:1/-1">
+            <label data-i18n="af_note">Notes</label>
+            <textarea name="notes" placeholder="Any additional info…"></textarea>
+          </div>
+        </div>
+        <div class="row" style="margin-top:12px;justify-content:flex-end">
+          <button type="button" class="btn" onclick="go('#schools')">← <span data-i18n="back">Back</span></button>
+          <button class="btn primary" type="submit" data-i18n="af_submit">Submit & Continue to Login</button>
+        </div>
+      </form>
+    </section>
+
+
+
+    
+
+    <!-- ABOUT -->
+
+
+
+    
+    <section id="about" class="container hide">
+
+
+
+      <h3 class="title" data-i18n="about_title">About EduChoice</h3>
+       <p class="subtitle" data-i18n="about_sub">A Web Science project serving families across Jordan.</p> 
+
+      <p>
+        
+
+
+  <h2 style="color:#263a65; font-size:28px; margin-bottom:16px; text-align:center;"data-i18n="about_99"
+>🎓 EduChoice — The Smart Way to Find the Right School in Jordan</h2>
+
+  <p data-i18n="about_88">
+    In today’s fast-paced digital world, parents face a growing challenge in finding the right school that truly fits their children’s needs —
+    whether it’s based on educational systems, location, or budget.
+    <strong >EduChoice</strong> was created to solve that challenge by becoming Jordan’s first smart, bilingual (Arabic–English) school-finding platform,
+    connecting parents, schools, and educational communities in one place.
+  </p>
+
+  <p data-i18n="about_77">
+    <strong >EduChoice</strong> is a modern web platform that helps parents discover, compare, and apply to private and international schools across Jordan.
+    Through an intuitive interface and advanced filtering tools, users can explore schools by education system (IB, IGCSE, SAT, National, Montessori, etc.),
+    city or area, rating, tuition, and facilities.
+    The platform also includes summer camps, community features, and school profiles that showcase each institution’s strengths, photos, programs, and location on an interactive map.
+  </p>
+
+  <h3 style="color:#000000; margin-top:30px;" data-i18n="about_55">💻 Key Features</h3>
+
+
+
+  <ul style="margin-left:20px;">
+    <li data-i18n="about_11"><strong data-i18n="about_1">Bilingual Design:</strong> Seamless switch between Arabic and English for full accessibility.</li>
+    <li data-i18n="about_12"><strong data-i18n="about_2">Smart Filtering:</strong> Search schools by name, system, location, or rating.</li>
+    <li data-i18n="about_13"><strong data-i18n="about_3">Interactive Map:</strong> View schools’ real locations on a map powered by Leaflet or Google Maps.</li>
+    <li data-i18n="about_14"><strong data-i18n="about_4">School Profiles:</strong> Each school has its own detailed profile page with academic programs, photos, and contact info.</li>
+    <li data-i18n="about_15"><strong data-i18n="about_5">Parent & School Login:</strong> Parents can apply and track, while schools manage their data and subscriptions.</li>
+    <li data-i18n="about_16"><strong about_6>Secure Payment System:</strong> Transparent payment process for school listings and promotions.</li>
+  </ul>
+
+
+
+
+  <h3 style="color:#000000; margin-top:30px;" data-i18n="about_21">🌐 Why EduChoice Matters</h3>
+  <p data-i18n="about_22">
+    Jordan’s private education sector is growing rapidly, but information is scattered and often outdated across hundreds of sources.
+    EduChoice centralizes all this data into one trusted platform — empowering parents with better choices and helping schools reach the right audience.
+    It increases transparency, simplifies admission, and encourages digital transformation in education.
+  </p>
+
+  <h3 style="color:#000000; margin-top:30px;" data-i18n="about_33">🚀 Future Vision</h3>
+  <p data-i18n="about44">
+    EduChoice aims to expand with AI-based school recommendations, parent dashboards, and a dedicated mobile app.
+    The long-term vision includes partnerships with educational authorities to enhance transparency and data accuracy.
+  </p>
+
+  <h3 style="color:#000000; margin-top:30px;" data-i18n="about_55">💬 Conclusion</h3>
+  <p data-i18n="about_66">
+    <strong>EduChoice</strong> is more than just a website — it’s a movement toward smarter, data-driven education choices in Jordan.
+    By combining technology, user experience, and educational insight, EduChoice bridges families and schools to build a brighter, more connected educational future.
+  </p>
+
+      </p>
+
+       
+      <div class="row" style="align-items:flex-start">
+        <div class="card" style="padding:16px;flex:2">
+          <h4 data-i18n="about_h1">Mission</h4>
+          <p2 style="margin:8px 0" data-i18n="about_p1">We help parents compare schools by system, city, and rating, and apply in minutes.</p2>
+          <h4 style="margin-top:12px" data-i18n="about_h2">Scope</h4>
+          <ul style="margin-left:18px;line-height:1.8">
+            <li data-i18n="about_l1">Public and private schools in Jordan</li>
+            <li data-i18n="about_l2">Systems: IB, IGCSE/A-Level, SAT/AP, National, Montessori</li>
+            <li data-i18n="about_l3">Parents & Schools dual login</li>
+            <li data-i18n="about_l4">Owner payment to boost listing</li>
+            <li data-i18n="about_l5">Community: activity & camp finder</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:16px;flex:1">
+          <h4 data-i18n="about_stats">At a glance</h4>
+          <div class="row" style="margin-top:8px">
+            <div class="stat"><strong id="statSchools">0</strong><span class="muted" data-i18n="st_sch">Schools</span></div>
+            <div class="stat"><strong id="statCities">0</strong><span class="muted" data-i18n="st_cit">Cities</span></div>
+            <div class="stat"><strong id="statCamps">0</strong><span class="muted" data-i18n="st_cam">Camps</span></div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login" class="container hide">
+      <h3 class="title" data-i18n="login_title">Login / Register</h3>
+      <p class="subtitle" data-i18n="login_sub">Choose your portal.</p>
+      <div class="tabs">
+        <button class="tab active" data-tab="parent" data-i18n="tab_parent">Parents</button>
+        <button class="tab" data-tab="school" data-i18n="tab_school">Schools</button>
+      </div>
+      <div class="card" style="padding:16px">
+        <form id="parentForm">
+          <div class="grid2">
+            <div><label>Email</label><input type="email" required></div>
+            <div><label data-i18n="lf_pass" >Password</label><input type="password"  style="width: 400px; height: 30px; " required ></div>
+          </div>
+        
+
+          <div class="row" style="margin-top:12px;justify-content:flex-end">
+            <button class="btn" type="button" onclick="alertMsg('Reset link sent')" data-i18n="lf_forgot">Forgot?</button>
+            <button class="btn primary" type="submit" data-i18n="lf_sign">Sign In</button>
+          </div>
+        </form>
+        <form id="schoolForm" class="hide">
+          <div class="grid2">
+            <div><label data-i18n="sf_school">School Name</label><input type="text" required></div>
+            <div><label>Email</label><input type="email" required></div>
+            <div><label data-i18n="sf_phone">Phone</label><input type="tel" required></div>
+            <div>
+              <label data-i18n="sf_system">System</label>
+              <select>
+                <option>IB</option><option>IGCSE</option><option>SAT/AP</option><option>National</option><option>Montessori</option>
+              </select>
+            </div>
+          </div>
+          <div class="row" style="margin-top:12px;justify-content:flex-end">
+            <a class="btn" href="#payment" data-i18n="sf_upgrade">Upgrade Listing →</a>
+            <button class="btn primary" type="submit" data-i18n="sf_register">Register</button>
+          </div>
+        </form>
+      </div>
+
+
+      
+
+      
+    </section>
+
+
+    <section id="parant" class="container hide">
+      
+<div class="card">
+    <h2>👨‍👩‍👧 Welcome, Parent</h2>
+    <p class="muted">Your personalized dashboard for school search and applications.</p>
+    <button class="btn small" onclick="logout()" style="float:right;margin-top:-40px">Logout</button>
+
+    <div class="grid" style="margin-top:20px">
+      <!-- Profile Info -->
+      <div class="card soft">
+        <h3>🎓 Your Profile</h3>
+        <p id="pName"><strong>Name:</strong> John Doe</p>
+        <p id="pPhone"><strong>Phone:</strong> +962-79-1234567</p>
+        <p id="pChildren"><strong>Children:</strong> 2 (Ages: 6, 10)</p>
+        <button class="btn small" onclick="go('#editProfile')">Edit Profile</button>
+      </div>
+
+      <!-- Applications -->
+      <div class="card soft wide">
+        <h3>📄 Applications</h3>
+        <ul class="checklist">
+          <li>✅ Amman Academy - <em>Under Review</em></li>
+          <li>❌ Montessori School - <em>Rejected</em></li>
+          <li>✨ IB World - <em>Accepted</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Favorites -->
+    <div class="card soft">
+      <h3>❤️ Favorite Schools</h3>
+      <div class="chips">
+        <span class="chip">International Academy</span>
+        <span class="chip">Zarqa STEM School</span>
+      </div>
+    </div>
+
+    
+
+    <!-- Notifications -->
+    <div class="card soft">
+      <h3>📢 Notifications</h3>
+      <ul class="dots">
+        <li>Reply received from <strong>ABC School</strong>.</li>
+        <li>New camp opens this week.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Edit Profile Page -->
+<section id="editProfile" class="container" style="display:none">
+  <div class="card">
+    <h2>📝 Edit Your Profile</h2>
+    <form id="editProfileForm">
+      <input type="text" id="parentName" placeholder="Full Name" required />
+      <input type="tel" id="parentPhone" placeholder="Phone Number" required />
+      <input type="number" id="childCount" placeholder="Number of Children" required />
+      <input type="text" id="childAges" placeholder="Children Ages (e.g. 6,10)" required />
+      <button class="btn" type="submit">Save</button>
+      <button class="btn small" type="button" onclick="go('#profile')">Cancel</button>
+    </form>
+  </div>
+    </section>
+
+
+    
+    <!-- PAYMENT -->
+    <section id="payment" class="container hide">
+      <h3 class="title" data-i18n="pay_title">Payment & Plans (Schools)</h3>
+      <p class="subtitle" data-i18n="pay_sub">Boost your visibility. Secure checkout placeholder (integrate later).</p>
+      <div class="pricing">
+
+
+<div class="card plan">
+  <h4>Basic</h4>
+  <p class="muted" style="margin:6px 0">Free listing</p>
+  <ul style="margin-left:18px;line-height:1.8">
+    <li>School profile</li>
+    <li>Contact info</li>
+  </ul>
+  <!-- ✅ أضفنا ID ثابت -->
+  <button id="btnFreePlan" class="btn primary" style="margin-top:10px">Current</button>
+</div>
+
+
+
+
+        <div class="card plan">
+          <h4>Pro</h4>
+          <p class="muted" style="margin:6px 0">JOD 19 / mo</p>
+          <ul style="margin-left:18px;line-height:1.8">
+            <li>Priority in results</li>
+            <li>Photo gallery</li>
+            <li>Applications export</li>
+          </ul>
+          <button class="btn primary" style="margin-top:10px" onclick="alertMsg('Mock payment flow')">Choose Pro</button>
+        </div>
+        <div class="card plan">
+          <h4>Premium</h4>
+          <p class="muted" style="margin:6px 0">JOD 39 / mo</p>
+          <ul style="margin-left:18px;line-height:1.8">
+            <li>Sponsored badge</li>
+            <li>Homepage highlights</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button class="btn accent" style="margin-top:10px" onclick="alertMsg('Mock payment flow')">Choose Premium</button>
+        </div>
+      </div>
+    </section>
+
+     <!--profil-->
+<!-- PROFILE (Schools only) -->
+
+
+
+
+
+
+<section id="profile" class="container hide">
+  <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px">
+    <h3 class="title">School Profile</h3>
+    <div class="row" style="gap:8px">
+      <button class="btn" id="btnBackToPayment">← Back to Payment</button>
+      <button class="btn black" id="btnLogout">Log Out</button>
+    </div>
+  </div>
+
+
+
+
+
+
+<!--auuuuuuuuuuuuuuuu-->
+
+
+
+
+
+
+
+
+
+
+<p class="subtitle">Manage your school information, photos, and description.</p>
+
+<div class="card" style="padding:24px;border-radius:20px;box-shadow:0 10px 30px rgba(53, 51, 51, 0.966)">
+  <h4>Welcome, <span id="profileSchoolName">Your School</span> 🎓</h4>
+  <p class="muted" style="margin:10px 0">
+    Here you can upload school photos, update information, and preview your location on map.
+  </p>
+
+  <div class="grid2" style="margin-top:20px;gap:16px">
+    <div>
+      <label>Upload Photos</label>
+      <input id="photoUpload" type="file" multiple accept="image/*" />
+      <div id="photoPreview" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"></div>
+    </div>
+
+    <div>
+      <label>Location</label>
+      <input id="schLocation" type="text" placeholder="Enter your address or city" />
+      <div id="profileMap" style="height:220px;border-radius:12px;margin-top:10px"></div>
+    </div>
+
+    <div style="grid-column:1/-1">
+      <label>About Your School</label>
+      <textarea id="schAbout" rows="4" placeholder="Write a short description about your school..."></textarea>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:24px;justify-content:flex-end;gap:10px">
+    <button class="btn" id="btnSaveProfile">💾 Save</button>
+    <button class="btn primary" id="btnPublishProfile">🚀 Publish</button>
+  </div>
+
+  <p id="profileMsg" style="margin-top:12px;color:var(--brand);font-weight:600"></p>
+</div>
+
+
+
+
+
+
+
+
+
+<!--auuuuuuuuuuuuuuuu-->
+
+
+
+
+
+
+
+</section>
+  </main>
+  <footer>
+    <div class="container wrap">
+      <div class="brandline">
+        <div class="logo"><img src="photos/cab761e4-4b79-4bf6-a7e9-9c5837ff1729 (1).png" alt=""></div>
+        <div>
+          <strong>EduChoice</strong>
+          <div class="muted">www.educhoice.jo   •   +962-79-000-0000   •   hello@educhoice.jo</div>
+        </div>
+      </div>
+      <div class="cols">
+        <div>
+          <div class="muted" data-i18n="f_about">Unified directory of Jordan schools & camps. Built as a Web Science project.</div>
+        </div>
+        <div>
+          <div class="row">
+            <span class="chip">Facebook</span>
+            <span class="chip">Instagram</span>
+            <span class="chip">X</span>
+            <span class="chip">LinkedIn</span>
+          </div>
+        </div>
+        <div>
+          <div class="row">
+            <span class="chip">Terms</span>
+            <span class="chip">Privacy</span>
+            <span class="chip">Contact</span>
+          </div>
+        </div>
+      </div>
+      <div class="muted">© <span id="year"></span> EduChoice. All rights reserved.</div>
+    </div>
+
+
+
+
+
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
