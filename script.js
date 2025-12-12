@@ -1,25 +1,36 @@
 
+
+window.addEventListener("DOMContentLoaded", () => {
+  const role = localStorage.getItem("logged_role");
+
+  // إذا ما في دخول → اعرض فقط صفحة اللوج ان
+  if (!role) {
+    show("#login");
+    document.querySelector(".menu").classList.add("hide");
+  }
+});
+
+
 // Mock data
     const SCHOOLS = [
     
       { id:"s1", name:"International Academy – Amman", system:"IB", city:"Amman", rating:5.0,
         email:"admissions@iaa.edu.jo", phone:"+962-6-000-0002", website:"https://www.iaa.edu.jo",
-      
         images:["photos/download.png","",""],
         desc:"IB PYP/MYP/DP with strong community ethos.", programs:["PYP","MYP","DP","Arts","Athletics"], address:"Amman, Jordan"
       },
 
 
 
-      { id:"s3", name:"Amman American Academy", system:"SAT/AP", city:"Amman", rating:5.2,
+      { id:"s2", name:"Amman American Academy", system:"SAT/AP", city:"Amman", rating:5.2,
         email:"hello@aaa.jo", phone:"+962-6-000-0004", website:"https://aaa.jo",
         images:["photos/download (1).png","https://images.unsplash.com/photo-1510936111840-65e151ad71bb","https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"],
         desc:"American curriculum with AP options and college counseling.", programs:["Common Core","AP","Sports","Counseling"], address:"Amman, Jordan"
       },
 
-      { id:"s2", name:"Cambridge International School", system:"IGCSE", city:"Zarqa", rating:4.4,
+      { id:"s3", name:"Cambridge International School", system:"IGCSE", city:"Zarqa", rating:4.4,
         email:"contact@cambridge.jo", phone:"+962-5-000-0003", website:"https://cambridge.jo",
-        images:["download (2).png","",""],
+        images:["https://www.icschools.ae/wp-content/uploads/2024/06/Cambridge-Education.jpg","",""],
         desc:"British curriculum focusing on IGCSE and A-Level.", programs:["IGCSE","AS","A-Level","Robotics Club"], address:"Zarqa, Jordan"
       },
 
@@ -53,7 +64,7 @@
      
 
       
-      { id:"s", name:"Irbid Grammar School", system:"IGCSE", city:"Irbid", rating:4.0,
+      { id:"s7", name:"Irbid Grammar School", system:"IGCSE", city:"Irbid", rating:4.0,
         email:"office@irbidgrammar.jo", phone:"+962-2-000-0008", website:"https://irbidgrammar.jo",
         images:["photos/download (2).png","https://images.unsplash.com/photo-1524995997946-a1c2e315a42f","https://images.unsplash.com/photo-1558021212-51b6ecfa0db9"],
         desc:"IGCSE with strong math & science focus.", programs:["IGCSE","A-Level","Math Olympiad"], address:"Irbid, Jordan"
@@ -63,14 +74,49 @@
     const CAMPS = [
 
 
-         {id:"c1", name:"Irbid Kids Club", city:"Irbid", phone:"+962-79-333-3333", img:"https://images.unsplash.com/photo-1488521787991-ed7bbaae773c", desc:"Outdoor adventures and coding bootcamps."},
+         {id:"c1", name:"Irbid Kids Club", city:"Irbid", phone:"+962-79-333-3333", img:"https://images.unsplash.com/photo-1743383126589-dacdc73c13ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VtbWVyJTIwY2FtcHMlMjBsb2dvfGVufDB8fDB8fHww", desc:"Outdoor adventures and coding bootcamps."},
 
 
-      {id:"c2", name:"Amman Activity Center", city:"Amman", phone:"+962-79-111-1111", img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", desc:"STEM, arts, and sports camps for ages 6–14."},
+      {id:"c2", name:"Amman Activity Center", city:"Amman", phone:"+962-79-111-1111", img:"https://images.unsplash.com/photo-1539629213911-66eac000dd0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"STEM, arts, and sports camps for ages 6–14."},
 
 
-      {id:"c4", name:"Zarqa Learning Hub", city:"Zarqa", phone:"+962-79-222-2222", img:"https://images.unsplash.com/photo-1517486808906-6ca8b3f04846", desc:"Robotics and language immersion programs."},
+      {id:"c3", name:"Zarqa Learning Hub", city:"Zarqa", phone:"+962-79-222-2222", img:"https://images.unsplash.com/photo-1535069499309-04ad66587934?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
 
+       {id:"c4", name:"home show ", city:"aqaba", phone:"+962-78-331-2442", img:"https://images.unsplash.com/photo-1665823253628-53910cb3be40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
+
+
+        {id:"c5", name:"jabal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1576723666300-97539040cfdf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
+
+
+
+
+        {id:"c6", name:"jabal camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/483954743/photo/3d-explore-camping.jpg?s=612x612&w=0&k=20&c=u9gp2CED1E5VO5b00mqyPzV4zrjRLYqFwhz33NKxkxk=", desc:"Robotics and language immersion programs."},
+
+
+        {id:"c7", name:"dalal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1746036188/photo/hand-lettering-kids-summer-camp-3d-realistic-stylish-isolated-on-white.jpg?s=612x612&w=0&k=20&c=y-RkpT6VF-CDm4AyQlNg5Uxqy9p6AfGSh0ZMfpO-aEU=", desc:"Robotics and language immersion programs."},
+
+
+
+        {id:"c8", name:"play camps Center ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1389504230/photo/summer-camp-community-education.webp?a=1&b=1&s=612x612&w=0&k=20&c=RoqUje7fFL1erd9GpaxSpeKLvJwtYXpsep1rVnGgADc=", desc:"Robotics and language immersion programs."},
+
+
+
+        {id:"c9", name:"kids camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/170041943/photo/large-group-of-enthusiatic-young-campers.webp?a=1&b=1&s=612x612&w=0&k=20&c=gGc1OlCSIqj32jrGMy57SVH3_SjMPre9qQPcW3OfscI=", desc:"Robotics and language immersion programs."},
+
+
+
+        {id:"c10", name:"layale camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/475284932/photo/summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=a4a-LAba3CMTFOciWUjcaHdgY3ptjxIMM81cfOCvqd0=", desc:"Robotics and language immersion programs."},
+
+
+        {id:"c11", name:"amman camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/626061024/photo/summer-camp-poster-in-flat-design-inspirational-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=TD40rPxLd9WzhWPoPGvA0yEeLeH4w3b8qlF-UrPbWIo=", desc:"Robotics and language immersion programs."},
+
+
+
+        {id:"c12", name:"madelar camps ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/2205699240/photo/3d-summer-camp-wood-sign-board-with-green-leaves-render-forest-wooden-signboard-banner-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=r7Rd9J8FY79hyw1G3CU1xhJfYez5cErMpWanKJL7Nc8=", desc:"Robotics and language immersion programs."},
+
+
+
+        {id:"c13", name:"jata camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1728555864830-499254793e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
     ];
 
 
@@ -176,7 +222,7 @@ function goBack(){
 
     const I18N = {
       en:{
-        nav_home:"Home", nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_about:"About", nav_login:"Login", nav_payment:"Payment",nav_profile:"profile",
+        nav_home:"Home", nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_about:"About", nav_login:"Login", nav_payment:"Payment",nav_profile:"Profile",
         home_head:"Find the right school for your child in Jordan",
         home_sub:"Search by name, explore by educational system, or discover summer camps.",
         ph_search:"Search school name…", btn_search:"Search", btn_systems:"By System", btn_camps:"Summer Camps",
@@ -211,13 +257,13 @@ function goBack(){
         about_6:"Secure Payment System:",
         about_16:"Transparent payment process for school listings and promotions.",
 
-        about_21:"🌐 Why EduChoice Matters",
+        about_21:" Why EduChoice Matters",
         about_22:"Jordan’s private education sector is growing rapidly, but information is scattered and often outdated across hundreds of sources.EduChoice centralizes all this data into one trusted platform — empowering parents with better choices and helping schools reach the right audience. It increases transparency, simplifies admission, and encourages digital transformation in education.",
 
-        about_33:"🚀 Future Vision",
+        about_33:" Future Vision",
         about_44:"EduChoice aims to expand with AI-based school recommendations, parent dashboards, and a dedicated mobile app. The long-term vision includes partnerships with educational authorities to enhance transparency and data accura",
         
-        about_55:"💬 Conclusion",
+        about_55:" Conclusion",
         about_66:"is more than just a website — it’s a movement toward smarter, data-driven education choices in Jordan. By combining technology, user experience, and educational insight, EduChoice bridges families and schools to build a brighter, more connected educational future",
 
 
@@ -279,13 +325,13 @@ function goBack(){
         about_6:"نظام الدفع الآمن:",
         about_16:"عملية دفع شفافة لإدراجات المدارس والعروض الترويجية.",
 
-        about_21:"🌐 لماذا يُعدّ EduChoice مهمًا؟",
+        about_21:" لماذا يُعدّ EduChoice مهمًا؟",
         about_22:"يشهد قطاع التعليم الخاص في الأردن نموًا متسارعًا، إلا أن المعلومات متناثرة، وغالبًا ما تكون قديمة، عبر مئات المصادر.ع EduChoice جميع هذه البيانات في منصة واحدة موثوقة، مما يُمكّن أولياء الأمور من خيارات أفضل، ويساعد المدارس على الوصول  المناسب.ز EduChoice الشفافية، ويُبسط عملية القبول، ويُشجع على التحول الرقمي في التعليم.",
 
-        about_33:"🚀 الرؤية المستقبلية",
+        about_33:" الرؤية المستقبلية",
         about_44:"تهدف EduChoice إلى التوسع من خلال توصيات مدرسية قائمة على الذكاء الاصطناعي، ولوحات معلومات لأولياء الأمور، وتطبيق جوال مخصص. تتضمن الرؤية طويلة المدى شراكات مع الجهات التعليمية لتعزيز الشفافية ودقة البيانات.",
 
-        about_55:"💬 الخاتمة",
+        about_55:" الخاتمة",
 
         about_66:"هو أكثر من مجرد موقع إلكتروني، إنه مبادرة نحو خيارات تعليمية أذكى قائمة على البيانات في الأردن. من خلال الجمع بين التكنولوجيا وتجربة المستخدم والرؤى التعليمية، يربط EduChoice بين العائلات والمدارس لبناء مستقبل تعليمي أكثر إشراقًا وتواصلًا.",
 
@@ -430,24 +476,66 @@ function goBack(){
     const mapBtn   = document.querySelector(`[data-map="${c.id}"]`);
 
     // Info → يفتح المودال بمعلومات
-    infoBtn?.addEventListener('click', ()=>{
-      openCampModal(`
-        <div class="modal-title" id="campModalTitle">${tDyn(c,'name','name_ar')}</div>
-        <div class="muted">${cityLabel(c.city)}</div>
-        <p style="margin-top:8px">${tDyn(c,'desc','desc_ar')}</p>
-        <div class="chip" style="margin-top:10px">${c.phone}</div>
-        <div class="modal-actions">
-          <button class="btn" id="modalCloseBtn">${I18N[currentLang].back}</button>
-          <button class="btn primary" id="modalApplyBtn">${I18N[currentLang].btn_apply}</button>
-        </div>
-      `, ()=>{
-        byId('modalCloseBtn')?.addEventListener('click', closeCampModal);
-        byId('modalApplyBtn')?.addEventListener('click', ()=>{
-          byId('applySchool').value = tDyn(c,'name','name_ar');
-          closeCampModal(); go('#apply');
-        });
-      });
+   infoBtn?.addEventListener('click', ()=>{
+  openCampModal(`
+   <div class="camp-modal clean">
+
+  <!-- TOP AVATAR -->
+  <div class="camp-avatar-wrap">
+    <img class="camp-avatar" src="${c.img}" alt="Camp Logo">
+  </div>
+
+  <!-- TITLE -->
+  <div class="camp-title">
+    <h2>${tDyn(c,'name','name_ar')}</h2>
+    <p class="muted">📍 ${cityLabel(c.city)}</p>
+  </div>
+
+  <!-- INFO STRIP -->
+  <div class="camp-info-strip">
+    <div><strong>Age</strong><span>6 – 14</span></div>
+    <div><strong>Duration</strong><span>2–4 Weeks</span></div>
+    <div><strong>Type</strong><span>Summer Camp</span></div>
+    <div><strong>Phone</strong><span>${c.phone}</span></div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="camp-desc">
+    <h4>About the Camp</h4>
+    <p>${tDyn(c,'desc','desc_ar')}</p>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="camp-gallery-wrap">
+    <h4>Camp Activities</h4>
+    <div class="camp-gallery">
+      <img src="${c.img}&w=420">
+      <img src="${c.img}&w=421">
+      <img src="${c.img}&w=422">
+      <img src="${c.img}&w=423">
+      <img src="${c.img}&w=424">
+      <img src="${c.img}&w=425">
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="modal-actions">
+    <button class="btn" id="modalCloseBtn">${I18N[currentLang].back}</button>
+    <button class="btn primary" id="modalApplyBtn">${I18N[currentLang].btn_apply}</button>
+  </div>
+
+</div>
+
+  `, ()=>{
+    byId('modalCloseBtn')?.addEventListener('click', closeCampModal);
+    byId('modalApplyBtn')?.addEventListener('click', ()=>{
+      byId('applySchool').value = tDyn(c,'name','name_ar');
+      closeCampModal();
+      go('#apply');
     });
+  });
+});
+
 
     // Apply → ينتقل لصفحة التقديم ويعبّي الاسم
    applyBtn?.addEventListener('click', ()=>{
@@ -505,12 +593,67 @@ document.getElementById('backToList')?.addEventListener('click', () => {
       ['fSystem','fCity','fMin','fSort'].forEach(id=>byId(id).selectedIndex=0);
       renderResults(SCHOOLS.slice().sort((a,b)=>b.rating-a.rating));
     }
-    function searchByName(q){
-      const v = q.trim().toLowerCase();
-      if(!v){ renderResults(SCHOOLS); return; }
-      renderResults(SCHOOLS.filter(s=>s.name.toLowerCase().includes(v) || s.name_ar.toLowerCase().includes(v)));
-      go('#schools');
-    }
+    ///////////
+   function searchByName(q) {
+  const v = q.trim().toLowerCase();
+
+  if (!v) return;
+
+  /* ===== Schools ===== */
+  const schoolResults = SCHOOLS.filter(s =>
+    (s.name && s.name.toLowerCase().includes(v)) ||
+    (s.name_ar && s.name_ar.toLowerCase().includes(v)) ||
+    (s.city && s.city.toLowerCase().includes(v)) ||
+    (s.system && s.system.toLowerCase().includes(v)) ||
+    (s.programs && s.programs.join(' ').toLowerCase().includes(v))
+  );
+
+  /* ===== Camps ===== */
+  const campResults = CAMPS.filter(c =>
+    (c.name && c.name.toLowerCase().includes(v)) ||
+    (c.city && c.city.toLowerCase().includes(v)) ||
+    (c.type && c.type.toLowerCase().includes(v)) ||
+    (c.description && c.description.toLowerCase().includes(v))
+  );
+
+  /* ===== Priority Logic ===== */
+
+  // إذا لقى مدرسة وحدة → افتح صفحة معلومات المدرسة
+  if (schoolResults.length === 1) {
+    openSchool(schoolResults[0].id);   // دالة فتح تفاصيل المدرسة
+    go('#school');
+    return;
+  }
+
+  // إذا ما لقى مدارس ولقي كامب واحد → افتح معلومات الكامب
+  if (schoolResults.length === 0 && campResults.length === 1) {
+    openCamp(campResults[0].id);       // دالة فتح تفاصيل الكامب
+    go('#camp'); // أو #community حسب مشروعك
+    return;
+  }
+
+  // إذا في أكثر من نتيجة → اعرض ليست
+  if (schoolResults.length) {
+    renderResults(schoolResults);
+    go('#schools');
+    return;
+  }
+
+  if (campResults.length) {
+    renderCamps(campResults);
+    go('#community');
+    return;
+  }
+
+  // إذا ما في ولا نتيجة
+  alert("No results found");
+}
+
+
+
+
+
+  //////////
     function seedStats(){
       byId('statSchools').textContent = SCHOOLS.length;
       byId('statCities').textContent = new Set(SCHOOLS.map(s=>s.city)).size;
@@ -561,6 +704,7 @@ document.getElementById('backToList')?.addEventListener('click', () => {
         });
       }
 
+      
       // re-render lists
       const sys = (fSystem && fSystem.value) || '';
       const city= (fCity && fCity.value) || '';
@@ -604,14 +748,225 @@ document.getElementById('backToList')?.addEventListener('click', () => {
 });
 
 
+
+
+
     // Login tabs
-    $$('.tab').forEach(t=>t.addEventListener('click',e=>{
-      $$('.tab').forEach(x=>x.classList.remove('active'));
-      e.currentTarget.classList.add('active');
-      const tab = e.currentTarget.dataset.tab;
-      byId('parentForm').classList.toggle('hide', tab!=='parent');
-      byId('schoolForm').classList.toggle('hide', tab!=='school');
-    }));
+    // $$('.tab').forEach(t=>t.addEventListener('click',e=>{
+    //   $$('.tab').forEach(x=>x.classList.remove('active'));
+    //   e.currentTarget.classList.add('active');
+    //   const tab = e.currentTarget.dataset.tab;
+    //   byId('parentForm').classList.toggle('hide', tab!=='parent');
+    //   byId('schoolForm').classList.toggle('hide', tab!=='school');
+    // }));
+
+
+// ========== LOGIN SIGNUP TABS ==========
+const loginTabs = document.querySelectorAll("#login .tab");
+const loginPanels = document.querySelectorAll("#login .auth-panel");
+
+loginTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+
+    loginTabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    loginPanels.forEach(p => {
+      p.classList.add("hide");
+      if (p.dataset.panel === target) p.classList.remove("hide");
+    });
+  });
+});
+
+
+// ========== SIGNUP ==========
+byId("signupForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const user = {
+    name: signupName.value,
+    email: signupEmail.value,
+    pass: signupPass.value,
+    role: signupRole.value // parent / school
+  };
+
+  localStorage.setItem("ed_user", JSON.stringify(user));
+
+  alert("Account Created!");
+  document.querySelector('#login .tab[data-tab="login"]').click();
+});
+
+
+// ========== LOGIN WITH ROLES ==========
+byId("loginForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const email = loginEmail.value;
+  const pass = loginPass.value;
+  const role = loginRole.value;
+
+  const user = JSON.parse(localStorage.getItem("ed_user"));
+
+  if (!user) return alert("No account found!");
+
+  if (user.email === email && user.pass === pass && user.role === role) {
+
+    // SUCCESS LOGIN
+    alert("Login Successful!");
+
+    if (role === "parent") go("#dashboard_parent");
+    if (role === "school") go("#dashboard_school");
+    if (role === "admin") go("#admin");
+
+  } else {
+    alert("Incorrect credentials or wrong role selected.");
+  }
+});
+
+function setUserAccess(role) {
+  
+  // إظهار المنيو بعد تسجيل الدخول
+  document.querySelector(".menu").classList.remove("hide");
+
+  // إخفاء كل البروفايلات
+  byId("profile_parent").classList.add("hide");
+  byId("profile_school").classList.add("hide");
+  byId("profile_admin").classList.add("hide");
+
+  // إظهار الصفحة المناسبة حسب الدور
+  if (role === "parent") {
+    byId("profile_parent").classList.remove("hide");
+  }
+  if (role === "school") {
+    byId("profile_school").classList.remove("hide");
+  }
+  if (role === "admin") {
+    byId("profile_admin").classList.remove("hide");
+  }
+}
+byId("loginForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const email = loginEmail.value;
+  const pass = loginPass.value;
+  const role = loginRole.value;
+
+  const user = JSON.parse(localStorage.getItem("ed_user"));
+
+  if (!user) return alert("No account found!");
+
+  if (user.email === email && user.pass === pass && user.role === role) {
+
+    alert("Login Successful!");
+
+    // حفظ المستخدم
+    localStorage.setItem("logged_role", role);
+
+    // تفعيل الوصول
+    setUserAccess(role);
+
+    // Go to profile page
+    go("#home");
+
+  } else {
+    alert("Incorrect email, password, or role.");
+  }
+});
+
+
+
+
+
+// عند فتح الموقع
+window.addEventListener("DOMContentLoaded", () => {
+  const role = localStorage.getItem("logged_role");
+
+  if (!role) {
+    // اخفي المنيو
+    document.querySelector(".menu").classList.add("hide");
+  } else {
+    // اظهر المنيو وابين الصفحة الصحيحة
+    setUserAccess(role);
+  }
+});
+
+
+// profile
+
+
+function logout() {
+
+  // امسح بيانات المستخدم
+  localStorage.removeItem("user");
+
+  // اخفي المنيو إذا كانت ظاهرة
+  const menu = document.querySelector(".menu");
+  if (menu) menu.classList.add("hide");
+
+  // اخفي كل الصفحات
+  document.querySelectorAll("section").forEach(sec => sec.classList.add("hide"));
+
+  // ارجع اعرض صفحة اللوج ان فقط
+  document.getElementById("login").classList.remove("hide");
+
+  alert("You have logged out.");
+}
+
+
+///////////////------------------------------------------------///////////////////////////------------------------------------------------////////////
+// ===== PARENT PROFILE TABS =====
+const parentTabs = document.querySelectorAll(".pp-sidebar button[data-tab]");
+const parentSections = document.querySelectorAll(".pp-section");
+
+parentTabs.forEach(btn => {
+  btn.addEventListener("click", () => {
+    parentTabs.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const tab = btn.dataset.tab;
+    parentSections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tab).classList.add("active");
+  });
+});
+
+
+// ===== SCHOOL PROFILE TABS =====
+const schoolTabs = document.querySelectorAll(".sp-sidebar button[data-tab]");
+const schoolSections = document.querySelectorAll(".sp-section");
+
+schoolTabs.forEach(btn => {
+  btn.addEventListener("click", () => {
+    schoolTabs.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const tab = btn.dataset.tab;
+    schoolSections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tab).classList.add("active");
+  });
+});
+
+// ===== ADMIN PROFILE TABS =====
+const adminTabs = document.querySelectorAll(".ap-sidebar button[data-tab]");
+const adminSections = document.querySelectorAll(".ap-section");
+
+adminTabs.forEach(btn => {
+  btn.addEventListener("click", () => {
+    adminTabs.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const tab = btn.dataset.tab;
+    adminSections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(tab).classList.add("active");
+  });
+});
+
+
+
+   ///////////////------------------------------------------------///////////////////////////------------------------------------------------////////////
+
+
+
 
     // Apply form
     byId('applyForm').addEventListener('submit',e=>{
@@ -619,6 +974,10 @@ document.getElementById('backToList')?.addEventListener('click', () => {
       alertMsg(currentLang==='ar' ? 'تم إرسال الطلب (تجريبي). المتابعة لتسجيل الدخول.' : 'Request sent (demo). Continue to login.');
       go('#login');
     });
+
+
+
+
 
     // Language switch
     byId('toggleLang').addEventListener('click',()=>{
@@ -629,6 +988,10 @@ document.getElementById('backToList')?.addEventListener('click', () => {
       applyI18n();
     });
 
+
+
+
+
 // === HOME PAGE COUNTERS ===
 document.addEventListener("DOMContentLoaded", () => {
   const countersSection = document.querySelector("#homeCounters");
@@ -636,6 +999,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let started = false;
 
   if (!countersSection) return;
+
+
+
+
+
 
   // يبدأ العدّ عند الظهور
   const startCount = () => {
@@ -654,6 +1022,9 @@ document.addEventListener("DOMContentLoaded", () => {
       update();
     });
   };
+
+
+
 
   // مراقبة الظهور فقط لما تكون الصفحة Home
   const observer = new IntersectionObserver(entries => {
@@ -681,60 +1052,63 @@ document.addEventListener("DOMContentLoaded", () => {
    PARENT REAL PROFILE (LocalStorage)
    =======================================================*/
 
-function loadParentProfile() {
-  const data = JSON.parse(localStorage.getItem("parentProfile")) || {
-    name: "John Doe",
-    phone: "+962-79-1234567",
-    children: 2,
-    ages: "6, 10"
-  };
 
-  // Update UI
-  document.getElementById("pName").innerHTML = `<strong>Name:</strong> ${data.name}`;
-  document.getElementById("pPhone").innerHTML = `<strong>Phone:</strong> ${data.phone}`;
-  document.getElementById("pChildren").innerHTML = `<strong>Children:</strong> ${data.children} (Ages: ${data.ages})`;
+   //---------------------------------------------------------------------------------------
 
-  // Pre-fill edit form
-  document.getElementById("parentName").value = data.name;
-  document.getElementById("parentPhone").value = data.phone;
-  document.getElementById("childCount").value = data.children;
-  document.getElementById("childAges").value = data.ages;
-}
+// function loadParentProfile() {
+//   const data = JSON.parse(localStorage.getItem("parentProfile")) || {
+//     name: "John Doe",
+//     phone: "+962-79-1234567",
+//     children: 2,
+//     ages: "6, 10"
+//   };
 
-// Save profile
-document.getElementById("editProfileForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+//   // Update UI
+//   document.getElementById("pName").innerHTML = `<strong>Name:</strong> ${data.name}`;
+//   document.getElementById("pPhone").innerHTML = `<strong>Phone:</strong> ${data.phone}`;
+//   document.getElementById("pChildren").innerHTML = `<strong>Children:</strong> ${data.children} (Ages: ${data.ages})`;
 
-  const data = {
-    name: document.getElementById("parentName").value,
-    phone: document.getElementById("parentPhone").value,
-    children: document.getElementById("childCount").value,
-    ages: document.getElementById("childAges").value
-  };
+//   // Pre-fill edit form
+//   document.getElementById("parentName").value = data.name;
+//   document.getElementById("parentPhone").value = data.phone;
+//   document.getElementById("childCount").value = data.children;
+//   document.getElementById("childAges").value = data.ages;
+// }
 
-  // Save to localStorage
-  localStorage.setItem("parentProfile", JSON.stringify(data));
+// // Save profile
+// document.getElementById("editProfileForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  // Success message
-  alert("Profile updated successfully!");
+//   const data = {
+//     name: document.getElementById("parentName").value,
+//     phone: document.getElementById("parentPhone").value,
+//     children: document.getElementById("childCount").value,
+//     ages: document.getElementById("childAges").value
+//   };
 
-  // Return to parent page
-  go("#parant");
-  loadParentProfile();
-});
+//   // Save to localStorage
+//   localStorage.setItem("parentProfile", JSON.stringify(data));
 
-// Logout
-function logout() {
-  localStorage.removeItem("parentProfile");
-  alert("You have been logged out.");
-  go("#login");
-}
+//   // Success message
+//   alert("Profile updated successfully!");
 
-// Load profile whenever page opens
-window.addEventListener("hashchange", () => {
-  if (location.hash === "#parant") loadParentProfile();
-});
+//   // Return to parent page
+//   go("#parant");
+//   loadParentProfile();
+// });
 
+// // Logout
+// function logout() {
+//   localStorage.removeItem("parentProfile");
+//   alert("You have been logged out.");
+//   go("#login");
+// }
+
+// // Load profile whenever page opens
+// window.addEventListener("hashchange", () => {
+//   if (location.hash === "#parant") loadParentProfile();
+// });
+//---------------------------------------------------------------------------------------
 
   // const observer1 = new IntersectionObserver(entries => {
   //   entries.forEach(entry => {
@@ -759,6 +1133,7 @@ window.addEventListener("hashchange", () => {
   ////////////
 
   // أول تحميل
+
   toggleCounters();
 
   // كل ما تغيّر الهاش (تنقل بين الصفحات)
@@ -768,6 +1143,9 @@ window.addEventListener("hashchange", () => {
 
 
     
+
+
+
     
 
     /* ===== Community Modal helpers ===== */
@@ -784,6 +1162,11 @@ function openCampModal(html, afterOpen){
 function closeCampModal(){
   campModal.classList.remove('modal-show');
   campModal.setAttribute('aria-hidden','true');
+
+
+
+
+
   // تنظيف الخريطة إذا لزم
   const mapEl = byId('campMap'); if(mapEl){ mapEl._leaflet_id = null; mapEl.innerHTML=''; }
 }
@@ -809,6 +1192,10 @@ function mountLeaflet(name, city){
   L.marker([lat,lng]).addTo(map).bindPopup(name).openPopup();
 }
 
+
+
+
+
     // Camps slider: duplicate items for endless loop + click to open community
     const slider = byId('sliderTrack');
     slider.innerHTML += slider.innerHTML;
@@ -818,6 +1205,9 @@ function mountLeaflet(name, city){
         window.scrollTo({top:0,behavior:'smooth'});
       });
     });
+
+
+
 
     // Init
     seedStats();
@@ -851,11 +1241,25 @@ function mountLeaflet(name, city){
 show(location.hash || '#home');
 
 
+
+
+
 // ✅ عند تحميل الصفحة، فعّل وظائف التنقل والأزرار كلها مرة واحدة
 document.addEventListener('DOMContentLoaded', () => {
 
+
+
+
+
+
   // ---- 1) تفعيل التنقل بين الأنظمة ----
   enableSystemNavigation();
+
+
+
+//---------------------------------------------------------------------------------------
+
+
 
   // ---- 2) زر "Current" في الدفع ينقل إلى صفحة البروفايل ----
   const freePlanBtn = document.getElementById('btnFreePlan');
@@ -868,6 +1272,15 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('profileSchoolName').textContent = schoolName || 'Your School';
     });
   }
+
+
+
+
+
+//---------------------------------------------------------------------------------------
+
+
+
 
   // ---- 3) أزرار البروفايل (رجوع + تسجيل خروج) ----
   const backBtn = document.getElementById('btnBackToPayment');
@@ -891,11 +1304,231 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+//---------------------------------------------------------------------------------------
+
+
+// ========= SHOW COMPARE PAGE =========
+document.querySelector('a[href="#compare"]')?.addEventListener("click", () => {
+  show("#compare");
+});
+
+// ========= BUTTONS: SHOW BOXES =========
+byId("showCompareSchools").addEventListener("click", () => {
+  byId("schoolCompareBox").classList.remove("hide");
+  byId("campCompareBox").classList.add("hide");
+  fillSchoolDropdowns();
+});
+
+byId("showCompareCamps").addEventListener("click", () => {
+  byId("campCompareBox").classList.remove("hide");
+  byId("schoolCompareBox").classList.add("hide");
+  fillCampDropdowns();
+});
+
+
+// ========= FILL SCHOOLS SELECT =========
+function fillSchoolDropdowns() {
+  const A = byId("schoolA");
+  const B = byId("schoolB");
+
+  A.innerHTML = `<option value="">Select School 1</option>`;
+  B.innerHTML = `<option value="">Select School 2</option>`;
+
+  SCHOOLS.forEach(s => {
+    A.innerHTML += `<option value="${s.id}">${s.name}</option>`;
+    B.innerHTML += `<option value="${s.id}">${s.name}</option>`;
+  });
+}
+
+// ========= FILL CAMPS SELECT =========
+function fillCampDropdowns() {
+  const A = byId("campA");
+  const B = byId("campB");
+
+  A.innerHTML = `<option value="">Select Camp 1</option>`;
+  B.innerHTML = `<option value="">Select Camp 2</option>`;
+
+  CAMPS.forEach(c => {
+    A.innerHTML += `<option value="${c.id}">${c.name}</option>`;
+    B.innerHTML += `<option value="${c.id}">${c.name}</option>`;
+  });
+}
+
+
+// ========= COMPARE SCHOOLS =========
+byId("btnCompareSchools").addEventListener("click", () => {
+  const idA = byId("schoolA").value;
+  const idB = byId("schoolB").value;
+
+  if (!idA || !idB) {
+    alert("Please select two schools.");
+    return;
+  }
+
+  const A = SCHOOLS.find(s => s.id === idA);
+  const B = SCHOOLS.find(s => s.id === idB);
+
+  renderSchoolComparison(A, B);
+});
+function renderSchoolComparison(A, B) {
+  byId("schoolCompareResult").innerHTML = `
+    <div class="compare-grid fade-in">
+
+      <!-- School A -->
+      <div class="compare-item">
+        <img class="compare-img" src="${A.images[0]}" alt="${A.name}">
+        <div class="compare-body">
+          <div class="compare-title">${A.name}</div>
+          <div class="compare-sub">${A.city} • ${A.system}</div>
+
+          <div class="compare-info"><span class="icon"></span> Rating: ${A.rating}</div>
+          <div class="compare-info"><span class="icon"></span> Address: ${A.address}</div>
+          <div class="compare-info"><span class="icon"></span> Phone: ${A.phone}</div>
+          <div class="compare-info"><span class="icon"></span> Email: ${A.email}</div>
+
+          <div class="compare-programs"><strong>Programs:</strong><br>${A.programs.join(", ")}</div>
+
+          <div class="compare-programs" style="margin-top:12px;"><strong>Description:</strong><br>${A.desc}</div>
+        </div>
+      </div>
+
+      <!-- Title Column -->
+      <div class="compare-item" style="background:#f9fafb; text-align:center; padding:20px;">
+        <h3 style="font-size:22px; color:#1e3a8a;">VS</h3>
+        <p style="color:#6b7280; font-size:15px;">School Comparison</p>
+      </div>
+
+      <!-- School B -->
+      <div class="compare-item">
+        <img class="compare-img" src="${B.images[0]}" alt="${B.name}">
+        <div class="compare-body">
+          <div class="compare-title">${B.name}</div>
+          <div class="compare-sub">${B.city} • ${B.system}</div>
+
+          <div class="compare-info"><span class="icon"></span> Rating: ${B.rating}</div>
+          <div class="compare-info"><span class="icon"></span> Address: ${B.address}</div>
+          <div class="compare-info"><span class="icon"></span> Phone: ${B.phone}</div>
+          <div class="compare-info"><span class="icon"></span> Email: ${B.email}</div>
+
+          <div class="compare-programs"><strong>Programs:</strong><br>${B.programs.join(", ")}</div>
+
+          <div class="compare-programs" style="margin-top:12px;"><strong>Description:</strong><br>${B.desc}</div>
+        </div>
+      </div>
+
+    </div>
+  `;
+}
+
+
+// function renderSchoolComparison(A, B) {
+//   byId("schoolCompareResult").innerHTML = `
+//     <div class="card" style="padding:20px;">
+//       <table style="width:100%; text-align:center; border-collapse:collapse;">
+//         <tr><th></th><th>${A.name}</th><th>${B.name}</th></tr>
+//         <tr><td>City</td><td>${A.city}</td><td>${B.city}</td></tr>
+//         <tr><td>System</td><td>${A.system}</td><td>${B.system}</td></tr>
+//         <tr><td>Rating</td><td>${A.rating}</td><td>${B.rating}</td></tr>
+//         <tr><td>Programs</td><td>${A.programs.join(", ")}</td><td>${B.programs.join(", ")}</td></tr>
+//         <tr><td>Description</td><td>${A.desc}</td><td>${B.desc}</td></tr>
+//       </table>
+//     </div>
+//   `;
+// }
+
+
+// ========= COMPARE CAMPS =========
+byId("btnCompareCamps").addEventListener("click", () => {
+  const A = CAMPS.find(c => c.id === byId("campA").value);
+  const B = CAMPS.find(c => c.id === byId("campB").value);
+
+  if (!A || !B) {
+    alert("Please select two camps.");
+    return;
+  }
+
+  renderCampComparison(A, B);
+});
+
+function renderCampComparison(A, B) {
+  byId("campCompareResult").innerHTML = `
+    <div class="compare-grid fade-in">
+
+      <!-- Camp A -->
+      <div class="compare-item">
+        <img class="camp-compare-img" src="${A.img}" alt="${A.name}" />
+
+        <div class="compare-body">
+          <div class="camp-compare-title">${A.name}</div>
+          <div class="camp-compare-sub">${A.city}</div>
+
+          <div class="camp-info">
+            <span class="icon"></span> Phone: ${A.phone}
+          </div>
+
+          <div class="camp-info">
+            <span class="icon"></span> Location: ${A.city}
+          </div>
+
+          <div class="camp-desc">
+            <strong>Description:</strong><br>${A.desc}
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Box -->
+      <div class="compare-item" style="background:#f9fafb; text-align:center; padding:20px;">
+        <h3 style="font-size:22px; color:#0f5132;">VS</h3>
+        <p style="color:#6b7280; font-size:15px;">Camp Comparison</p>
+      </div>
+
+      <!-- Camp B -->
+      <div class="compare-item">
+        <img class="camp-compare-img" src="${B.img}" alt="${B.name}" />
+
+        <div class="compare-body">
+          <div class="camp-compare-title">${B.name}</div>
+          <div class="camp-compare-sub">${B.city}</div>
+
+          <div class="camp-info">
+            <span class="icon"></span> Phone: ${B.phone}
+          </div>
+
+          <div class="camp-info">
+            <span class="icon"></span> Location: ${B.city}
+          </div>
+
+          <div class="camp-desc">
+            <strong>Description:</strong><br>${B.desc}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  `;
+}
+
+
+// function renderCampComparison(A, B) {
+//   byId("campCompareResult").innerHTML = `
+//     <div class="card" style="padding:20px;">
+//       <table style="width:100%; text-align:center;">
+//         <tr><th></th><th>${A.name}</th><th>${B.name}</th></tr>
+//         <tr><td>City</td><td>${A.city}</td><td>${B.city}</td></tr>
+//         <tr><td>Phone</td><td>${A.phone}</td><td>${B.phone}</td></tr>
+//         <tr><td>Description</td><td>${A.desc}</td><td>${B.desc}</td></tr>
+//       </table>
+//     </div>
+//   `;
+// }
+
+
 
 ////////////////////////////////////////////////////////////////
 
 
 
+//------------------------------------999999---------------------------------------------------
 
 
 function enableSystemNavigation() {
@@ -921,6 +1554,7 @@ function enableSystemNavigation() {
   });
 }
 
+//--------------------------------------9999999-------------------------------------------------
 
 
 // فعّل الوظيفة عند تحميل الصفحة
