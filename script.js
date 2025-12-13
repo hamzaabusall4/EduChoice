@@ -7,6 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!role) {
     show("#login");
     document.querySelector(".menu").classList.add("hide");
+    document.querySelector(".menuBtn").classList.add("hide");
   }
 });
 
@@ -20,6 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
         desc:"IB PYP/MYP/DP with strong community ethos.", programs:["PYP","MYP","DP","Arts","Athletics"], address:"Amman, Jordan"
       },
 
+      
 
 
       { id:"s2", name:"Amman American Academy", system:"SAT/AP", city:"Amman", rating:5.2,
@@ -74,49 +76,144 @@ window.addEventListener("DOMContentLoaded", () => {
     const CAMPS = [
 
 
-         {id:"c1", name:"Irbid Kids Club", city:"Irbid", phone:"+962-79-333-3333", img:"https://images.unsplash.com/photo-1743383126589-dacdc73c13ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VtbWVyJTIwY2FtcHMlMjBsb2dvfGVufDB8fDB8fHww", desc:"Outdoor adventures and coding bootcamps."},
+         {id:"c1", name:"Irbid Kids Club", city:"Irbid", phone:"+962-79-333-3333", img:"https://images.unsplash.com/photo-1743383126589-dacdc73c13ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VtbWVyJTIwY2FtcHMlMjBsb2dvfGVufDB8fDB8fHww", desc:"Outdoor adventures and coding bootcamps."
+          
+         ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]
+         
+  },
 
 
-      {id:"c2", name:"Amman Activity Center", city:"Amman", phone:"+962-79-111-1111", img:"https://images.unsplash.com/photo-1539629213911-66eac000dd0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"STEM, arts, and sports camps for ages 6–14."},
+      {id:"c2", name:"Amman Activity Center", city:"Amman", phone:"+962-79-111-1111", img:"https://images.unsplash.com/photo-1539629213911-66eac000dd0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"STEM, arts, and sports camps for ages 6–14." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
-      {id:"c3", name:"Zarqa Learning Hub", city:"Zarqa", phone:"+962-79-222-2222", img:"https://images.unsplash.com/photo-1535069499309-04ad66587934?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
+      {id:"c3", name:"Zarqa Learning Hub", city:"Zarqa", phone:"+962-79-222-2222", img:"https://images.unsplash.com/photo-1535069499309-04ad66587934?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
-       {id:"c4", name:"home show ", city:"aqaba", phone:"+962-78-331-2442", img:"https://images.unsplash.com/photo-1665823253628-53910cb3be40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
-
-
-        {id:"c5", name:"jabal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1576723666300-97539040cfdf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
-
-
-
-
-        {id:"c6", name:"jabal camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/483954743/photo/3d-explore-camping.jpg?s=612x612&w=0&k=20&c=u9gp2CED1E5VO5b00mqyPzV4zrjRLYqFwhz33NKxkxk=", desc:"Robotics and language immersion programs."},
-
-
-        {id:"c7", name:"dalal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1746036188/photo/hand-lettering-kids-summer-camp-3d-realistic-stylish-isolated-on-white.jpg?s=612x612&w=0&k=20&c=y-RkpT6VF-CDm4AyQlNg5Uxqy9p6AfGSh0ZMfpO-aEU=", desc:"Robotics and language immersion programs."},
-
-
-
-        {id:"c8", name:"play camps Center ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1389504230/photo/summer-camp-community-education.webp?a=1&b=1&s=612x612&w=0&k=20&c=RoqUje7fFL1erd9GpaxSpeKLvJwtYXpsep1rVnGgADc=", desc:"Robotics and language immersion programs."},
-
+       {id:"c4", name:"home show ", city:"aqaba", phone:"+962-78-331-2442", img:"https://images.unsplash.com/photo-1665823253628-53910cb3be40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
-        {id:"c9", name:"kids camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/170041943/photo/large-group-of-enthusiatic-young-campers.webp?a=1&b=1&s=612x612&w=0&k=20&c=gGc1OlCSIqj32jrGMy57SVH3_SjMPre9qQPcW3OfscI=", desc:"Robotics and language immersion programs."},
-
-
-
-        {id:"c10", name:"layale camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/475284932/photo/summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=a4a-LAba3CMTFOciWUjcaHdgY3ptjxIMM81cfOCvqd0=", desc:"Robotics and language immersion programs."},
-
-
-        {id:"c11", name:"amman camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/626061024/photo/summer-camp-poster-in-flat-design-inspirational-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=TD40rPxLd9WzhWPoPGvA0yEeLeH4w3b8qlF-UrPbWIo=", desc:"Robotics and language immersion programs."},
+        {id:"c5", name:"jabal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1576723666300-97539040cfdf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
 
-        {id:"c12", name:"madelar camps ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/2205699240/photo/3d-summer-camp-wood-sign-board-with-green-leaves-render-forest-wooden-signboard-banner-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=r7Rd9J8FY79hyw1G3CU1xhJfYez5cErMpWanKJL7Nc8=", desc:"Robotics and language immersion programs."},
+
+        {id:"c6", name:"jabal camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/483954743/photo/3d-explore-camping.jpg?s=612x612&w=0&k=20&c=u9gp2CED1E5VO5b00mqyPzV4zrjRLYqFwhz33NKxkxk=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+        {id:"c7", name:"dalal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1746036188/photo/hand-lettering-kids-summer-camp-3d-realistic-stylish-isolated-on-white.jpg?s=612x612&w=0&k=20&c=y-RkpT6VF-CDm4AyQlNg5Uxqy9p6AfGSh0ZMfpO-aEU=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
 
-        {id:"c13", name:"jata camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1728555864830-499254793e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs."},
+        {id:"c8", name:"play camps Center ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1389504230/photo/summer-camp-community-education.webp?a=1&b=1&s=612x612&w=0&k=20&c=RoqUje7fFL1erd9GpaxSpeKLvJwtYXpsep1rVnGgADc=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+
+        {id:"c9", name:"kids camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/170041943/photo/large-group-of-enthusiatic-young-campers.webp?a=1&b=1&s=612x612&w=0&k=20&c=gGc1OlCSIqj32jrGMy57SVH3_SjMPre9qQPcW3OfscI=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+
+        {id:"c10", name:"layale camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/475284932/photo/summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=a4a-LAba3CMTFOciWUjcaHdgY3ptjxIMM81cfOCvqd0=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+        {id:"c11", name:"amman camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/626061024/photo/summer-camp-poster-in-flat-design-inspirational-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=TD40rPxLd9WzhWPoPGvA0yEeLeH4w3b8qlF-UrPbWIo=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+
+        {id:"c12", name:"madelar camps ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/2205699240/photo/3d-summer-camp-wood-sign-board-with-green-leaves-render-forest-wooden-signboard-banner-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=r7Rd9J8FY79hyw1G3CU1xhJfYez5cErMpWanKJL7Nc8=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
+
+
+
+        {id:"c13", name:"jata camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1728555864830-499254793e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
+         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
+         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
+         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
     ];
 
 
@@ -185,9 +282,9 @@ function goBack(){
     };
     const SYS_LABEL = {
       "IB":{en:"IB", ar:"البكالوريا الدولية"},
-      "IGCSE":{en:"IGCSE / A-Level", ar:"IGCSE / A-Level"},
-      "SAT/AP":{en:"American (SAT / AP)", ar:"الأمريكي (SAT/AP)"},
-      "National":{en:"Jordanian National", ar:"المنهاج الأردني"},
+      "IGCSE":{en:"IGCSE", ar:"IGCSE / A-Level"},
+      "SAT/AP":{en:"SAT/AP", ar:"الأمريكي (SAT/AP)"},
+      "National":{en:"National", ar:"المنهاج الأردني"},
       "Montessori":{en:"Montessori", ar:"مونتيسوري"}
     };
     const SCHOOL_TR = {
@@ -222,7 +319,7 @@ function goBack(){
 
     const I18N = {
       en:{
-        nav_home:"Home", nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_about:"About", nav_login:"Login", nav_payment:"Payment",nav_profile:"Profile",
+        nav_home:"Home", nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_compare:"Compare",nav_about:"About us",nav_profile:"Profile" , nav_login:"Login", nav_payment:"Payment",
         home_head:"Find the right school for your child in Jordan",
         home_sub:"Search by name, explore by educational system, or discover summer camps.",
         ph_search:"Search school name…", btn_search:"Search", btn_systems:"By System", btn_camps:"Summer Camps",
@@ -270,8 +367,8 @@ function goBack(){
 
 
         about_h1:"Mission", about_p1:"We help parents compare schools by system, city, and rating, and apply in minutes.",
-        about_h2:"Scope", about_l1:"Public and private schools in Jordan", about_l2:"Systems: IB, IGCSE/A-Level, SAT/AP, National, Montessori", about_l3:"Parents & Schools dual login", about_l4:"Owner payment to boost listing", about_l5:"Community: activity & camp finder", about_stats:"At a glance",
-        st_sch:"Schools", st_cit:"Cities", st_cam:"Camps",
+        about_h2:"Scope", about_l1:"Public and private schools in Jordan", about_l2:"Systems: IB, IGCSE/A-Level, SAT/AP, National, Montessori", about_l3:"Parents & Schools dual login", about_l4:"Owner payment to boost listing", about_l5:"Community: activity & camp finder", about_stats:"the MIS department",
+        st_sch:"developers", st_cit:"designer", st_cam:"softwares",
         login_title:"Login / Register", login_sub:"Choose your portal.", tab_parent:"Parents", tab_school:"Schools", lf_pass:"Password", lf_forgot:"Forgot?", lf_sign:"Sign In",
         sf_school:"School Name", sf_phone:"Phone", sf_system:"System", sf_register:"Register", sf_upgrade:"Upgrade Listing →",
         pay_title:"Payment & Plans (Schools)", pay_sub:"Boost your visibility. Secure checkout placeholder (integrate later).",btn_map:"Map"   ,       // داخل I18N.en
@@ -283,7 +380,7 @@ function goBack(){
         
       },
       ar:{
-        nav_home:"الرئيسية", nav_systems:"الأنظمة التعليمية", nav_schools:"المدارس", nav_community:" المعسكرات", nav_about:"من نحن", nav_login:"تسجيل الدخول", nav_payment:"الدفع", nav_profile:"الصفحة الشخصية" ,btn_map:"الخريطة"  ,    // داخل I18N.ar
+        nav_home:"الرئيسية", nav_systems:"الأنظمة التعليمية", nav_schools:"المدارس", nav_community:" المعسكرات",nav_compare:"المقارنة" ,nav_about:"من نحن", nav_login:"تسجيل الدخول", nav_payment:"الدفع", nav_profile:"الصفحة الشخصية" ,btn_map:"الخريطة"  ,    // داخل I18N.ar
 
         home_head:"ابحث عن المدرسة المناسبة لطفلك في الأردن",
         home_sub:"ابحث بالاسم، أو استكشف حسب النظام التعليمي، أو اكتشف المعسكرات الصيفية.",
@@ -342,10 +439,10 @@ function goBack(){
 
         about_h1:"الرسالة",  about_p1:"نساعد الأهالي على مقارنة المدارس حسب النظام والمدينة والتقييم والتقديم خلال دقائق.",
 
-        about_h2:"النطاق", about_l1:"مدارس حكومية وخاصة في الأردن", about_l2:"الأنظمة: IB وIGCSE/A-Level وSAT/AP والمنهاج الوطني ومونتيسوري", about_l3:"بوابتان للأهالي والمدارس", about_l4:"دفع للمدارس لزيادة الظهور", about_l5:"المجتمع: البحث عن الأنشطة والمعسكرات", about_stats:"لمحة سريعة",
+        about_h2:"النطاق", about_l1:"مدارس حكومية وخاصة في الأردن", about_l2:"الأنظمة: IB وIGCSE/A-Level وSAT/AP والمنهاج الوطني ومونتيسوري", about_l3:"بوابتان للأهالي والمدارس", about_l4:"دفع للمدارس لزيادة الظهور", about_l5:"المجتمع: البحث عن الأنشطة والمعسكرات", about_stats:"قسم نظم المعلومات الادارية",
 
 
-        st_sch:"مدرسة", st_cit:"مدينة", st_cam:"معسكر",
+        st_sch:"مطورين", st_cit:"مصممين", st_cam:"برمجية",
 
 
 
@@ -488,7 +585,7 @@ function goBack(){
   <!-- TITLE -->
   <div class="camp-title">
     <h2>${tDyn(c,'name','name_ar')}</h2>
-    <p class="muted">📍 ${cityLabel(c.city)}</p>
+    <p class="muted"> ${cityLabel(c.city)}</p>
   </div>
 
   <!-- INFO STRIP -->
@@ -509,12 +606,14 @@ function goBack(){
   <div class="camp-gallery-wrap">
     <h4>Camp Activities</h4>
     <div class="camp-gallery">
-      <img src="${c.img}&w=420">
-      <img src="${c.img}&w=421">
-      <img src="${c.img}&w=422">
-      <img src="${c.img}&w=423">
-      <img src="${c.img}&w=424">
-      <img src="${c.img}&w=425">
+      <img src="${c.images1}&w=420">
+      <img src="${c.images2}&w=421">
+      <img src="${c.images3}&w=422">
+      <img src="${c.images4}&w=423">
+      <img src="${c.images5}&w=424">
+      <img src="${c.images6}&w=425">
+      <img src="${c.images7}&w=426">
+      <img src="${c.images8}&w=427">
     </div>
   </div>
 
@@ -525,6 +624,7 @@ function goBack(){
   </div>
 
 </div>
+
 
   `, ()=>{
     byId('modalCloseBtn')?.addEventListener('click', closeCampModal);
@@ -625,13 +725,6 @@ document.getElementById('backToList')?.addEventListener('click', () => {
     return;
   }
 
-  // إذا ما لقى مدارس ولقي كامب واحد → افتح معلومات الكامب
-  if (schoolResults.length === 0 && campResults.length === 1) {
-    openCamp(campResults[0].id);       // دالة فتح تفاصيل الكامب
-    go('#camp'); // أو #community حسب مشروعك
-    return;
-  }
-
   // إذا في أكثر من نتيجة → اعرض ليست
   if (schoolResults.length) {
     renderResults(schoolResults);
@@ -639,6 +732,15 @@ document.getElementById('backToList')?.addEventListener('click', () => {
     return;
   }
 
+
+
+    // إذا ما لقى مدارس ولقي كامب واحد → افتح معلومات الكامب
+  if (schoolResults.length === 0 && campResults.length === 1) {
+    openCamp(campResults[0].id);       // دالة فتح تفاصيل الكامب
+    go('#camp'); // أو #community حسب مشروعك
+    return;
+  }
+    // إذا في أكثر من نتيجة → اعرض ليست
   if (campResults.length) {
     renderCamps(campResults);
     go('#community');
@@ -722,8 +824,12 @@ document.getElementById('backToList')?.addEventListener('click', () => {
 
     // Router & events
     window.addEventListener('hashchange', ()=>{
-      const h = location.hash || '#home';
-      if(['#home','#systems','#schools','#school','#apply','#community','#about','#login','#payment'].includes(h)) show(h);
+       const h = location.hash || '#home';
+      if(['#home','#systems','#schools','#profile','#school','#apply','#compare','#community','#about','#login','#payment'
+
+
+
+      ].includes(h)) show(h);
       setActiveNav(h);
     });
 
@@ -750,15 +856,13 @@ document.getElementById('backToList')?.addEventListener('click', () => {
 
 
 
+byId("compareResetBtn")?.addEventListener("click", () => {
+  location.reload();
+});
+byId("compareResetBtn1")?.addEventListener("click", () => {
+  location.reload();
+});
 
-    // Login tabs
-    // $$('.tab').forEach(t=>t.addEventListener('click',e=>{
-    //   $$('.tab').forEach(x=>x.classList.remove('active'));
-    //   e.currentTarget.classList.add('active');
-    //   const tab = e.currentTarget.dataset.tab;
-    //   byId('parentForm').classList.toggle('hide', tab!=='parent');
-    //   byId('schoolForm').classList.toggle('hide', tab!=='school');
-    // }));
 
 
 // ========== LOGIN SIGNUP TABS ==========
@@ -866,7 +970,7 @@ byId("loginForm").addEventListener("submit", e => {
     // تفعيل الوصول
     setUserAccess(role);
 
-    // Go to profile page
+    // Go to home page
     go("#home");
 
   } else {
@@ -876,7 +980,7 @@ byId("loginForm").addEventListener("submit", e => {
 
 
 
-
+//profile access
 
 // عند فتح الموقع
 window.addEventListener("DOMContentLoaded", () => {
@@ -885,6 +989,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!role) {
     // اخفي المنيو
     document.querySelector(".menu").classList.add("hide");
+   
   } else {
     // اظهر المنيو وابين الصفحة الصحيحة
     setUserAccess(role);
@@ -892,7 +997,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// profile
 
 
 function logout() {
@@ -903,6 +1007,10 @@ function logout() {
   // اخفي المنيو إذا كانت ظاهرة
   const menu = document.querySelector(".menu");
   if (menu) menu.classList.add("hide");
+
+
+// const menuBtn = document.querySelector(".menuBtn");
+//   if (menuBtn) menuBtn.classList.add("hide");
 
   // اخفي كل الصفحات
   document.querySelectorAll("section").forEach(sec => sec.classList.add("hide"));
@@ -916,19 +1024,56 @@ function logout() {
 
 ///////////////------------------------------------------------///////////////////////////------------------------------------------------////////////
 // ===== PARENT PROFILE TABS =====
-const parentTabs = document.querySelectorAll(".pp-sidebar button[data-tab]");
-const parentSections = document.querySelectorAll(".pp-section");
+// ================================
+// PARENT PROFILE – TAB CONTROLLER
+// ================================
 
-parentTabs.forEach(btn => {
-  btn.addEventListener("click", () => {
-    parentTabs.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const tab = btn.dataset.tab;
-    parentSections.forEach(sec => sec.classList.remove("active"));
-    document.getElementById(tab).classList.add("active");
-  });
+document.addEventListener("DOMContentLoaded", () => {
+document.querySelector('a[href="#profile"]')?.addEventListener("click", () => {
+  show("#profile");
 });
+  const parentProfile = document.getElementById("profile_parent");
+  if (!parentProfile) return;
+
+  const tabButtons = parentProfile.querySelectorAll("button[data-tab]");
+  const sections = parentProfile.querySelectorAll(".pp-section");
+
+  function openParentTab(tabId) {
+
+    // remove active from all buttons
+    tabButtons.forEach(btn => btn.classList.remove("active"));
+
+    // hide all sections
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    // activate clicked button
+    const activeBtn = parentProfile.querySelector(
+      `button[data-tab="${tabId}"]`
+    );
+    if (activeBtn) activeBtn.classList.add("active");
+
+    // show section
+    const section = parentProfile.querySelector(`#${tabId}`);
+    if (section) section.classList.add("active");
+  }
+
+  // attach click events
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      openParentTab(btn.dataset.tab);
+    });
+  });
+
+  // open default tab
+  const defaultBtn =
+    parentProfile.querySelector("button.active") || tabButtons[0];
+
+  if (defaultBtn) {
+    openParentTab(defaultBtn.dataset.tab);
+  }
+
+});
+
 
 
 // ===== SCHOOL PROFILE TABS =====
@@ -947,19 +1092,52 @@ schoolTabs.forEach(btn => {
 });
 
 // ===== ADMIN PROFILE TABS =====
-const adminTabs = document.querySelectorAll(".ap-sidebar button[data-tab]");
-const adminSections = document.querySelectorAll(".ap-section");
+// ===================================
+// ADMIN PANEL – FINAL WORKING LOGIC
+// ===================================
 
-adminTabs.forEach(btn => {
-  btn.addEventListener("click", () => {
-    adminTabs.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+document.addEventListener("DOMContentLoaded", () => {
 
-    const tab = btn.dataset.tab;
-    adminSections.forEach(sec => sec.classList.remove("active"));
-    document.getElementById(tab).classList.add("active");
+  const adminRoot = document.getElementById("profile_admin");
+  if (!adminRoot) return;
+
+  const tabButtons = adminRoot.querySelectorAll("aside button[data-tab]");
+  const sections = adminRoot.querySelectorAll(".ap-section");
+
+  function openTab(tabId) {
+
+    // deactivate buttons
+    tabButtons.forEach(btn => btn.classList.remove("active"));
+
+    // hide sections
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    // activate button
+    const btn = adminRoot.querySelector(`button[data-tab="${tabId}"]`);
+    if (btn) btn.classList.add("active");
+
+    // show section
+    const section = adminRoot.querySelector(`#${tabId}`);
+    if (section) section.classList.add("active");
+  }
+
+  // bind clicks
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      openTab(btn.dataset.tab);
+    });
   });
+
+  // open default tab
+  const defaultBtn =
+    adminRoot.querySelector("aside button.active") || tabButtons[0];
+
+  if (defaultBtn) {
+    openTab(defaultBtn.dataset.tab);
+  }
+
 });
+
 
 
 
@@ -1053,81 +1231,6 @@ document.addEventListener("DOMContentLoaded", () => {
    =======================================================*/
 
 
-   //---------------------------------------------------------------------------------------
-
-// function loadParentProfile() {
-//   const data = JSON.parse(localStorage.getItem("parentProfile")) || {
-//     name: "John Doe",
-//     phone: "+962-79-1234567",
-//     children: 2,
-//     ages: "6, 10"
-//   };
-
-//   // Update UI
-//   document.getElementById("pName").innerHTML = `<strong>Name:</strong> ${data.name}`;
-//   document.getElementById("pPhone").innerHTML = `<strong>Phone:</strong> ${data.phone}`;
-//   document.getElementById("pChildren").innerHTML = `<strong>Children:</strong> ${data.children} (Ages: ${data.ages})`;
-
-//   // Pre-fill edit form
-//   document.getElementById("parentName").value = data.name;
-//   document.getElementById("parentPhone").value = data.phone;
-//   document.getElementById("childCount").value = data.children;
-//   document.getElementById("childAges").value = data.ages;
-// }
-
-// // Save profile
-// document.getElementById("editProfileForm").addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   const data = {
-//     name: document.getElementById("parentName").value,
-//     phone: document.getElementById("parentPhone").value,
-//     children: document.getElementById("childCount").value,
-//     ages: document.getElementById("childAges").value
-//   };
-
-//   // Save to localStorage
-//   localStorage.setItem("parentProfile", JSON.stringify(data));
-
-//   // Success message
-//   alert("Profile updated successfully!");
-
-//   // Return to parent page
-//   go("#parant");
-//   loadParentProfile();
-// });
-
-// // Logout
-// function logout() {
-//   localStorage.removeItem("parentProfile");
-//   alert("You have been logged out.");
-//   go("#login");
-// }
-
-// // Load profile whenever page opens
-// window.addEventListener("hashchange", () => {
-//   if (location.hash === "#parant") loadParentProfile();
-// });
-//---------------------------------------------------------------------------------------
-
-  // const observer1 = new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     const onAbout = location.hash === "" || location.hash === "#about";
-  //     if (entry.isIntersecting && onAbout && !started) {
-  //       startCount();
-  //       started = true;
-  //     }
-  //   });
-  // }, { threshold: 0.5 });
-
-  // observer.observe(countersSection);
-
-  // // يخفي العدادات لما تنتقل لصفحة ثانية
-  // const toggleCounters1 = () => {
-  //   const isAbout = location.hash === "" || location.hash === "#about";
-  //   countersSection.style.display = isHome ? "flex" : "none";
-  //   if (isAbout) started = false; // يرجع العداد يشتغل من جديد لو رجعت للصفحة
-  // };
 
 
   ////////////
@@ -1139,12 +1242,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // كل ما تغيّر الهاش (تنقل بين الصفحات)
   window.addEventListener("hashchange", toggleCounters);
 });
-
-
-
-    
-
-
 
     
 
@@ -1393,8 +1490,8 @@ function renderSchoolComparison(A, B) {
       </div>
 
       <!-- Title Column -->
-      <div class="compare-item" style="background:#f9fafb; text-align:center; padding:20px;">
-        <h3 style="font-size:22px; color:#1e3a8a;">VS</h3>
+      <div class="compare-item" style="background:#f9fafb; text-align:center; padding:10px;">
+        <h3 style="font-size:12px; color:#1e3a8a;"></h3>
         <p style="color:#6b7280; font-size:15px;">School Comparison</p>
       </div>
 
@@ -1478,7 +1575,7 @@ function renderCampComparison(A, B) {
 
       <!-- Center Box -->
       <div class="compare-item" style="background:#f9fafb; text-align:center; padding:20px;">
-        <h3 style="font-size:22px; color:#0f5132;">VS</h3>
+        <h3 style="font-size:22px; color:#0f5132;"></h3>
         <p style="color:#6b7280; font-size:15px;">Camp Comparison</p>
       </div>
 

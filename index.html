@@ -27,7 +27,11 @@
       <a href="#about" data-i18n="nav_about">About</a>
       <a href="#payment" data-i18n="nav_payment">Payment</a>
       <a href="#profile" data-i18n="nav_profile">Profile</a>
-      <a href="#login" data-i18n="nav_login" style="color: #1a1aff; ">Login</a>
+      <a href="#login" class="btn"  data-i18n="nav_login" style="color: #0000ff; color:#0000ff;">Login</a>
+
+
+
+
 
     </nav>
 
@@ -49,15 +53,19 @@
 
 <!-- المنيو الجانبية -->
 <nav class="sidebar" id="sidebar">
+   <div class="logo" aria-hidden="true">
+        <img src="photos/cab761e4-4b79-4bf6-a7e9-9c5837ff1729 (1).png" style="width: 100%; height: 100%;">
+      </div>
   <a href="#home" data-i18n="nav_home" class="active">Home</a>
   <a href="#systems" data-i18n="nav_systems">Systems</a>
   <a href="#schools" data-i18n="nav_schools">Schools</a>
   <a href="#community" data-i18n="nav_community">Community</a>
-        <a href="#compare" data-i18n="nav_compare">Compare</a>
+  <a href="#compare" data-i18n="nav_compare">Compare</a>
   <a href="#about" data-i18n="nav_about">About</a>
   <a href="#payment" data-i18n="nav_payment">Payment</a>
   <a href="#Profile" data-i18n="nav_profile">Profile</a>
   <a href="#login" data-i18n="nav_login" style="color: rgb(0, 0, 157); font-size:larger;">Login</a>
+  <!-- <a href="#logout" data-i18n="logout" style="color: rgb(221, 4, 4); font-size:larger;">logout</a> -->
   
 </nav>
 
@@ -83,7 +91,7 @@
     <section id="home" class="container"  >
      <div class="home-hero-image"> 
    <img 
-    src="https://media.istockphoto.com/id/2226938243/photo/primary-school-children-sitting-at-the-desks-raising-hands-to-give-correct-answer.jpg?s=612x612&w=0&k=20&c=R8bqZSjlDCrsHc3JLIGr4RgXuEdRV8KDWLjshWJvXyM=" 
+    src="photos/happy-diverse-female-school-teacher-and-schoolgir-2025-04-05-01-58-44-utc.jpg" style="width: 100%; height: 100%; "
     class="hero-img"
     
     alt="Schools in Jordan" >
@@ -96,7 +104,7 @@
         <div class="overlay"></div>
         <div class="content">
           <h2 data-i18n="home_head">Find the right school for your child in Jordan</h2>
-          <p class="muted" style="color: #000000; font-family:Georgia, 'Times New Roman', Times, serif;" data-i18n="home_sub">Search by name, explore by educational system, or discover summer camps.</p>
+          <p class="muted" style="color: #000000; font-family:Georgia, 'Times New Roman', Times, serif; "  data-i18n="home_sub">Search by name, explore by educational system, or discover summer camps.</p>
 
           
           
@@ -301,16 +309,10 @@
           <div>
             <label data-i18n="f_min">Min. Rating</label>
             <select id="fMin">
-              <option value="0">0</option>
-              <option value="0.5">0.5</option>
               <option value="1">1</option>
-              <option value="1.5">1.5</option>
               <option value="2">2</option>
-              <option value="2.5">2.5</option>
               <option value="3">3</option>
-              <option value="3.5">3.5</option>
               <option value="4">4</option>
-              <option value="4.5">4.5</option>
               <option value="5">5</option>
             </select>
           </div>
@@ -410,10 +412,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </section>
 
     
-
-
-
-   
     
     <!-- summer camps   -->
      
@@ -425,7 +423,6 @@ document.addEventListener("DOMContentLoaded", function () {
       Ready-to-view camp cards
       <div class="card" style="padding:16px">
         <div id="campList" class="grid" style="grid-template-columns:1fr"></div>
-
 
 
         
@@ -448,11 +445,6 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </section>
 
-
-
-
-
-    
 
     <!--compre-->
 
@@ -485,6 +477,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </select>
 
       <button class="btn primary" id="btnCompareSchools" style="margin-left:10px;">Compare</button>
+      <button class="btn primary" id="compareResetBtn" style="color: #ffffff;"> Reset Compare</button>
+
     </div>
 
     <div id="schoolCompareResult" style="margin-top:25px;"></div>
@@ -506,6 +500,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </select>
 
       <button class="btn primary" id="btnCompareCamps" style="margin-left:10px;">Compare</button>
+      <button class="btn primary" id="compareResetBtn1" style="color: #ffffff;">  Reset Compare</button>
+
     </div>
 
     <div id="campCompareResult" style="margin-top:25px; "></div>
@@ -567,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
         <div class="row" style="margin-top:12px;justify-content:flex-end">
-         <button type="button" class="btn" onclick="goBack()">
+          <button type="button" class="btn" onclick="go('#schools')">← <span data-i18n="back">Back</span></button>
 
           <button class="btn primary" type="submit" data-i18n="af_submit">Submit & Continue to Login</button>
         </div>
@@ -630,18 +626,13 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
         <div class="row" style="margin-top:12px;justify-content:flex-end">
-          <button type="button" class="btn" onclick="go('#schools')">← <span data-i18n="back">Back</span></button>
+          <button type="button" class="btn" onclick="go('#community')">← <span data-i18n="back">Back</span></button>
           <button class="btn primary" type="submit" data-i18n="af_submit">Submit & Continue to Login</button>
         </div>
       </form>
     </section>
 
-
-
-    
-
     <!-- ABOUT -->
-
 
 
     
@@ -727,9 +718,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         <div class="card" style="padding:16px;flex:1">
-          <h4 data-i18n="about_stats">At a glance</h4>
+          <h4 data-i18n="about_stats">the mis department </h4>
           <div class="row" style="margin-top:8px">
-            <div class="stat"><strong id="statSchools">0</strong><span class="muted" data-i18n="st_sch">Schools</span></div>
+            <div class="stat"><strong id="statSchools">0</strong><span class="muted" data-i18n="st_sch">developers</span></div>
             <div class="stat"><strong id="statCities">0</strong><span class="muted" data-i18n="st_cit">Cities</span></div>
             <div class="stat"><strong id="statCamps">0</strong><span class="muted" data-i18n="st_cam">Camps</span></div>
 
@@ -744,65 +735,10 @@ document.addEventListener("DOMContentLoaded", function () {
     </section>
 
 
-
-
-
-
-
-
-
-    <!-- LOGIN -->
-    <!-- <section id="login" class="container hide">
-      <h3 class="title" data-i18n="login_title">Login / Register</h3>
-      <p class="subtitle" data-i18n="login_sub">Choose your portal.</p>
-      <div class="tabs">
-        <button class="tab active" data-tab="parent" data-i18n="tab_parent">Parents</button>
-        <button class="tab" data-tab="school" data-i18n="tab_school">Schools</button>
-        <button class="tab" data-tab="Admin" data-i18n="tab_Admin">Admin</button>
-
-      </div>
-      <div class="card" style="padding:16px">
-        <form id="parentForm">
-          <div class="grid2">
-            
-            <div><label>Email</label><input type="email" required></div>
-            <div><label data-i18n="lf_pass" style="text-align: top;" >Password</label><input type="password" style="width:450px ; height: 40px;" ></div>
-          </div>
-        
-
-          <div class="row" style="margin-top:12px;justify-content:flex-end">
-            <button class="btn" type="button" onclick="alertMsg('Reset link sent')" data-i18n="lf_forgot">Forgot?</button>
-            <button class="btn primary" type="submit" data-i18n="lf_sign">Sign In</button>
-          </div>
-          
-        </form>
-        <form id="schoolForm" class="hide">
-          <div class="grid2">
-            <div><label data-i18n="sf_school">School Name</label><input type="text" required></div>
-            <div><label>Email</label><input type="email" required></div>
-            <div><label data-i18n="sf_phone">Phone</label><input type="tel" required></div>
-            <div>
-              <label data-i18n="sf_system">System</label>
-              <select>
-                <option>IB</option><option>IGCSE</option><option>SAT/AP</option><option>National</option><option>Montessori</option>
-              </select>
-            </div>
-          </div>
-          <div class="row" style="margin-top:12px;justify-content:flex-end">
-            <a class="btn" href="#payment" data-i18n="sf_upgrade">Upgrade Listing →</a>
-            <button class="btn primary" type="submit" data-i18n="sf_register">Register</button>
-          </div>
-        </form>
-      </div>
-
-
-
       
 
       
-
-      
-    </section> -->
+    </section> 
 
     <!-- ========== LOGIN / SIGNUP PAGE ========== -->
 <section id="login" class="container ">
@@ -901,24 +837,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+ <!-- =============================================== Profiles=============================================== -->
 
-
-
-
-
-
-
-
-
-
+ <!-- =============================================== profile_parent=============================================== -->
 
 <section id="profile" class="container hide">
 
   <h2>Your Profile</h2>
 
+
   <!-- Parent Profile -->
   <div id="profile_parent" class="hide">
-    
+    <aside class="pp-sidebar">
     <button class="active" data-tab="overview">Overview</button>
     <button data-tab="children">Children</button>
     <button data-tab="applications">Applications</button>
@@ -1071,6 +1001,10 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
   </div>
+
+
+
+   <!-- =============================================== profile_school=============================================== -->
 
   <!-- School Profile -->
   <div id="profile_school" class="hide">
@@ -1267,10 +1201,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </div>
 
+
+   <!-- =============================================== profile_admin=============================================== -->
+
   <!-- Admin Profile -->
   <div id="profile_admin" class="hide">
    <h2>Admin Panel</h2>
-
+<aside>
     <button class="active" data-tab="overview">Overview</button>
     <button data-tab="schools">Manage Schools</button>
     <button data-tab="parents">Manage Parents</button>
@@ -1412,99 +1349,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-    <section id="parant" class="container hide">
-      
-<div class="">
-    <h2> Welcome, Parent</h2>
-    <p class="muted">Your personalized dashboard for school search and applications.</p>
-    <button class="btn small" onclick="logout()" style="float:right;margin-top:-40px">Logout</button>
-
-    <div class="grid" style="margin-top:20px">
-
-        
-       Profile Info -----
-      <div class="">
-        <h3> Your Profile</h3>
-        <p id="pName"><strong>Name:</strong> John Doe</p>
-        <p id="pPhone"><strong>Phone:</strong> +962-79-1234567</p>
-        <p id="pChildren"><strong>Children:</strong> 2 (Ages: 6, 10)</p>
-        <button class="btn small" onclick="go('#editProfile')">Edit Profile</button>
-      </div>
-
-       Applications -----
-      <div class="">
-        <h3> Applications</h3>
-        <ul class="checklist">
-          <li>Amman Academy - <em>Under Review</em></li>
-          <li> Montessori School - <em>Rejected</em></li>
-          <li> IB World - <em>Accepted</em></li>
-        </ul>
-      </div>
-    </div>
-
-     Favorites -----
-    <div class="">
-      <h3> Favorite Schools</h3>
-      <div class="chips">
-        <span class="chip">International Academy</span>
-        <span class="chip">Zarqa STEM School</span>
-      </div>
-    </div>
-
-    
-
-     Notifications -----
-    <div class="">
-      <h3> Notifications</h3>
-      <ul class="dots">
-        <li>Reply received from <strong>ABC School</strong>.</li>
-        <li>New camp opens this week.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
- Edit Profile Page -----
-<section id="editProfile" class="container" style="display:none">
-  <div class="">
-    <h2> Edit Your Profile</h2>
-    <form id="editProfileForm">
-      <input type="text" id="parentName" placeholder="Full Name" required />
-      <input type="tel" id="parentPhone" placeholder="Phone Number" required />
-      <input type="number" id="childCount" placeholder="Number of Children" required />
-      <input type="text" id="childAges" placeholder="Children Ages (e.g. 6,10)" required />
-      <button class="btn" type="submit">Save</button>
-      <button class="btn small" type="button" onclick="go('#profile')">Cancel</button>
-    </form>
-  </div>
-    </section> -->
-  
-
-    
-
-
-
+ <!-- =============================================== Profiles=============================================== -->
 
 
 
@@ -1526,8 +1371,6 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- ✅ أضفنا ID ثابت -->
   <button id="btnFreePlan" class="btn primary" style="margin-top:10px">Current</button>
 </div>
-
-
 
 
         <div class="card plan">
@@ -1554,109 +1397,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-     <!--profil-->
-<!-- PROFILE (Schools only) -->
-
-
-
-<!-- 
-
-
-<section id="profile" class="container hide">
-  <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px">
-    <h3 class="title">School Profile</h3>
-    <div class="row" style="gap:8px">
-      <button class="btn" id="btnBackToPayment">← Back to Payment</button>
-      <button class="btn black" id="btnLogout">Log Out</button>
-    </div>
-  </div>
-
- -->
-
-
-
-
 <!--auuuuuuuuuuuuuuuu-->
-
-
-
-
-
-
-
-<!-- 
-
-
-<p class="subtitle">Manage your school information, photos, and description.</p>
-
-<div class="card" style="padding:24px;border-radius:20px;box-shadow:0 10px 30px rgba(53, 51, 51, 0.966)">
-  <h4>Welcome, <span id="profileSchoolName">Your School</span> 🎓</h4>
-  <p class="muted" style="margin:10px 0">
-    Here you can upload school photos, update information, and preview your location on map.
-  </p>
-
-  <div class="grid2" style="margin-top:20px;gap:16px">
-    <div>
-      <label>Upload Photos</label>
-      <input id="photoUpload" type="file" multiple accept="image/*" />
-      <div id="photoPreview" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px"></div>
-    </div>
-
-    <div>
-      <label>Location</label>
-      <input id="schLocation" type="text" placeholder="Enter your address or city" />
-      <div id="profileMap" style="height:220px;border-radius:12px;margin-top:10px"></div>
-    </div>
-
-    <div style="grid-column:1/-1">
-      <label>About Your School</label>
-      <textarea id="schAbout" rows="4" placeholder="Write a short description about your school..."></textarea>
-    </div>
-  </div>
-
-  <div class="row" style="margin-top:24px;justify-content:flex-end;gap:10px">
-    <button class="btn" id="btnSaveProfile">💾 Save</button>
-    <button class="btn primary" id="btnPublishProfile">🚀 Publish</button>
-  </div>
-
-  <p id="profileMsg" style="margin-top:12px;color:var(--brand);font-weight:600"></p>
-</div>
-
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--auuuuuuuuuuuuuuuu-->
-
-
-
-
-
-
 
 </section>
   </main>
@@ -1691,11 +1432,6 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="muted">© <span id="year"></span> EduChoice. All rights reserved.</div>
     </div>
-
-
-
-
-
   </footer>
  <script src="script.js"></script>
 </body>

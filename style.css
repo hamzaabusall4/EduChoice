@@ -230,7 +230,7 @@
 /* ===== SCHOOL COMPARE CARD ===== */
 .compare-grid {
   display: grid;
-  grid-template-columns: 1fr 150px 1fr; 
+  grid-template-columns: 1fr , 1fr; 
   gap: 22px;
 }
 
@@ -894,68 +894,202 @@ about-counters
 /* =================================================
    PARENT PROFILE — CALM / SOFT / MODERN UI
 ================================================= */
-
-.parent-profile {
+/* ===== PARENT PROFILE LAYOUT ===== */
+#profile_parent {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 30px;
-  padding: 40px 0;
-  min-height: 85vh;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  min-height: 90vh;
+  padding: 24px;
+  background: #f1f5f9;
 }
 
-/* ===== Sidebar (Soft Glass) ===== */
-.pp-sidebar {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(14px);
-  border-radius: 28px;
-  padding: 30px 22px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 18px 45px rgba(0,0,0,.08);
+#profile_parent.hide {
+  display: none;
+}
+
+/* ===== SIDEBAR ===== */
+#profile_parent > button,
+#profile_parent aside button {
+  all: unset;
+}
+
+#profile_parent aside {
+  background: linear-gradient(180deg,#0f172a,#1e293b);
+  color: #e5e7eb;
+  padding: 22px;
+  border-radius: 18px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.pp-sidebar h2 {
-  font-size: 20px;
+#profile_parent h2 {
+  grid-column: span 2;
+  font-size: 22px;
   font-weight: 800;
-  margin-bottom: 18px;
-  color: #1e293b;
+  color: #0f172a;
+  margin-bottom: 6px;
 }
 
 /* Sidebar buttons */
-.pp-sidebar button {
-  all: unset;
-  padding: 14px 18px;
-  border-radius: 18px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #475569;
+#profile_parent aside button[data-tab] {
+  background: transparent;
+  border: none;
+  color: #c7d2fe;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-align: left;
   cursor: pointer;
+  font-size: 15px;
   transition: .25s ease;
 }
 
-.pp-sidebar button:hover {
-  background: #f1f5f9;
+#profile_parent aside button:hover {
+  background: rgba(255,255,255,.08);
 }
 
-.pp-sidebar button.active {
-  background: linear-gradient(135deg,#2563eb,#38bdf8);
-  color: white;
-  box-shadow: 0 10px 22px rgba(37,99,235,.35);
+#profile_parent aside button.active {
+  background: #2563eb;
+  color: #fff;
 }
 
 /* Logout */
-.logout-btn {
+#profile_parent .logout-btn {
   margin-top: auto;
-  background: #fff1f2 !important;
-  color: #be123c !important;
-  text-align: center;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-.logout-btn:hover {
-  background: #be123c !important;
-  color: white !important;
+/* ===== MAIN CONTENT ===== */
+.pp-content {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Sections */
+.pp-section {
+  display: none;
+}
+.pp-section.active {
+  display: block;
+}
+
+/* ===== CARDS ===== */
+.pp-card {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+
+.pp-card h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Grid */
+.pp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 14px;
+}
+
+/* Inputs */
+.pp-card input,
+.pp-card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 14px;
+}
+
+/* Save button */
+.save-btn {
+  margin-top: 14px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+.save-btn:hover {
+  background: #1e40af;
+}
+
+/* ===== CHILD CARD ===== */
+.child-entry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 14px;
+}
+
+/* ===== APPLICATIONS ===== */
+.application-item {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Status */
+.status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.pending {
+  background: #fde68a;
+  color: #92400e;
+}
+.status.accepted {
+  background: #bbf7d0;
+  color: #166534;
+}
+
+/* ===== PRIVACY ===== */
+.pp-card label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Danger Zone */
+.danger-zone {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+}
+
+.delete-btn {
+  margin-top: 12px;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* ===== Content Area ===== */
@@ -1204,6 +1338,43 @@ about-counters
     height:110px;
   }
 }
+/* ===== IMAGE LIGHTBOX ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+
+.lightbox.hide{
+  display:none;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  animation:zoomIn .25s ease;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:25px;
+  right:30px;
+  font-size:40px;
+  color:#fff;
+  cursor:pointer;
+  font-weight:700;
+}
+
+@keyframes zoomIn{
+  from{transform:scale(.85);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
 
 
 /*
@@ -1338,3 +1509,163 @@ about-counters
 
 /*
 
+/* ===== ADMIN LAYOUT ===== */
+#profile_admin {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  min-height: 90vh;
+  padding: 24px;
+  background: #f1f5f9;
+}
+
+#profile_admin.hide {
+  display: none;
+}
+
+/* ===== SIDEBAR ===== */
+#profile_admin aside {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 22px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#profile_admin h2 {
+  grid-column: span 2;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Buttons */
+#profile_admin aside button[data-tab] {
+  background: transparent;
+  border: none;
+  color: #c7d2fe;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#profile_admin aside button.active,
+#profile_admin aside button[data-tab]:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Logout */
+.logout-btn {
+  margin-top: auto;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== MAIN CONTENT ===== */
+.ap-content {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* Sections */
+.ap-section {
+  display: none;
+}
+.ap-section.active {
+  display: block;
+}
+
+/* Cards */
+.ap-card {
+  background: #f8fafc;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* Stats */
+.ap-grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+  gap: 16px;
+}
+
+.ap-stat {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ap-stat h4 {
+  font-size: 28px;
+  color: #2563eb;
+}
+
+/* Lists */
+.list-item {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.list-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Status */
+.status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status.pending {
+  background: #fde68a;
+  color: #92400e;
+}
+.status.accepted {
+  background: #bbf7d0;
+  color: #166534;
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.save-btn {
+  margin-top: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
