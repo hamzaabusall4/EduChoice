@@ -1,35 +1,36 @@
 <?php
-require "../db.php";
-header("Content-Type: application/json");
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-// قراءة البيانات القادمة من fetch
-$data = json_decode(file_get_contents("php://input"), true);
+session_start();
+require __DIR__ . "/../db.php";
 
-// تأكد من وجود id
-if (!isset($data["id"])) {
-  echo json_encode([
-    "success" => false,
-    "error" => "NO_ID"
-  ]);
+header("Content-Type: application/json; charset=UTF-8");
+
+if (!isset($_SESSION["user_id"]) || $_SESSION["role"] !== "school") {
+  echo json_encode(["status" => "error", "message" => "Unauthorized"]);
   exit;
 }
 
-$id = intval($data["id"]);
+$school_user_id = $_SESSION["user_id"];
 
-// ⚠️ عدّل اسم الجدول إذا كان مختلف عندك
-// مثال: schools_full بدل schools
-$stmt = mysqli_prepare($conn, "DELETE FROM schools WHERE id = ?");
-mysqli_stmt_bind_param($stmt, "i", $id);
-mysqli_stmt_execute($stmt);
+/*
+  الترتيب مهم:
+  1. حذف بيانات المدرسة
+  2. حذف المستخدم
+*/
 
-// تحقق هل فعلاً انحذف صف
-if (mysqli_stmt_affected_rows($stmt) === 1) {
-  echo json_encode([
-    "success" => true
-  ]);
-} else {
-  echo json_encode([
-    "success" => false,
-    "error" => "NOT_DELETED"
-  ]);
-}
+// حذف المدرسة
+$stmt = $conn->prepare("DELETE FROM schools_full WHERE user_id = ?");
+$stmt->bind_param("i", $school_user_id);
+$stmt->execute();
+
+// حذف المستخدم
+$stmt2 = $conn->prepare("DELETE FROM users WHERE id = ?");
+$stmt2->bind_param("i", $school_user_id);
+$stmt2->execute();
+
+// تدمير الجلسة
+session_destroy();
+
+echo json_encode(["status" => "ok"]);

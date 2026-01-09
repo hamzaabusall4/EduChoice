@@ -1,5 +1,3 @@
-
-
 fetch("../backend/auth/check_session.php",{credentials:"include"})
 .then(r=>r.json())
 
@@ -67,9 +65,76 @@ clearFilters();
     window.USE_DB = false;
      let SCHOOLS = [
 ];
-    const CAMPS = [
-         {id:"c1", name:"Irbid Kids Club", city:"Irbid", phone:"+962-79-333-3333", img:"https://images.unsplash.com/photo-1743383126589-dacdc73c13ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VtbWVyJTIwY2FtcHMlMjBsb2dvfGVufDB8fDB8fHww", desc:"A fun and safe camp designed for young children to explore the world around them. Activities include simple science experiments, storytelling, outdoor play, and creative games that encourage curiosity and confidence."
-         ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+   const CAMPS = [
+
+{
+id:"c1",
+name:"Amman Kids Club",
+city:"khalda",
+phone:"+962-79-333-3333",
+img:"https://images.unsplash.com/photo-1743383126589-dacdc73c13ad?w=600&auto=format&fit=crop&q=60",
+desc:"A fun and safe camp designed for young children to explore, play, and make new friends in a joyful environment.",
+desc2:
+"Programs:\n• Treasure hunt games\n• Water splash fun\n• Storytelling circle\n• Creative art time\n• Mini team games",
+desc3:
+"Activities:\n• Giant puzzle challenge\n• Water balloon battle\n• Face painting day\n• Music and dance party\n• Picnic adventure",
+
+images1:["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600"],
+images2:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images3:["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600"],
+images4:["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600"],
+images5:["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600"],
+images6:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images7:["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp"],
+images8:["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp"]
+},
+
+{
+id:"c2",
+name:"Amman Activity Center",
+city:"Amman",
+phone:"+962-79-111-1111",
+img:"https://images.unsplash.com/photo-1539629213911-66eac000dd0b?w=600",
+desc:"A creative camp where kids enjoy art, colors, music, and hands-on fun in a friendly atmosphere.",
+desc2:
+"Programs:\n• Painting and coloring\n• Slime making\n• Music and dance games\n• DIY crafts\n• Cartoon drawing",
+desc3:
+"Activities:\n• Art exhibition day\n• Talent mini show\n• Best slime contest\n• Mask making workshop\n• Dance party",
+
+images1:["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600"],
+images2:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images3:["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600"],
+images4:["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600"],
+images5:["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600"],
+images6:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images7:["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp"],
+images8:["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp"]
+},
+
+{
+id:"c3",
+name:"Kids Learning Hub",
+city:"amman",
+phone:"+962-79-222-2222",
+img:"https://images.unsplash.com/photo-1535069499309-04ad66587934?w=600",
+desc:"A playful discovery camp filled with fun experiments, games, and creative challenges.",
+desc2:
+"Programs:\n• Fun science tricks\n• LEGO building\n• Puzzle games\n• Color experiments\n• Team challenges",
+desc3:
+"Activities:\n• Crazy invention show\n• Marble race\n• Tower building contest\n• Surprise experiment\n• Fun quiz game",
+
+images1:["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600"],
+images2:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images3:["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600"],
+images4:["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600"],
+images5:["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600"],
+images6:["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600"],
+images7:["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp"],
+images8:["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp"]
+},
+
+
+       {id:"c4", name:"home show ", city:"Amman", phone:"+962-78-331-2442", img:"https://images.unsplash.com/photo-1665823253628-53910cb3be40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"A high-energy camp that promotes physical activity and healthy habits. Children participate in fun sports, obstacle courses, group games, and movement activities that improve coordination and teamwork." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -78,27 +143,19 @@ clearFilters();
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
-      {id:"c2", name:"Amman Activity Center", city:"Amman", phone:"+962-79-111-1111", img:"https://images.unsplash.com/photo-1539629213911-66eac000dd0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"This camp focuses on creativity and imagination through drawing, painting, crafts, and hands-on art projects. Children express themselves freely while developing fine motor skills and artistic confidence." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
-         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
-         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-
-         
-      {id:"c3", name:"Zarqa Learning Hub", city:"Zarqa", phone:"+962-79-222-2222", img:"https://images.unsplash.com/photo-1535069499309-04ad66587934?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHN1bW1lciUyMGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"A playful science camp where children discover basic scientific concepts through safe experiments, colorful reactions, and interactive demonstrations that make learning exciting and enjoyable." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
-         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
-         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
-       {id:"c4", name:"home show ", city:"aqaba", phone:"+962-78-331-2442", img:"https://images.unsplash.com/photo-1665823253628-53910cb3be40?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"A high-energy camp that promotes physical activity and healthy habits. Children participate in fun sports, obstacle courses, group games, and movement activities that improve coordination and teamwork." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+        {id:"c5", name:"jabal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1576723666300-97539040cfdf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", 
+          
+          desc:"An engaging English language camp designed for young learners. Through songs, games, stories, and role-playing, children improve their listening, speaking, and basic vocabulary skills." ,
+          
+          desc2:
+"Programs:\n• Nature crafts\n• Leaf art\n• Rock painting\n• Garden games\n• Outdoor puzzles",
+desc3:
+"Activities:\n• Nature art show\n• Garden treasure hunt\n• Picnic games\n• Photo walk\n• Nature challenge day"
+
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -108,7 +165,15 @@ clearFilters();
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
-        {id:"c5", name:"jabal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1576723666300-97539040cfdf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"An engaging English language camp designed for young learners. Through songs, games, stories, and role-playing, children improve their listening, speaking, and basic vocabulary skills." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+        {id:"c6", name:"jabal camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/483954743/photo/3d-explore-camping.jpg?s=612x612&w=0&k=20&c=u9gp2CED1E5VO5b00mqyPzV4zrjRLYqFwhz33NKxkxk=", desc:"A hands-on construction camp where children build models using LEGO and building blocks. Activities enhance creativity, problem-solving skills, and basic engineering thinking in a fun environment." ,
+          
+          desc2:
+"Programs:\n• Singing games\n• Story acting\n• Word games\n• Role play fun\n• Team storytelling",
+desc3:
+"Activities:\n• English fun day\n• Costume show\n• Funny storytelling contest\n• Song competition\n• Puppet show"
+
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -118,7 +183,16 @@ clearFilters();
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
 
 
-        {id:"c6", name:"jabal camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/483954743/photo/3d-explore-camping.jpg?s=612x612&w=0&k=20&c=u9gp2CED1E5VO5b00mqyPzV4zrjRLYqFwhz33NKxkxk=", desc:"A hands-on construction camp where children build models using LEGO and building blocks. Activities enhance creativity, problem-solving skills, and basic engineering thinking in a fun environment." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+        {id:"c7", name:"dalal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1746036188/photo/hand-lettering-kids-summer-camp-3d-realistic-stylish-isolated-on-white.jpg?s=612x612&w=0&k=20&c=y-RkpT6VF-CDm4AyQlNg5Uxqy9p6AfGSh0ZMfpO-aEU=",
+          
+         desc:"A creative building camp where kids build, design, and explore imagination.",
+desc2:
+"Programs:\n• LEGO building\n• Tower challenges\n• Bridge building games\n• Creative design stations\n• Puzzle building",
+desc3:
+"Activities:\n• Tallest tower contest\n• Crazy building day\n• Team construction challenge\n• Design show\n• Speed building race"
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -126,7 +200,16 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c7", name:"dalal camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1746036188/photo/hand-lettering-kids-summer-camp-3d-realistic-stylish-isolated-on-white.jpg?s=612x612&w=0&k=20&c=y-RkpT6VF-CDm4AyQlNg5Uxqy9p6AfGSh0ZMfpO-aEU=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+        {id:"c8", name:"play camps Center ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1389504230/photo/summer-camp-community-education.webp?a=1&b=1&s=612x612&w=0&k=20&c=RoqUje7fFL1erd9GpaxSpeKLvJwtYXpsep1rVnGgADc=",
+          
+          desc:"A playful tech and creativity camp filled with fun challenges.",
+desc2:
+"Programs:\n• Robot toy games\n• Simple coding toys\n• Puzzle challenges\n• Creative design games\n• Team robot play",
+desc3:
+"Activities:\n• Robot race\n• Build a robot challenge\n• Fun maze game\n• Robot dance show\n• Team challenge cup"
+
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -134,7 +217,20 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c8", name:"play camps Center ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/1389504230/photo/summer-camp-community-education.webp?a=1&b=1&s=612x612&w=0&k=20&c=RoqUje7fFL1erd9GpaxSpeKLvJwtYXpsep1rVnGgADc=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+
+        {id:"c9", name:"kids camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/170041943/photo/large-group-of-enthusiatic-young-campers.webp?a=1&b=1&s=612x612&w=0&k=20&c=gGc1OlCSIqj32jrGMy57SVH3_SjMPre9qQPcW3OfscI=",
+          
+          
+         desc:"A fun social camp where kids make friends and enjoy playful activities.",
+desc2:
+"Programs:\n• Group games\n• Ice breaker games\n• Balloon games\n• Creative teamwork\n• Fun competitions",
+desc3:
+"Activities:\n• Team fun day\n• Balloon battle\n• Friendship games\n• Dance party\n• Surprise game day"
+
+          
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -142,7 +238,17 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c9", name:"kids camps Club", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/170041943/photo/large-group-of-enthusiatic-young-campers.webp?a=1&b=1&s=612x612&w=0&k=20&c=gGc1OlCSIqj32jrGMy57SVH3_SjMPre9qQPcW3OfscI=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+
+        {id:"c10", name:"layale camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/475284932/photo/summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=a4a-LAba3CMTFOciWUjcaHdgY3ptjxIMM81cfOCvqd0=",desc:"A joyful water fun camp to cool off and enjoy summer splashes.",
+desc2:
+"Programs:\n• Water games\n• Pool fun\n• Splash challenges\n• Floating toys\n• Safety water play",
+desc3:
+"Activities:\n• Water festival\n• Balloon splash war\n• Water relay race\n• Ice cream party\n• Pool games day"
+
+          
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -150,7 +256,19 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c10", name:"layale camps Center", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/475284932/photo/summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=a4a-LAba3CMTFOciWUjcaHdgY3ptjxIMM81cfOCvqd0=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+
+        {id:"c11", name:"amman camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/626061024/photo/summer-camp-poster-in-flat-design-inspirational-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=TD40rPxLd9WzhWPoPGvA0yEeLeH4w3b8qlF-UrPbWIo=", desc:"Robotics and language immersion programs." ,
+          desc2:
+"Programs:\n• Board games\n• Art time\n• Music games\n• Puzzle fun\n• Team activities",
+desc3:
+"Activities:\n• Game championship\n• Art show\n• Dance hour\n• Puzzle challenge\n• Prize day"
+
+          
+          
+          
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -158,7 +276,18 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c11", name:"amman camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/626061024/photo/summer-camp-poster-in-flat-design-inspirational-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=TD40rPxLd9WzhWPoPGvA0yEeLeH4w3b8qlF-UrPbWIo=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+
+
+
+        {id:"c12", name:"madelar camps ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/2205699240/photo/3d-summer-camp-wood-sign-board-with-green-leaves-render-forest-wooden-signboard-banner-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=r7Rd9J8FY79hyw1G3CU1xhJfYez5cErMpWanKJL7Nc8=", desc:"Robotics and language immersion programs.",desc2:
+"Programs:\n• Nature crafts\n• Leaf art\n• Rock painting\n• Garden games\n• Outdoor puzzles",
+desc3:
+"Activities:\n• Nature art show\n• Garden treasure hunt\n• Picnic games\n• Photo walk\n• Nature challenge day"
+
+          
+          
+          
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -166,15 +295,12 @@ clearFilters();
          ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
          ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c12", name:"madelar camps ", city:"amman", phone:"+962-79-9654-8822", img:"https://media.istockphoto.com/id/2205699240/photo/3d-summer-camp-wood-sign-board-with-green-leaves-render-forest-wooden-signboard-banner-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=r7Rd9J8FY79hyw1G3CU1xhJfYez5cErMpWanKJL7Nc8=", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
-         ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
-         ,images5: ["https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images6: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
-         ,images7: ["https://media.istockphoto.com/id/505936299/photo/children-smiling-in-teepee-at-campsite.webp?a=1&b=1&s=612x612&w=0&k=20&c=0lE8UEwb3BZSxCw2DiIAglS2JSpy49EAzV-fg5HLHGQ=",]
-         ,images8: ["https://media.istockphoto.com/id/1326030834/photo/shot-of-a-group-of-teenagers-walking-across-a-bridge-in-nature-at-summer-camp.webp?a=1&b=1&s=612x612&w=0&k=20&c=SsQB2W3XcFqqn83TGAiq_Va9EL8N5dLgPffsk-dOYn8=",]},
-        {id:"c13", name:"jata camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1728555864830-499254793e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs." ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
+        {id:"c13", name:"jata camps hub ", city:"amman", phone:"+962-79-9654-8822", img:"https://images.unsplash.com/photo-1728555864830-499254793e04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhbXBzJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D", desc:"Robotics and language immersion programs.",desc2:
+"Programs:\n• Giant games\n• Team sports\n• Creative stations\n• Music play\n• Fun competitions",
+desc3:
+"Activities:\n• Camp festival\n• Big team challenge\n• Talent show\n• Dance marathon\n• Closing party"
+                    
+          ,images1: ["https://plus.unsplash.com/premium_photo-1687757690681-30eaf2cb50dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",] 
          ,images2: ["https://plus.unsplash.com/premium_photo-1687757692697-1b1afaf77a6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbXBzJTIwa2lkc3xlbnwwfHwwfHx8MA%3D%3D",]
          ,images3: ["https://plus.unsplash.com/premium_photo-1687354990511-daf367ffa5a6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
          ,images4: ["https://images.unsplash.com/photo-1551398766-791b80fde370?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcHMlMjBraWRzfGVufDB8fDB8fHww",]
@@ -244,17 +370,6 @@ function goBack(){
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     
     /* =========================i18n STATIC + DYNAMIC ========================= */
     const CITY_LABEL = {
@@ -303,7 +418,9 @@ function goBack(){
 
     const I18N = {
       en:{
-        nav_home:"Home", nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_compare:"Compare",nav_about:"About us",nav_profile:"Profile" , nav_login:"Login", nav_payment:"Payment",
+
+
+        nav_home:"Home",nav_systems:"Systems", nav_schools:"Schools", nav_community:"Summer Camps", nav_compare:"Compare",nav_about:"About us",nav_profile:"Profile" , nav_login:"Login", nav_payment:"Payment",
         home_head:"Find the right school for your child in Jordan",
         home_sub:"Search by name, explore by educational system, or discover summer camps.",
         ph_search:"Search school name…", btn_search:"Search", btn_systems:"By System", btn_camps:"Summer Camps",
@@ -312,65 +429,27 @@ function goBack(){
         f_system:"System", f_city:"City", f_min:"Min. Rating", f_sort:"Sort", back:"Back",
         map_hint:"Map preview (static). Replace with real map later.", programs:"Programs & Highlights", contact:"Contact",
         "district-khalda": "Khalda",
-"district-tabarbour": "Tabarbour","district-jabal-amman": "Jabal Amman","district-jabal-al-hussein": "Jabal Al-Hussein","district-al-jubaiha": "Al-Jubaiha","district-deir-ghbar": "Deir Ghbar",
-"district-dabouq": "Dabouq",
-"district-mecca-street": "Mecca Street",
-"district-airport-road": "Airport Road",
-"district-naour-west-amman": "Naour / West Amman",
-"district-shmeisani": "Shmeisani","district-wadi-essir": "Wadi Essir",
-"district-jabal-al-weibdeh": "Jabal Al-Weibdeh",
-"district-tlaa-al-ali": "Tla’ Al Ali","district-gardens-al-bustan": "Gardens / Al-Bustan",
+"district-tabarbour": "Tabarbour","district-jabal-amman": "Jabal Amman","district-jabal-al-hussein": "Jabal Al-Hussein","district-al-jubaiha": "Al-Jubaiha","district-deir-ghbar": "Deir Ghbar","district-dabouq": "Dabouq","district-mecca-street": "MeccaStreet","district-airport-road": "Airport Road","district-naour-west-amman": "Naour / West Amman",
+"district-shmeisani": "Shmeisani","district-wadi-essir": "Wadi Essir","district-jabal-al-weibdeh": "Jabal Al-Weibdeh",
+"district-tlaa-al-ali": "Tla’ Al Ali","district-gardens-al-bustan": "Gardens / Al-Bustan",   brand_name: "EduChoice",    auth_subtitle: "Login or create an account to continue.",   tab_login: "Login",
+    tab_signup: "Signup",   label_email: "Email",   label_password: "Password",   label_login_as: "Login as",   label_signup_as:"Signupas",   label_fullname: "Full Name",
+    role_parent: "Parent",    role_school: "School",   role_admin: "Admin",
+   login_hint: "Role here is for UI; real role comes from DB session.",
+   btn_login: "Login",    btn_signup: "Create Account",
 
-
-
-   brand_name: "EduChoice",
-    auth_subtitle: "Login or create an account to continue.",
-
-    tab_login: "Login",
-    tab_signup: "Signup",
-
-    label_email: "Email",
-    label_password: "Password",
-    label_login_as: "Login as",
-    label_signup_as: "Signup as",
-    label_fullname: "Full Name",
-
-    role_parent: "Parent",
-    role_school: "School",
-    role_admin: "Admin",
-
-    login_hint: "Role here is for UI; real role comes from DB session.",
-
-    btn_login: "Login",
-    btn_signup: "Create Account",
-
-    ph_email: "example@mail.com",
-    ph_password: "******",
+    ph_email: "example@mail.com",    ph_password: "******",
     ph_password_min: "min 6 chars",
     ph_name: "Your Name",
-
-
-
-
-
-
-
 
 hero_title: "EduChoice — The Smart Way to Find the Right School in Jordan",
 hero_subtitle: "We help parents compare schools by system, city, and rating, and apply in minutes.",
 
-
-
-
-
 footer_brand_desc: "Your smart guide to finding the best schools & educational communities in Jordan.",
 
 footer_quick_links: "Quick Links",
-footer_for_parents: "For Parents",
-footer_contact: "Contact Us",
+footer_for_parents: "For Parents",footer_contact: "Contact Us",
 
-nav_home: "Home",
-nav_systems: " Systems",
+nav_home: "Home",nav_systems: " Systems",
 nav_schools: "Schools",
 nav_camps: "Summer Camps",
 nav_compare: "Compare",
@@ -483,6 +562,258 @@ cmp_compare: "Compare",
 cmp_reset: "Reset Compare",
 
 
+  sp_dashboard: "School Dashboard",
+  sp_overview: "Overview",
+  sp_info: "School Info",
+  sp_programs: "Programs",
+  sp_fees: "Tuition Fees",
+  sp_gallery: "Gallery",
+  sp_location: "Location",
+  sp_admissions: "Admissions",
+  sp_settings: "Settings",
+  sp_logout: "Logout",
+
+  sp_welcome: "Welcome to Your School Profile",
+  sp_overview_desc: "Review and manage your school's public information.",
+  sp_profile_visits: "Profile Visits",
+  sp_applications_received: "Applications Received",
+  sp_acceptance: "Acceptance",
+
+  sp_school_info: "School Information",
+  sp_school_name: "School Name",
+  sp_school_desc: "General Description",
+  sp_email: "Email",
+  sp_phone: "Phone",
+  sp_website: "Website",
+  sp_save: "Save",
+
+  sp_ph_school_name: "Enter school name",
+  sp_ph_school_desc: "Write a general introduction...",
+  sp_ph_email: "info@school.jo",
+  sp_ph_phone: "+962-6-000000",
+  sp_ph_website: "www.school.jo",
+
+  sp_programs_title: "Programs Offered",
+  sp_select_programs: "Select Programs",
+  sp_programs_desc_label: "Description",
+  sp_ph_programs_desc: "Describe your programs",
+
+  sp_fees_title: "Tuition Fees",
+  sp_fees_by_grade: "Fees by Grade",
+  sp_ph_fees: `KG1–KG2: 2000 JOD
+Grade 1–3: 2600 JOD
+Grade 4–6: 3000 JOD
+Grade 7–9: 3400 JOD
+Grade 10–12: 3800 JOD`,
+
+  sp_gallery_title: "Upload Gallery Photos",
+  sp_upload: "Upload",
+
+  sp_location_title: "School Location",
+  sp_address: "Address",
+  sp_lat: "Latitude",
+  sp_lng: "Longitude",
+  sp_save_location: "Save Location",
+  sp_ph_address: "Amman - Khalda - Beside ...",
+
+  sp_received_applications: "Received Applications",
+  sp_pending: "Pending",
+  sp_accepted: "Accepted",
+
+  sp_settings_title: "Settings",
+  sp_visibility: "Profile Visibility",
+  sp_public: "Public",
+  sp_private: "Private",
+  sp_notifications: "Notifications",
+  sp_notify_all: "All",
+  sp_notify_email: "Email Only",
+  sp_notify_off: "Off",
+  sp_save_settings: "Save Settings",
+
+  /* Titles */
+  pp_title: "Parent Profile",
+  pp_overview: "Overview",
+  pp_children: "Children",
+  pp_applications: "Applications",
+  pp_account: "Account",
+  pp_settings: "Settings",
+  pp_privacy: "Privacy",
+  pp_logout: "Logout",
+
+  /* Overview */
+  pp_your_info: "Your Information",
+  pp_full_name: "Full Name",
+  pp_email: "Email",
+  pp_phone: "Phone",
+  pp_save: "Save",
+
+  pp_ph_name: "Your Name",
+  pp_ph_email: "example@mail.com",
+  pp_ph_phone: "+962-79-0000000",
+
+  /* Children */
+  pp_children_title: "Your Children",
+  pp_city: "City of Residence",
+  pp_children_count: "Number of Children",
+  pp_save_children: "Save Children",
+
+  /* Applications */
+  pp_applications: "Applications",
+
+  /* Account */
+  pp_account_settings: "Account Settings",
+  pp_new_password: "New Password",
+  pp_confirm_password: "Confirm Password",
+  pp_update_password: "Update Password",
+
+  pp_ph_new_password: "Enter new password",
+  pp_ph_confirm_password: "Confirm password",
+
+  /* Settings */
+  pp_general_settings: "General Settings",
+  pp_language: "Language",
+  pp_notifications: "Notifications",
+  pp_save_settings: "Save Settings",
+
+  pp_notify_all: "All notifications",
+  pp_notify_email: "Email only",
+  pp_notify_off: "Off",
+
+  /* Danger Zone */
+  pp_danger: "Danger Zone",
+  pp_delete_warning: "Once you delete your account, all data will be removed forever.",
+  pp_delete_account: "Delete Account",
+
+  /* Common */
+  select: "Select...",
+  all: "All",
+  lang_en: "English",
+  lang_ar: "Arabic",
+
+  
+  /* Sidebar */
+  sp_dashboard: "Profile School",
+  sp_overview: "Overview",
+  sp_info: "School Info",
+  sp_programs: "Programs",
+  sp_fees: "Tuition Fees",
+  sp_gallery: "Gallery",
+  sp_location: "Location",
+  sp_admissions: "Admissions",
+  sp_settings: "Settings",
+  sp_logout: "Logout",
+
+  /* Overview */
+  sp_welcome: "Welcome to Your School Profile",
+  sp_overview_desc: "Review and manage your school's public information.",
+  sp_profile_visits: "Profile Visits",
+  sp_applications_received: "Applications Received",
+  sp_acceptance: "Acceptance",
+
+  /* School Info */
+  sp_school_info: "School Information",
+  sp_school_name: "School Name",
+  sp_school_desc: "General Description",
+  sp_email: "Email",
+  sp_phone: "Phone",
+  sp_website: "Website",
+  sp_save: "Save",
+
+  sp_ph_school_name: "Enter school name",
+  sp_ph_school_desc: "Write a general introduction...",
+  sp_ph_email: "info@school.jo",
+  sp_ph_phone: "+962-6-000000",
+  sp_ph_website: "www.school.jo",
+
+  /* Programs */
+  sp_programs_title: "Programs Offered",
+  sp_select_programs: "Select Programs",
+  sp_programs_desc_label: "Description",
+  sp_ph_programs_desc: "Describe your programs",
+
+  /* Fees */
+  sp_fees_title: "Tuition Fees",
+  sp_fees_by_grade: "Fees by Grade",
+  sp_ph_fees: `KG1–KG2: 2000 JOD
+Grade 1–3: 2600 JOD
+Grade 4–6: 3000 JOD
+Grade 7–9: 3400 JOD
+Grade 10–12: 3800 JOD`,
+
+  /* Gallery */
+  sp_gallery_title: "Upload Gallery Photos",
+  sp_upload: "Upload",
+
+  /* Location */
+  sp_location_title: "School Location",
+  sp_address: "Address",
+  sp_lat: "Latitude",
+  sp_lng: "Longitude",
+  sp_save_location: "Save Location",
+  sp_ph_address: "Amman - Khalda - Beside ...",
+
+  /* Admissions */
+  sp_received_applications: "Received Applications",
+  sp_pending: "Pending",
+  sp_accepted: "Accepted",
+
+  /* Settings */
+  sp_settings_title: "Settings",
+  sp_visibility: "Profile Visibility",
+  sp_public: "Public",
+  sp_private: "Private",
+  sp_notifications: "Notifications",
+  sp_notify_all: "All",
+  sp_notify_email: "Email Only",
+  sp_notify_off: "Off",
+  sp_save_settings: "Save Settings",
+
+
+  
+
+  ap_title: "Admin Panel",
+  ap_overview: "Overview",
+  ap_schools: "Manage Schools",
+  ap_parents: "Manage Parents",
+  ap_applications: "Applications",
+  ap_reports: "Reports",
+  ap_settings: "Settings",
+  ap_logout: "Logout",
+
+  ap_platform_overview: "Platform Overview",
+  ap_registered_schools: "Registered Schools",
+  ap_parent_accounts: "Parents Accounts",
+  ap_total_applications: "Total Applications",
+
+  ap_schools_list: "Schools List",
+  ap_edit: "Edit",
+
+  ap_parents_accounts: "Parents Accounts",
+  ap_view: "View",
+  ap_children_2: "2 Children",
+  ap_children_1: "1 Child",
+
+  ap_applications: "Applications",
+  ap_app_from_1: "From: Ali Hassan — Grade 1",
+  ap_app_from_2: "From: Lara Shaheen — KG2",
+
+  status_pending: "Pending",
+  status_accepted: "Accepted",
+
+  ap_reports_desc: "Performance, insights, and overall system analytics.",
+  ap_ph_notes: "Write admin notes here...",
+  ap_save_notes: "Save Notes",
+
+  ap_platform_settings: "Platform Settings",
+  ap_system_mode: "System Mode",
+  ap_mode_normal: "Normal",
+  ap_mode_maintenance: "Maintenance Mode",
+
+  ap_admin_email: "Admin Email",
+  ap_ph_admin_email: "admin@educhoice.jo",
+  ap_save_settings: "Save Settings",
+
+
 
         camp_title:"Community & Summer Camps", camp_sub:"Centers and schools offering seasonal camps and activities.",
         about_title:"About EduChoice",  about_sub:"A Web Science project serving families across Jordan.",
@@ -519,10 +850,6 @@ cmp_reset: "Reset Compare",
         btn_info:"Info", btn_apply:"Book a meeting ", btn_view:"View Details", apply_now:"Book a meeting",
         camp_ads:" Summer Camps Ads" ,btn1_apply:"Apply",
       },
-
-
-
-
       ar:{
         nav_home:"الرئيسية", nav_systems:"الأنظمة التعليمية", nav_schools:"المدارس", nav_community:" المعسكرات",nav_compare:"المقارنة" ,nav_about:"من نحن", nav_login:"تسجيل الدخول", nav_payment:"الدفع", nav_profile:"الصفحة الشخصية" ,btn_map:"الخريطة"  ,    // داخل I18N.ar
         home_head:"ابحث عن المدرسة المناسبة لطفلك في الأردن",
@@ -547,23 +874,81 @@ cmp_reset: "Reset Compare",
 "district-gardens-al-bustan": "الجاردنز / البستان",
 
 
+  sp_dashboard: "لوحة تحكم المدرسة",
+  sp_overview: "نظرة عامة",
+  sp_info: "معلومات المدرسة",
+  sp_programs: "البرامج",
+  sp_fees: "الرسوم الدراسية",
+  sp_gallery: "المعرض",
+  sp_location: "الموقع",
+  sp_admissions: "القبول",
+  sp_settings: "الإعدادات",
+  sp_logout: "تسجيل الخروج",
+
+  sp_welcome: "مرحبًا بك في ملف مدرستك",
+  sp_overview_desc: "راجع وأدر المعلومات العامة لمدرستك.",
+  sp_profile_visits: "زيارات الملف",
+  sp_applications_received: "الطلبات المستلمة",
+  sp_acceptance: "نسبة القبول",
+
+  sp_school_info: "معلومات المدرسة",
+  sp_school_name: "اسم المدرسة",
+  sp_school_desc: "الوصف العام",
+  sp_email: "البريد الإلكتروني",
+  sp_phone: "رقم الهاتف",
+  sp_website: "الموقع الإلكتروني",
+  sp_save: "حفظ",
+
+  sp_ph_school_name: "أدخل اسم المدرسة",
+  sp_ph_school_desc: "اكتب نبذة تعريفية عامة...",
+  sp_ph_email: "info@school.jo",
+  sp_ph_phone: "+962-6-000000",
+  sp_ph_website: "www.school.jo",
+  sp_programs_title: "البرامج المقدمة",
+  sp_select_programs: "اختر البرامج",
+  sp_programs_desc_label: "الوصف",
+  sp_ph_programs_desc: "اشرح برامج المدرسة",
+  sp_fees_title: "الرسوم الدراسية",
+  sp_fees_by_grade: "الرسوم حسب الصف",
+  sp_ph_fees: `رياض الأطفال 1–2: 2000 دينار
+الصف 1–3: 2600 دينار
+الصف 4–6: 3000 دينار
+الصف 7–9: 3400 دينار
+الصف 10–12: 3800 دينار`,
+  sp_gallery_title: "رفع صور المعرض",
+  sp_upload: "رفع",
+  sp_location_title: "موقع المدرسة",
+  sp_address: "العنوان",
+  sp_lat: "خط العرض",
+  sp_lng: "خط الطول",
+  sp_save_location: "حفظ الموقع",
+  sp_ph_address: "عمّان - خلدا - بجانب ...",
+  sp_received_applications: "طلبات الالتحاق",
+  sp_pending: "قيد الانتظار",
+  sp_accepted: "مقبول",
+  sp_settings_title: "الإعدادات",
+  sp_visibility: "ظهور الملف",
+  sp_public: "عام",
+  sp_private: "خاص",
+  sp_notifications: "الإشعارات",
+  sp_notify_all: "الكل",
+  sp_notify_email: "البريد فقط",
+  sp_notify_off: "إيقاف",
+  sp_save_settings: "حفظ الإعدادات",
 pay_title: "الدفع والباقات (للمدارس)",
 pay_sub: "عزّز ظهور مدرستك. نموذج دفع تجريبي (سيتم الربط لاحقًا).",
-
 plan_basic: "الأساسية",
 plan_basic_price: "100 دينار أردني / سنوي",
 plan_basic_f1: "شارة توثيق",
 plan_basic_f2: "الظهور في نتائج البحث",
 plan_basic_f3: "معلومات أساسية",
 plan_current: "الخطة الحالية",
-
 plan_pro: "الاحترافية",
 plan_pro_price: "200 دينار أردني / سنوي",
 plan_pro_f1: "الأساسية + منشورات (أخبار / فعاليات / أيام مفتوحة) وظهور أعلى في البحث",
 plan_pro_f2: "أولوية في النتائج",
 plan_pro_f3: "تصدير طلبات التسجيل",
 plan_choose_pro: "اختر الاحترافية",
-
 plan_premium: "المميزة",
 plan_premium_price: "250 دينار أردني / سنوي",
 plan_premium_f1: "الاحترافية + تمييز في الصفحة الرئيسية",
@@ -572,48 +957,136 @@ plan_premium_f3: "لافتات إعلانية",
 plan_premium_f4: "تعزيز في المقارنة",
 plan_premium_f5: "دعم فني مميز",
 plan_choose_premium: "اختر المميزة",
-
-
 cmp_title: "المقارنة",
 cmp_sub: "اختر ما تريد مقارنته",
-
 cmp_btn_schools: "مقارنة المدارس",
 cmp_btn_camps: "مقارنة المخيمات",
-
 cmp_select_school1: "اختر المدرسة الأولى",
 cmp_select_school2: "اختر المدرسة الثانية",
 cmp_select_camp1: "اختر المخيم الأول",
 cmp_select_camp2: "اختر المخيم الثاني",
-
 cmp_compare: "قارن",
 cmp_reset: "إعادة التعيين",
-
-
-
 sys_title: "الأنظمة التعليمية",
 sys_sub: "اضغط على أي نظام لعرض المدارس التي تدرّسه.",
-
 sys_ib_title: "البكالوريا الدولية (IB)",
 sys_ib_desc: "برنامج عالمي قائم على الاستقصاء من الروضة حتى الصف الثاني عشر.",
 sys_ib_btn: "عرض مدارس IB →",
-
 sys_igcse_title: "IGCSE / A-Level",
 sys_igcse_desc: "منهاج بريطاني بعمق أكاديمي عالي.",
 sys_igcse_btn: "عرض مدارس IGCSE →",
-
 sys_us_title: "النظام الأمريكي (SAT / AP)",
 sys_us_desc: "مسار أمريكي يعتمد على المعايير الأكاديمية.",
 sys_us_btn: "عرض المدارس الأمريكية →",
-
 sys_nat_title: "المنهاج الوطني الأردني",
 sys_nat_desc: "منهاج معتمد من وزارة التربية والتعليم.",
 sys_nat_btn: "عرض المدارس الوطنية →",
-
 sys_mont_title: "مونتيسوري (الطفولة المبكرة)",
 sys_mont_desc: "بيئات تعليمية تركز على تعلّم الطفل الذاتي.",
 sys_mont_btn: "عرض مدارس مونتيسوري →",
+  ap_title: "لوحة تحكم المشرف",
+  ap_overview: "نظرة عامة",
+  ap_schools: "إدارة المدارس",
+  ap_parents: "إدارة أولياء الأمور",
+  ap_applications: "الطلبات",
+  ap_reports: "التقارير",
+  ap_settings: "الإعدادات",
+  ap_logout: "تسجيل الخروج",
+
+  ap_platform_overview: "نظرة عامة على المنصة",
+  ap_registered_schools: "المدارس المسجلة",
+  ap_parent_accounts: "حسابات أولياء الأمور",
+  ap_total_applications: "إجمالي الطلبات",
+
+  ap_schools_list: "قائمة المدارس",
+  ap_edit: "تعديل",
+
+  ap_parents_accounts: "حسابات أولياء الأمور",
+  ap_view: "عرض",
+  ap_children_2: "طفلان",
+  ap_children_1: "طفل واحد",
+
+  ap_applications: "الطلبات",
+  ap_app_from_1: "من: علي حسن — الصف الأول",
+  ap_app_from_2: "من: لارا شاهين — KG2",
+
+  status_pending: "قيد الانتظار",
+  status_accepted: "مقبول",
+
+  ap_reports_desc: "الأداء، التحليلات، ونظرة عامة على النظام.",
+  ap_ph_notes: "اكتب ملاحظات المشرف هنا...",
+  ap_save_notes: "حفظ الملاحظات",
+
+  ap_platform_settings: "إعدادات المنصة",
+  ap_system_mode: "وضع النظام",
+  ap_mode_normal: "عادي",
+  ap_mode_maintenance: "وضع الصيانة",
+
+  ap_admin_email: "بريد المشرف",
+  ap_ph_admin_email: "admin@educhoice.jo",
+  ap_save_settings: "حفظ الإعدادات",
 
 
+  
+  /* Titles */
+  pp_title: "الملف الشخصي لولي الأمر",
+  pp_overview: "نظرة عامة",
+  pp_children: "الأبناء",
+  pp_applications: "الطلبات",
+  pp_account: "الحساب",
+  pp_settings: "الإعدادات",
+  pp_privacy: "الخصوصية",
+  pp_logout: "تسجيل الخروج",
+
+  /* Overview */
+  pp_your_info: "معلوماتك",
+  pp_full_name: "الاسم الكامل",
+  pp_email: "البريد الإلكتروني",
+  pp_phone: "رقم الهاتف",
+  pp_save: "حفظ",
+
+  pp_ph_name: "اسمك",
+  pp_ph_email: "example@mail.com",
+  pp_ph_phone: "+962-79-0000000",
+
+  /* Children */
+  pp_children_title: "أبناؤك",
+  pp_city: "مدينة السكن",
+  pp_children_count: "عدد الأبناء",
+  pp_save_children: "حفظ الأبناء",
+
+  /* Applications */
+  pp_applications: "الطلبات",
+
+  /* Account */
+  pp_account_settings: "إعدادات الحساب",
+  pp_new_password: "كلمة مرور جديدة",
+  pp_confirm_password: "تأكيد كلمة المرور",
+  pp_update_password: "تحديث كلمة المرور",
+
+  pp_ph_new_password: "أدخل كلمة مرور جديدة",
+  pp_ph_confirm_password: "تأكيد كلمة المرور",
+
+  /* Settings */
+  pp_general_settings: "الإعدادات العامة",
+  pp_language: "اللغة",
+  pp_notifications: "الإشعارات",
+  pp_save_settings: "حفظ الإعدادات",
+
+  pp_notify_all: "جميع الإشعارات",
+  pp_notify_email: "البريد الإلكتروني فقط",
+  pp_notify_off: "إيقاف",
+
+  /* Danger Zone */
+  pp_danger: "منطقة الخطر",
+  pp_delete_warning: "عند حذف الحساب، سيتم حذف جميع البيانات نهائيًا.",
+  pp_delete_account: "حذف الحساب",
+
+  /* Common */
+  select: "اختر...",
+  all: "الكل",
+  lang_en: "الإنجليزية",
+  lang_ar: "العربية",
 
         sch_title:"المدارس", sch_sub:"مراجعة  و بحث عن أفضل المدارس في الأردن حسب النظام التعليمي، المدينة، والتقييم.",
         f_system:"النظام", f_city:"المدينة", f_min:"أدنى تقييم", f_sort:"ترتيب", back:"رجوع",
@@ -670,70 +1143,121 @@ back: "رجوع",
 
 
 
+  /* Sidebar */
+  sp_dashboard: "لوحة تحكم المدرسة",
+  sp_overview: "نظرة عامة",
+  sp_info: "معلومات المدرسة",
+  sp_programs: "البرامج",
+  sp_fees: "الرسوم الدراسية",
+  sp_gallery: "المعرض",
+  sp_location: "الموقع",
+  sp_admissions: "القبول",
+  sp_settings: "الإعدادات",
+  sp_logout: "تسجيل الخروج",
 
+  /* Overview */
+  sp_welcome: "مرحبًا بك في ملف مدرستك",
+  sp_overview_desc: "راجع وأدر المعلومات العامة لمدرستك.",
+  sp_profile_visits: "زيارات الملف",
+  sp_applications_received: "الطلبات المستلمة",
+  sp_acceptance: "نسبة القبول",
+
+  /* School Info */
+  sp_school_info: "معلومات المدرسة",
+  sp_school_name: "اسم المدرسة",
+  sp_school_desc: "الوصف العام",
+  sp_email: "البريد الإلكتروني",
+  sp_phone: "رقم الهاتف",
+  sp_website: "الموقع الإلكتروني",
+  sp_save: "حفظ",
+
+  sp_ph_school_name: "أدخل اسم المدرسة",
+  sp_ph_school_desc: "اكتب نبذة تعريفية عامة...",
+  sp_ph_email: "info@school.jo",
+  sp_ph_phone: "+962-6-000000",
+  sp_ph_website: "www.school.jo",
+
+  /* Programs */
+  sp_programs_title: "البرامج المقدمة",
+  sp_select_programs: "اختر البرامج",
+  sp_programs_desc_label: "الوصف",
+  sp_ph_programs_desc: "اشرح برامج المدرسة",
+
+  /* Fees */
+  sp_fees_title: "الرسوم الدراسية",
+  sp_fees_by_grade: "الرسوم حسب الصف",
+  sp_ph_fees: `رياض الأطفال 1–2: 2000 دينار
+الصف 1–3: 2600 دينار
+الصف 4–6: 3000 دينار
+الصف 7–9: 3400 دينار
+الصف 10–12: 3800 دينار`,
+
+  /* Gallery */
+  sp_gallery_title: "رفع صور المعرض",
+  sp_upload: "رفع",
+
+  /* Location */
+  sp_location_title: "موقع المدرسة",
+  sp_address: "العنوان",
+  sp_lat: "خط العرض",
+  sp_lng: "خط الطول",
+  sp_save_location: "حفظ الموقع",
+  sp_ph_address: "عمّان - خلدا - بجانب ...",
+
+  /* Admissions */
+  sp_received_applications: "طلبات الالتحاق",
+  sp_pending: "قيد الانتظار",
+  sp_accepted: "مقبول",
+
+  /* Settings */
+  sp_settings_title: "الإعدادات",
+  sp_visibility: "ظهور الملف",
+  sp_public: "عام",
+  sp_private: "خاص",
+  sp_notifications: "الإشعارات",
+  sp_notify_all: "الكل",
+  sp_notify_email: "البريد فقط",
+  sp_notify_off: "إيقاف",
+  sp_save_settings: "حفظ الإعدادات",
   brand_name: "EduChoice",
     auth_subtitle: "سجّل الدخول أو أنشئ حسابًا للمتابعة",
-
     tab_login: "تسجيل الدخول",
     tab_signup: "إنشاء حساب",
-
     label_email: "البريد الإلكتروني",
     label_password: "كلمة المرور",
     label_login_as: "تسجيل الدخول كـ",
     label_signup_as: "التسجيل كـ",
     label_fullname: "الاسم الكامل",
-
     role_parent: "ولي أمر",
     role_school: "مدرسة",
     role_admin: "مدير",
-
     login_hint: "هذا الخيار للواجهة فقط، الدور الحقيقي يأتي من الجلسة في قاعدة البيانات",
-
     btn_login: "دخول",
     btn_signup: "إنشاء حساب",
-
     ph_email: "example@mail.com",
     ph_password: "******",
     ph_password_min: "على الأقل 6 أحرف",
     ph_name: "اسمك الكامل",
-
-
-
 hero_title: "EduChoice — الطريقة الذكية لاختيار المدرسة المناسبة في الأردن",
 hero_subtitle: "نساعد أولياء الأمور على مقارنة المدارس حسب النظام، المدينة، والتقييم، والتقديم خلال دقائق.",
-
-
-
-
 footer_brand_desc: "دليلك الذكي لاكتشاف أفضل المدارس والمجتمعات التعليمية في الأردن",
-
 footer_quick_links: "روابط سريعة",
 footer_for_parents: "لأولياء الأمور",
 footer_contact: "تواصل معنا",
-
 nav_home: "الرئيسية",
 nav_systems: "الأنظمة التعليمية",
 nav_schools: "المدارس",
 nav_camps: "المخيمات الصيفية",
 nav_compare: "المقارنة",
 nav_about: "معلومات عنا",
-
 fp_1: "✔ مقارنة المدارس حسب النظام",
 fp_2: "✔ البحث حسب المدينة والتقييم",
 fp_3: "✔ التقديم مباشرة عبر الإنترنت",
 fp_4: "✔ اكتشاف المخيمات الصيفية",
 fp_5: "✔ تجربة ثنائية اللغة (عربي / إنجليزي)",
-
 contact_city: "عمّان، الأردن",
-
 footer_rights: "EduChoice — جميع الحقوق محفوظة",
 footer_project: "| مشروع Web Science · نظم معلومات إدارية",
-
-
-
-
-
-
         about_h2:"النطاق", about_l1:"مدارس حكومية وخاصة في الأردن", about_l2:"الأنظمة: IB وIGCSE/A-Level وSAT/AP والمنهاج الوطني ومونتيسوري", about_l3:"بوابتان للأهالي والمدارس", about_l4:"دفع للمدارس لزيادة الظهور", about_l5:"المجتمع: البحث عن الأنشطة والمعسكرات", about_stats:"قسم نظم المعلومات الادارية",
         st_sch:"مطورين", st_cit:"مصممين", st_cam:"برمجية",
         login_title:"تسجيل الدخول / إنشاء حساب", login_sub:"اختر البوابة.", tab_parent:"أهالي", tab_school:"مدارس", lf_pass:"كلمة المرور", lf_forgot:"نسيت؟", lf_sign:"تسجيل الدخول",
@@ -751,13 +1275,6 @@ footer_project: "| مشروع Web Science · نظم معلومات إدارية"
     const tDyn = (obj, enKey, arKey) => (currentLang==='ar' ? (obj[arKey]||obj[enKey]) : obj[enKey]);
     const sysLabel = sys => (currentLang==='ar' ? (SYS_LABEL[sys]?.ar||sys) : (SYS_LABEL[sys]?.en||sys));
     const cityLabel = city => (currentLang==='ar' ? (CITY_LABEL[city]?.ar||city) : (CITY_LABEL[city]?.en||city));
-
-
-
-
-
-
-
 
     function renderResults(list){
       const root = byId('results');
@@ -785,15 +1302,15 @@ footer_project: "| مشروع Web Science · نظم معلومات إدارية"
             </div>
             <p class="muted" style="margin-top:8px">${tDyn(s,'desc','desc_ar')}</p>
           </div>
+         
+       
           <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;justify-content:center">
-         <button class="btn require-login" aria-label="Info" data-id="${s.id}">${I18N[currentLang].btn_info}</button>
-            <a class="btn primary" href="#apply" data-apply="${tDyn(s,'name','name_ar')}">${I18N[currentLang].btn_apply}</a>
+        
+          <button class="btn require-login" aria-label="Info" data-id="${s.id}">${I18N[currentLang].btn_info}</button>
+         
+         <a class="btn primary" href="#apply" data-apply="${tDyn(s,'name','name_ar')}">${I18N[currentLang].btn_apply}</a>
           </div>
         `;
-
-
-
-
 
         card.querySelector('[aria-label="Info"]').addEventListener('click',()=>openSchool(s.id));
         
@@ -955,10 +1472,7 @@ byId('schoolfees').innerHTML = fees.length
 
 
 
-
-
-
-    // camps logo info apply map
+    // camps logo info apply map///////////////////////////////////////////////////////////////////////
    function renderCamps(){
   const root = byId('campList');
   if(!root) return;
@@ -1018,11 +1532,26 @@ byId('schoolfees').innerHTML = fees.length
     <div><strong>Type</strong><span>Summer Camp</span></div>
     <div><strong>Phone</strong><span>${c.phone}</span></div>
   </div>
+
+
+
   <!-- DESCRIPTION -->
   <div class="camp-desc">
     <h4>About the Camp</h4>
     <p>${tDyn(c,'desc','desc_ar')}</p>
   </div>
+
+ <!-- programs -->
+  <div class="camp-desc2">
+    <h4>Programs in the Camp</h4>
+    <p>${tDyn(c,'desc2','desc2_ar')}</p>
+  </div>
+ <!-- activite -->
+  <div class="camp-desc3">
+    <h4>activite in the Camp</h4>
+    <p>${tDyn(c,'desc3','desc3_ar')}</p>
+  </div>
+
   <!-- GALLERY -->
   <div class="camp-gallery-wrap">
     <h4>Camp Activities</h4>
@@ -1081,14 +1610,14 @@ byId('schoolfees').innerHTML = fees.length
 
 
 
-document.getElementById("applyForm")?.addEventListener("submit", function(e){
-  e.preventDefault();
-  alert("Application submitted!");
-  this.reset();
+// document.getElementById("applyForm")?.addEventListener("submit", function(e){
+//   e.preventDefault();
+//   alert("Application submitted!");
+//   this.reset();
 
-  location.hash = "#community";
-  openPage && openPage('#community');
-});
+//   location.hash = "#community";
+//   openPage && openPage('#community');
+// });
 
 
 
@@ -1134,7 +1663,7 @@ document.getElementById("applyForm")?.addEventListener("submit", function(e){
 
   //  الحل هنا
   if (hash === "#profile") {
-    const role = sessionStorage.getItem("currentRole");
+    const role = sessionStorage.getItem("currentRole"); 
     if (role) showProfileByRole(role);
   }
 }
@@ -1393,6 +1922,473 @@ function initAuthTabs(){
 
 
 
+// //////////////////////////////////////
+
+async function loadParentOverview(){
+  console.log(" loadParentOverview CALLED");
+
+  const res = await fetch("/EduChoice3/backend/parents/get_parent.php", {
+  credentials: "include"
+});
+
+
+  const data = await res.json();
+  console.log(" PROFILE DATA:", data);
+
+  if (data.status !== "ok") return;
+
+  document.getElementById("pName").value  = data.data.name || "";
+  document.getElementById("pEmail").value = data.data.email || "";
+pPhone.value = "";
+}
+
+
+
+
+async function saveParentOverview(){
+  const name  = document.getElementById("pName").value.trim();
+  const email = document.getElementById("pEmail").value.trim();
+
+  if(!name || !email){
+    alert("Name and email are required");
+    return;
+  }
+
+  const fd = new FormData();
+  fd.append("name", name);
+  fd.append("email", email);
+
+  const res = await fetch("/EduChoice3/backend/parents/update_parent.php", {
+    method: "POST",
+    body: fd,
+    credentials: "include"
+  });
+
+  const data = await res.json();
+
+  if(data.status !== "ok"){
+    alert(data.message || "Update failed");
+    return;
+  }
+
+  alert("Profile updated successfully");
+}
+// /////////////////////////////////////////////////
+
+
+
+const childrenForms = document.getElementById("childrenForms");
+const childrenCount = document.getElementById("childrenCount");
+
+// تخزين مؤقت (بدون DB)
+let CHILDREN_DATA = [];
+
+// عند اختيار عدد الأطفال
+childrenCount.addEventListener("change", () => {
+  const count = parseInt(childrenCount.value);
+  childrenForms.innerHTML = "";
+  CHILDREN_DATA = [];
+
+  if (!count) return;
+
+  for (let i = 0; i < count; i++) {
+    childrenForms.innerHTML += `
+      <div class="pp-card" style="margin-bottom:16px">
+        <h4>Child ${i + 1}</h4>
+
+        <div class="pp-grid">
+          <div>
+            <label>Child Name</label>
+            <input type="text" data-name />
+          </div>
+
+          <div>
+            <label>Date of Birth</label>
+            <input type="date" data-dob />
+          </div>
+
+          <div>
+            <label>Educational System</label>
+            <select data-system>
+              <option value="">Select...</option>
+              <option>IB</option>
+              <option>IGCSE</option>
+              <option>SAT / American</option>
+              <option>National</option>
+              <option>Montessori</option>
+            </select>
+          </div>
+
+         
+          <div>
+            <label>Age</label>
+            <input type="text" data-age disabled />
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  bindDOBListeners();
+});
+
+// حساب العمر من تاريخ الميلاد
+function calculateAge(dob) {
+  const birth = new Date(dob);
+  const today = new Date();
+
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+// ربط تاريخ الميلاد بحساب العمر
+function bindDOBListeners() {
+  document.querySelectorAll("[data-dob]").forEach(dobInput => {
+    dobInput.addEventListener("change", e => {
+      const ageInput = e.target.closest(".pp-grid").querySelector("[data-age]");
+      ageInput.value = calculateAge(e.target.value) + " years";
+    });
+  });
+}
+
+// حفظ البيانات (فكرة فقط)
+
+
+async function saveChildren() {
+  const city = document.getElementById("parentCity").value;
+  if (!city) {
+    alert("Please select city of residence");
+    return;
+  }
+
+  const children = [];
+
+  document.querySelectorAll("#childrenForms .pp-card").forEach(card => {
+    const name = card.querySelector("[data-name]").value.trim();
+    const dob = card.querySelector("[data-dob]").value;
+    const system = card.querySelector("[data-system]").value;
+
+    if (!name || !dob || !system) return;
+
+    children.push({
+      name,
+      dob,
+      system,
+      city
+    });
+  });
+
+  if (!children.length) {
+    alert("Please add at least one child");
+    return;
+  }
+
+  const res = await fetch("/EduChoice3/backend/parents/save_children.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ children })
+  });
+
+  const data = await res.json();
+
+  if (data.status !== "ok") {
+    alert(data.message || "Save failed");
+    return;
+  }
+
+  alert("Children saved successfully");
+}
+
+
+// ///////////////////////////////////////////////////////////////
+
+document.querySelector(".delete-btn")?.addEventListener("click", async () => {
+  const confirmDelete = confirm(
+    "Are you sure?\nYour account and all data will be permanently deleted."
+  );
+
+  if (!confirmDelete) return;
+
+  const res = await fetch("/EduChoice3/backend/parents/delete_account.php", {
+    method: "POST",
+    credentials: "include"
+  });
+
+  const data = await res.json();
+
+  if (data.status !== "ok") {
+    alert("Delete failed");
+    return;
+  }
+
+  alert("Account deleted successfully");
+  location.hash = "#login";
+  location.reload();
+});
+
+
+// /////////////////////////////////////////////////////////////////////////
+
+const applySchoolForm = document.getElementById("applySchoolForm");
+
+if (applySchoolForm) {
+  applySchoolForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fd = new FormData(applySchoolForm);
+    fd.append("school_id", applySchoolForm.dataset.schoolId);
+
+    const res = await fetch("/EduChoice3/backend/parents/apply.php", {
+      method: "POST",
+      body: fd,
+      credentials: "include"
+    });
+
+    const data = await res.json();
+
+    if (data.status !== "ok") {
+      alert(data.message || "Error");
+      return;
+    }
+
+    alert("Application sent successfully");
+    applySchoolForm.reset();
+  });
+}
+
+// /////////////
+
+
+
+async function loadParentApplications() {
+  console.log("LOAD APPLICATIONS CALLED");
+
+  const res = await fetch("/EduChoice3/backend/parents/get_applications.php", {
+    credentials: "include"
+  });
+
+  const data = await res.json();
+  console.log("APPLICATIONS DATA:", data);
+
+  const container = document.getElementById("parentApplications");
+  container.innerHTML = "";
+
+  if (data.status !== "ok" || data.applications.length === 0) {
+    container.innerHTML = `<p class="muted">No applications yet.</p>`;
+    return;
+  }
+
+  data.applications.forEach(app => {
+    const item = document.createElement("div");
+    item.className = "application-item";
+
+    item.innerHTML = `
+      <div>
+        <strong>${app.target_name}</strong>
+        <p class="muted">Applied on ${app.created_at}</p>
+      </div>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="status pending">${app.status}</span>
+        <button 
+          class="btn cancel-btn"
+          data-id="${app.id}">
+          Cancel
+        </button>
+      </div>
+    `;
+
+    container.appendChild(item);
+  });
+
+  // ربط زر الإلغاء
+  document.querySelectorAll(".cancel-btn").forEach(btn => {
+    btn.onclick = () => cancelApplication(btn.dataset.id);
+  });
+}
+
+async function cancelApplication(appId) {
+  if (!confirm("Cancel this application?")) return;
+
+  const fd = new FormData();
+  fd.append("id", appId);
+
+  const res = await fetch(
+    "/EduChoice3/backend/parents/cancel_application.php",
+    {
+      method: "POST",
+      body: fd,
+      credentials: "include"
+    }
+  );
+
+  const data = await res.json();
+
+  if (data.status !== "ok") {
+    alert("Failed to cancel");
+    return;
+  }
+
+  // تحديث القائمة فورًا
+  loadParentApplications();
+}
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const applicationsTab =
+    document.querySelector('[data-tab="applications"]');
+
+  if (applicationsTab) {
+    applicationsTab.addEventListener("click", loadParentApplications);
+  }
+});
+function showProfileByRole(role){
+  // كودك الموجود
+
+  if(role === "parent"){
+    loadParentApplications();
+  }
+}
+
+
+async function loadParentApplications(){
+
+  // 🔥 فعّل Applications section
+  document.querySelectorAll(".pp-section")
+    .forEach(s => s.classList.remove("active"));
+
+  document.getElementById("applications")
+    ?.classList.add("active");
+
+  const res = await fetch("/EduChoice3/backend/parents/get_applications.php", {
+    credentials: "include"
+  });
+
+  const data = await res.json();
+  console.log("APPLICATIONS DATA:", data);
+
+  if (!data || data.status !== "ok") return;
+
+  const box = document.getElementById("parentApplications");
+  if (!box) return;
+
+  box.innerHTML = "";
+
+  if (!data.applications.length) {
+    box.innerHTML = "<p class='muted'>No applications submitted yet.</p>";
+    return;
+  }
+
+  data.applications.forEach(app => {
+    box.innerHTML += `
+      <div class="application-item">
+        <div>
+          <strong>${app.target_name}</strong>
+          <p class="muted">
+            Applied on ${new Date(app.created_at).toDateString()}
+          </p>
+        </div>
+        <span class="status ${app.status}">
+          ${app.status}\n
+          <button 
+      class="btn cancel-btn"
+      data-id="${app.id}">
+      Cancel
+    </button>
+        </span>
+        
+      </div>
+    `;
+  });
+}
+
+
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest('[data-tab="applications"]');
+  if (!btn) return;
+
+  setTimeout(() => {
+    loadParentApplications();
+  }, 50);
+});
+
+// Cancel application (event delegation)
+
+
+document.addEventListener("click", async (e) => {
+  if (!e.target.classList.contains("cancel-btn")) return;
+
+  const appId = e.target.dataset.id;
+  if (!appId) return;
+
+  if (!confirm("Are you sure you want to cancel this application?")) return;
+
+  const fd = new FormData();
+  fd.append("application_id", appId);
+
+  const res = await fetch("/EduChoice3/backend/parents/cancel_application.php", {
+    method: "POST",
+    body: fd,
+    credentials: "include"
+  });
+
+  const data = await res.json();
+
+  if (data.status !== "ok") {
+    alert(data.message || "Cancel failed");
+    return;
+  }
+
+  // 🔥 احذف الطلب من الواجهة فورًا
+  e.target.closest(".application-item")?.remove();
+});
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+
+// document.getElementById("saveSchoolInfo").addEventListener("click", () => {
+//   const programs = Array.from(
+//     document.querySelectorAll("#programs_select option:checked")
+//   ).map(o => o.value).join(",");
+
+//   fetch("backend/schools/update_school_profile.php", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       name_en: document.getElementById("name_en").value,
+//       description_en: document.getElementById("description_en").value,
+//       email: document.getElementById("email").value,
+//       phone: document.getElementById("phone").value,
+//       website: document.getElementById("website").value,
+//       address: document.getElementById("address").value,
+//       programs: programs,
+//       programs_description: document.getElementById("programs_desc").value,
+//       fees: document.getElementById("fees_text").value
+//     })
+//   })
+//   .then(res => res.json())
+//   .then(res => {
+//     if (res.status === "ok") {
+//       alert("Saved successfully");
+//     } else {
+//       alert("Save failed");
+//     }
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////
 
 
 document.getElementById("saveSchoolInfo")?.addEventListener("click", async () => {
@@ -1419,6 +2415,388 @@ document.getElementById("saveSchoolInfo")?.addEventListener("click", async () =>
 alert(txt);
 
 });
+/////////////////////////////////////////////////////
+document.getElementById("savePrograms")?.addEventListener("click", async () => {
+
+  const select = document.getElementById("programs_select_programs");
+  const programs = Array.from(select.selectedOptions).map(o => o.value);
+
+  const data = {
+    programs: programs.join(","),
+    description: document.getElementById("programs_desc").value
+  };
+
+  const res = await fetch("../backend/schools/save_programs.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  alert(result.message || "Programs saved");
+});
+
+
+
+////////////////////////////////////////////
+
+// ===== SAVE FEES =====
+document.getElementById("saveFees")?.addEventListener("click", async () => {
+  const feesText = document.getElementById("fees_text").value.trim();
+  if (!feesText) return alert("Enter fees");
+
+  const res = await fetch("../backend/schools/save_fees.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ fees: feesText })
+  });
+
+  const result = await res.json();
+  alert(result.message);
+
+  // 👇 عرض مرتب
+  renderSchoolFees(feesText);
+});
+
+
+// ===== RENDER FEES =====
+function renderSchoolFees(feesText) {
+  const box = document.getElementById("feesDisplay");
+  box.innerHTML = "";
+
+  if (!feesText) return;
+
+  const ul = document.createElement("ul");
+  ul.className = "fees-list";
+
+  feesText.split("\n").forEach(line => {
+    if (line.trim()) {
+      const li = document.createElement("li");
+      li.textContent = line.trim();
+      ul.appendChild(li);
+    }
+  });
+
+  box.appendChild(ul);
+}
+
+
+document.getElementById("saveLocation")?.addEventListener("click", async () => {
+
+  const data = {
+    address: document.getElementById("address").value,
+    lat: document.getElementById("lat").value,
+    lng: document.getElementById("lng").value
+  };
+
+  const res = await fetch("../backend/schools/save_location.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  alert(result.message || "Location saved");
+});
+
+
+
+/* ================= GALLERY ================= */
+
+const galleryInput = document.getElementById("galleryInput");
+const galleryBox   = document.getElementById("schoolGallery");
+
+/* ===== LOAD GALLERY ===== */
+fetch("backend/schools/get_applications.php")
+  .then(res => res.json())
+  .then(schools => {
+    if (!schools || !schools.length) return;
+    renderGallery(schools[0].gallery);
+  });
+
+/* ===== RENDER ===== */
+function renderGallery(galleryStr) {
+  const box = document.getElementById("schoolGallery");
+  box.innerHTML = "";
+
+  if (!galleryStr) {
+    box.textContent = "No images available";
+    return;
+  }
+
+  const base = window.location.origin + "/EDUCHOICE3/";
+
+  galleryStr.split(",").forEach(p => {
+    const img = document.createElement("img");
+    img.src = base + p.trim();
+    img.classList.add("school-gallery-img");
+    box.appendChild(img);
+  });
+}
+
+/* ===== UPLOAD ===== */
+document.getElementById("saveGallery").addEventListener("click", async () => {
+  if (!galleryInput.files.length) {
+    alert("Select images first");
+    return;
+  }
+
+  const fd = new FormData();
+  Array.from(galleryInput.files).forEach(f => fd.append("images[]", f));
+
+  const res = await fetch("../backend/schools/save_gallery.php", {
+    method: "POST",
+    body: fd
+  });
+
+  const result = await res.json();
+  alert(result.message);
+
+  if (result.gallery) renderGallery(result.gallery);
+
+  galleryInput.value = "";
+});
+
+
+/////////////////////////////////////////////
+
+
+
+
+// async function loadSchoolApplications() {
+//   const res = await fetch(
+//     "/EduChoice3/backend/schools/get_applications.php",
+//     { credentials: "include" }
+//   );
+
+//   const json = await res.json();
+//   if (json.status !== "ok") return;
+
+//   const box = document.getElementById("schoolApplications");
+//   box.innerHTML = "";
+
+//   if (json.data.length === 0) {
+//     box.innerHTML = `<p class="muted">No applications yet</p>`;
+//     return;
+//   }
+
+//   json.data.forEach(a => {
+//     box.innerHTML += `
+//       <div class="application-item">
+//         <div>
+//           <strong>${a.child_name}</strong>
+//           <p class="muted">
+//             ${a.parent_name} • Grade ${a.grade} —
+//             ${new Date(a.created_at).toLocaleDateString()}
+//           </p>
+//         </div>
+//         <span class="status ${a.status}">
+//           ${a.status}
+//         </span>
+//       </div>
+//     `;
+//   });
+// }
+
+
+
+// document.addEventListener("DOMContentLoaded", loadApplications);
+async function loadApplications(){
+
+  const box = document.getElementById("applicationsList");
+  if(!box) {
+    console.warn("applicationsList not found");
+    return;
+  }
+
+  // فرض الظهور
+  box.style.display = "block";
+  box.style.minHeight = "120px";
+  box.style.color = "#000";
+
+  try {
+    const res = await fetch("../backend/schools/get_applications.php");
+    const data = await res.json();
+
+    console.log("Applications:", data);
+
+    box.innerHTML = "";
+
+    if (!Array.isArray(data) || data.length === 0) {
+      box.innerHTML = "<p>No applications yet</p>";
+      return;
+    }
+
+    data.forEach(app => {
+      const div = document.createElement("div");
+
+/* Card Layout */
+div.style.padding = "18px 20px";
+div.style.marginBottom = "14px";
+div.style.borderRadius = "14px";
+div.style.border = "1px solid #e5e7eb";
+div.style.background = "linear-gradient(135deg, #f8fafc, #eef2f7)";
+div.style.transition = "0.25s ease";
+div.style.cursor = "default";
+
+/* Shadow */
+div.style.boxShadow = "0 6px 14px rgba(0,0,0,0.08)";
+
+/* Hover Effect */
+div.addEventListener("mouseenter", () => {
+  div.style.transform = "translateY(-4px)";
+  div.style.boxShadow = "0 12px 26px rgba(0,0,0,0.12)";
+});
+
+div.addEventListener("mouseleave", () => {
+  div.style.transform = "translateY(0)";
+  div.style.boxShadow = "0 6px 14px rgba(0,0,0,0.08)";
+});
+
+      div.innerHTML = `
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:15px;">
+
+    <!-- INFO -->
+    <div style="flex:1">
+
+      <div style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:4px;">
+        ${app.child_name}
+      </div>
+
+      <div style="font-size:14px; color:#475569; margin-bottom:6px;">
+        Grade: <b>${app.grade}</b> |
+        Age: <b>${app.age}</b> |
+        Gender: <b>${app.gender}</b>
+      </div>
+
+      <div style="font-size:14px; color:#1e293b; margin-bottom:6px;">
+        📞 ${app.phone} <br>
+        ✉️ ${app.email}
+      </div>
+
+      <div style="font-size:13px; color:#334155; margin-bottom:6px;">
+        📝 ${app.notes || "No notes"}
+      </div>
+
+      <div style="font-size:12px; color:#64748b;">
+        ⏰ ${app.created_at}
+      </div>
+
+    </div>
+
+    <!-- ACTIONS -->
+    <div style="display:flex; flex-direction:column; gap:8px; min-width:110px;">
+
+      <button class="btn-accept">Accept</button>
+      <button class="btn-reject">Reject</button>
+
+    </div>
+
+  </div>
+`;
+
+const acceptBtn = div.querySelector(".btn-accept");
+const rejectBtn = div.querySelector(".btn-reject");
+
+/* Accept Button */
+acceptBtn.style.background = "#069b3cff";
+acceptBtn.style.color = "#fff";
+acceptBtn.style.border = "none";
+acceptBtn.style.padding = "8px 12px";
+acceptBtn.style.borderRadius = "8px";
+acceptBtn.style.cursor = "pointer";
+acceptBtn.style.fontSize = "13px";
+acceptBtn.style.fontWeight = "600";
+
+/* Reject Button */
+rejectBtn.style.background = "#cd0303ff";
+rejectBtn.style.color = "#fff";
+rejectBtn.style.border = "none";
+rejectBtn.style.padding = "8px 12px";
+rejectBtn.style.borderRadius = "8px";
+rejectBtn.style.cursor = "pointer";
+rejectBtn.style.fontSize = "13px";
+rejectBtn.style.fontWeight = "600";
+
+
+  acceptBtn.onclick = () => {
+    alert("Accepted Application ID: " + app.id);
+  };
+
+  rejectBtn.onclick = () => {
+    alert("Rejected Application ID: " + app.id);
+  };
+
+      box.appendChild(div);
+    });
+
+    
+  } catch(err){
+    console.error("Load error:", err);
+    box.innerHTML = "Failed to load applications";
+  }
+}
+setInterval(loadApplications, 1500);
+
+
+/////////////////////////////////////////////
+
+
+
+/* ================= DELETE SCHOOL ACCOUNT ================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const deleteBtn = document.getElementById("deleteSchoolAccount");
+  if (!deleteBtn) return;
+
+  deleteBtn.addEventListener("click", async () => {
+
+    const confirmText = currentLang === "ar"
+      ? "هل أنت متأكد؟ سيتم حذف حساب المدرسة وجميع البيانات نهائيًا."
+      : "Are you sure? This will permanently delete the school account and all data.";
+
+    if (!confirm(confirmText)) return;
+
+    try {
+      const res = await fetch("/EduChoice3/backend/schools/delete_school.php", {
+        method: "POST",
+        credentials: "include"
+      });
+
+      const data = await res.json();
+
+      if (data.status !== "ok") {
+        alert(data.message || "Delete failed");
+        return;
+      }
+
+      alert(
+        currentLang === "ar"
+          ? "تم حذف حساب المدرسة بنجاح"
+          : "School account deleted successfully"
+      );
+
+      // تسجيل خروج وإعادة توجيه
+      window.location.href = "/EduChoice3/public/#login";
+
+    } catch (err) {
+      console.error(err);
+      alert("Server error");
+    }
+  });
+
+});
+
+/////////////////////////////////iiiiiiiiiiiiihhhhhhhhhh//////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 
 
 
@@ -1536,7 +2914,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   CURRENT_ROLE = s.role;
 
   showSection("profile");
-  showProfileByRole(s.role);
+  showProfileByRole(s.role);  ////////////////////////////////////////////////////////////////////////////////////////
 } else {
   CURRENT_ROLE = 'visitor';
   showSection("login");
@@ -1571,9 +2949,9 @@ loginForm?.addEventListener("submit", async (e) => {
     CURRENT_ROLE = s.role;
 
     showSection("profile");
-    showProfileByRole(s.role);
+    showProfileByRole(s.role);  ///////////////////////////////////////////////////////////////////////////////////////
 
-    alert("PROFILE SHOWN — لا تعمل أي شي، بس اضغط OK");
+    alert("login successful");
   }
 });
 
@@ -1677,14 +3055,109 @@ window.addEventListener('hashchange', guardVisitorRoutes);
 
 
 
-    byId('applyForm').addEventListener('submit',e=>{
-      e.preventDefault();
-      alertMsg(currentLang==='ar' ? 'تم إرسال الطلب (تجريبي).' : 'Request sent (demo).');
-      go('#home');
+    // byId('applyForm').addEventListener('submit',e=>{
+    //   e.preventDefault();
+    //   alertMsg(currentLang==='ar' ? 'تم إرسال الطلب (تجريبي).' : 'Request sent (demo).');
+    //   go('#home');
+    // });
+
+
+
+/* =====================================================
+   APPLICATIONS SYSTEM (Parents → Schools)
+   ===================================================== */
+
+// 1️⃣ تحميل الطلبات من التخزين
+let APPLICATIONS = JSON.parse(localStorage.getItem('applications')) || [];
+
+// 2️⃣ حفظ طلب جديد من فورم التقديم
+function saveApplication(formData) {
+  const application = {
+    id: Date.now(),
+    child: formData.child,
+    parent: formData.parent,
+    grade: formData.grade,
+    school: formData.school,
+    date: new Date().toLocaleDateString(),
+    status: 'pending'
+  };
+
+  APPLICATIONS.push(application);
+  localStorage.setItem('applications', JSON.stringify(APPLICATIONS));
+}
+
+// 3️⃣ ربط فورم Apply بالحفظ
+const applyForm = document.getElementById('applyForm');
+if (applyForm) {
+  applyForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(applyForm));
+    saveApplication(formData);
+
+    alert('Application sent successfully');
+    go('#login');
+  });
+}
+
+// 4️⃣ عرض الطلبات داخل بروفايل المدرسة
+function renderApplicationsForSchool(schoolName) {
+  const list = document.getElementById('applicationsList');
+  const empty = document.getElementById('noApplications');
+
+  if (!list || !empty) return;
+
+  list.innerHTML = '';
+
+  const apps = APPLICATIONS.filter(a => a.school === schoolName);
+
+  if (!apps.length) {
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display = 'none';
+
+  apps.forEach(a => {
+    const div = document.createElement('div');
+    div.className = 'application-item';
+
+    div.innerHTML = `
+      <div>
+        <strong>${a.parent}</strong>
+        <p class="muted">
+          Applied for ${a.grade} — ${a.date}<br>
+          Child: ${a.child}
+        </p>
+      </div>
+      <span class="status ${a.status}">
+        ${a.status}
+      </span>
+    `;
+
+    list.appendChild(div);
+  });
+}
+
+// 5️⃣ لما المدرسة تدخل البروفايل → اعرض الطلبات
+document.addEventListener('DOMContentLoaded', () => {
+  const freePlanBtn = document.getElementById('btnFreePlan');
+
+  if (freePlanBtn) {
+    freePlanBtn.addEventListener('click', () => {
+      go('#profile');
+
+      const schoolInput = document.querySelector('#schoolForm input[type="text"]');
+      const schoolName = schoolInput ? schoolInput.value.trim() : '';
+
+      document.getElementById('profileSchoolName').textContent =
+        schoolName || 'Your School';
+
+      // ⭐ هون المهم
+      renderApplicationsForSchool(schoolName);
     });
-
-
-
+  }
+});
 
 
 
@@ -2064,6 +3537,12 @@ function renderCampComparison(A, B) {
           <div class="camp-desc">
             <strong>Description:</strong><br>${A.desc}
           </div>
+          <div class="camp-desc">
+            <strong>Description:</strong><br>${A.desc2}
+          </div>
+          <div class="camp-desc">
+            <strong>Description:</strong><br>${A.desc3}
+          </div>
         </div>
       </div>
 
@@ -2088,6 +3567,12 @@ function renderCampComparison(A, B) {
           <div class="camp-desc">
             <strong>Description:</strong><br>${B.desc}
           </div>
+           <div class="camp-desc">
+            <strong>Description:</strong><br>${B.desc2}
+          </div>
+          <div class="camp-desc">
+            <strong>Description:</strong><br>${B.desc3}
+          </div>
         </div>
       </div>
 
@@ -2095,7 +3580,27 @@ function renderCampComparison(A, B) {
   `;
 }
 
+
+
+
 ////////////////////////////////////////////////////////////////
+function trackSchoolVisit(schoolId){
+  fetch(`backend/schools/track_visit.php?school_id=${schoolId}`);
+}
+function openSchoolDetails(id){
+
+  go("#school-details");
+
+  fetch(`backend/schools/track_visit.php?school_id=${id}`)
+    .then(() => fetch(`backend/schools/get_school.php?id=${id}`))
+    .then(r => r.json())
+    .then(s => {
+      document.getElementById("profileVisits").innerText =
+        s.profile_visits + " Profile Visits";
+    });
+
+}
+
 
 
 // ================= SYSTEM CARDS → FILTER =================
@@ -2153,6 +3658,7 @@ function enableSystemNavigation() {
 
 //--------------------------------------9999999-------------------------------------------------
 
+
 function showProfileByRole(role) {
   if (location.hash !== "#profile") return;
 
@@ -2161,27 +3667,18 @@ function showProfileByRole(role) {
   }
 
   if (!role) return;
-
   // إخفاء الجميع
   qsa("#profile_parent, #profile_school, #profile_admin")
     .forEach(p => p.classList.add("hide"));
-
   const root = qs("#profile_" + role);
   if (!root) return;
-
   root.classList.remove("hide");
   setupProfileTabs(root);
 }
-
-
 window.addEventListener('DOMContentLoaded', () => {
   enableSystemNavigation();
 });
-
 show(location.hash || '#home');
-
-
-
 document.addEventListener("click", (e) => {
   const el = e.target.closest(".require-login");
   if (!el) return;

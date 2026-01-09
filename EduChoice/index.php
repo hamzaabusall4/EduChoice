@@ -68,11 +68,30 @@
   </div>
 </div>
   <main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="home" class="body">
   <div class="home-hero-image">  
-    <img src="assets/images/schools/hero.jpg" class="hero-img" alt="Schools in Jordan"> 
-    <div class="overlay"></div>
+    <img src="assets/images/schools/hero.jpg"   
+    class="hero-img" alt="Schools in Jordan"> 
+    <div class="overlay">
+    </div>
   </div>
+
   <div class="content">
     <h2 data-i18n="home_head">Find the right school for your child in Jordan</h2>
     <div class="search-box">
@@ -86,6 +105,7 @@
       </div>
     </div>
   </div>
+
   <!-- حط النظام أسفل الهيرو -->
   <div class="systems-box">
     <div class="chip" data-system="IB">IB</div>
@@ -94,32 +114,32 @@
     <div class="chip" data-system="National">National</div>
     <div class="chip" data-system="Montessori">Montessori</div>
   </div>
+
 <!-- Summer Camps Slider -->
 <div class="camps-slider card">
   <h3 class="slider-title"  data-i18n="camp_ads">Summer Camps Ads</h3>
   <div class="slider-container" >
     <div class="slider-track" id="sliderTrack" >
-      <!-- Ad 1 – Kids Summer Camp -->
+
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREpkFWum2G7g8GCZwto703ufHeo7vDXWtgXdZsmQpv0Q&s"
            alt="Kids Summer Camp">
-      <!-- Ad 2 – STEM Robotics Camp -->
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8_G1rWCDHtWiK5rd2UJn1coPKOO09_68k4bjl8-n0A&s"
            alt="STEM Robotics Camp">
-      <!-- Ad 3 – Outdoor Adventure Camp -->
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTENGFGC5n3N8oIOVQtzOZlQDKBFYKlYbhTIQqv3JO-Qg&s"
            alt="Adventure Camp">
-      <!-- Ad 4 – Swimming & Sports Camp -->
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR01Gj2pG1zY0ci9tlNJPPtovaZbQO5cjnjuw&s"
            alt="Sports Camp">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExFmv6O6pWLsYsGvtfgrR3GSD6vh5HLAPUlKvw7Yufw&s">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxi_w0XDy2KGe6PVSrFH9BPPbmmgShBBHA1OZlg090sQ&s">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7gbNX4gA03K4MSvMLXkKVgmgyTsSh47SMA&s">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSx5y8JkRzoi2HXN11Ago0ArSee09WyVEM-HyF4xT7og&s">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSExFmv6O6pWLsYsGvtfgrR3GSD6vh5HLAPUlKvw7Yufw&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxi_w0XDy2KGe6PVSrFH9BPPbmmgShBBHA1OZlg090sQ&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7gbNX4gA03K4MSvMLXkKVgmgyTsSh47SMA&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSx5y8JkRzoi2HXN11Ago0ArSee09WyVEM-HyF4xT7og&s">
            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLT09oTSM1bmacWfjMR0YtMLBEV3GAmJiK8Q&s">
            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwygTGwhDw7J9xtKwVVBrNcc5cMdjLSTJgg&s">
     </div>
   </div>
 </div>
+
+
       <div class="text card" style="padding:50px;border-radius:20px;box-shadow:0 10px 30px rgba(31, 37, 99, 0.966); background-color: rgba(255, 255, 255, 1)" >
       <p style="font-size:28px;font-weight:800;margin-bottom:10px; color: rgb(44, 64, 138); text-align: center;"
    data-i18n="hero_title">
@@ -129,8 +149,17 @@
    data-i18n="hero_subtitle">
   We help parents compare schools by system, city, and rating, and apply in minutes.
 </p>  
+
       </div>      
     </section>
+
+
+
+
+
+    
+
+
 
     <!-- ===== COUNTERS (Home Only) ===== -->
 <div id="homeCounters" class="home-counters">
@@ -150,6 +179,11 @@
 
     
     
+
+
+
+
+
     
 <!-- SYSTEMS -->
 <section id="systems" class="container">
@@ -332,8 +366,23 @@
 
           <p id="schoolDesc" style="margin-top:10px"></p>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!--  خريطة المدرسة -->
 <div class="card school">
+
   <div id="schoolMap" style="height:350px; width: 335px; border-radius:12px;"></div>
 </div>
 
@@ -347,7 +396,7 @@
 <!-- تفعيل الخريطة -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const map = L.map("schoolMap").setView([31.9539, 35.9106], 13); // 📍 موقع عمان
+  const map = L.map("schoolMap").setView([31.9539, 35.9106], 14); // 📍 موقع عمان
 
   // خلفية الخريطة من OpenStreetMap
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -361,6 +410,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .openPopup();
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <div class="columns">
@@ -486,13 +547,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <!-- APPLY -->
+
 <section id="apply" class="container hide">
   <h3 class="title" data-i18n="apply_title">Enrollment Request</h3>
   <p class="subtitle" data-i18n="apply_sub">
     Fill in the form and the school will receive your request by email.
   </p>
 
-<form id="applySchoolForm" class="card" style="padding:16px">
+  <form id="applySchoolForm"
+        class="card"
+        style="padding:16px"
+        method="POST"
+        action="apply.php">
+
+    <!-- ✅ هذا السطر الجديد الوحيد المهم -->
+    <input type="hidden" name="school_id" id="applySchoolId">
+
     <div class="grid2">
       <div>
         <label data-i18n="af_child">Child Full Name</label>
@@ -545,7 +615,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <div style="grid-column:1/-1">
         <label data-i18n="af_note">Notes</label>
-        <textarea name="notes" data-i18n-ph="af_note_ph"
+        <textarea
+          name="notes"
+          data-i18n-ph="af_note_ph"
           placeholder="Any additional info…"></textarea>
       </div>
     </div>
@@ -560,6 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </form>
 </section>
+
 <!-- CAMP APPLY -->
 <section id="applycamp" class="container hide">
   <h3 class="title" data-i18n="apply_title">Enrollment Request</h3>
@@ -860,131 +933,166 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <section id="profile" class="container hide">
 
+
+
+
+
 <!-- Parent Profile --> 
- <div id="profile_parent" class="hide"> 
-  <h2>profile_parent</h2>
-   <aside class="pp-sidebar">
-     <button class="active" data-tab="overview">Overview</button>
-      <button data-tab="children">Children</button>
-       <button data-tab="applications">Applications</button> 
-       <button data-tab="account">Account</button> 
-       <button data-tab="settings">Settings</button>
-        <button data-tab="privacy">Privacy</button>
-         <button class="logout-btn" onclick="logout()">Logout</button>
-         </aside>
-          <!-- Main Content --> 
-           <main class="pp-content"> 
-          <!-- Overview Section --> 
-           <div class="pp-section active" id="overview">
-             <div class="pp-card"> <h3>Your Information</h3> 
-             <div class="pp-grid"> <div> <label>Full Name</label> 
-             <input type="text" id="pName" placeholder="Your Name"> 
-            </div>
-             <div> <label>Email</label>
-             <input type="email" id="pEmail" placeholder="example@mail.com">
-             </div>
-              <div>
-                 <label>Phone</label> 
-             <input type="text" id="pPhone" placeholder="+962-79-0000000">
-             </div>
-             </div>
-              <button class="save-btn" onclick="saveParentOverview()">Save</button>
-             </div> 
-            </div> 
-   <!-- Children Section -->
-<div class="pp-section" id="children">
-  <div class="pp-card">
-    <h3>Your Children</h3>
+<div id="profile_parent" class="hide"> 
 
-     <!-- مكان السكن (موحّد) -->
-    <div class="pp-grid" style="margin-bottom:20px">
-      <div>
-        <label>City of Residence</label>
-        <select id="parentCity">
-          <option value="">Select...</option>
-            <option value="">All</option>
-            
-<option value="Khalda" data-i18n="district-khalda">Khalda</option>
-<option value="Tabarbour" data-i18n="district-tabarbour">Tabarbour</option>
-<option value="Jabal Amman" data-i18n="district-jabal-amman">Jabal Amman</option>
-<option value="Jabal Al-Hussein" data-i18n="district-jabal-al-hussein">Jabal Al-Hussein</option>
-<option value="Al-Jubaiha" data-i18n="district-al-jubaiha">Al-Jubaiha</option>
-<option value="Deir Ghbar" data-i18n="district-deir-ghbar">Deir Ghbar</option>
-<option value="Dabouq" data-i18n="district-dabouq">Dabouq</option>
-<option value="Mecca Street" data-i18n="district-mecca-street">Mecca Street</option>
-<option value="Airport Road" data-i18n="district-airport-road">Airport Road</option>
-<option value="Naour / West Amman" data-i18n="district-naour-west-amman">Naour / West Amman</option>
-<option value="Shmeisani" data-i18n="district-shmeisani">Shmeisani</option>
-<option value="Wadi Essir" data-i18n="district-wadi-essir">Wadi Essir</option>
-<option value="Jabal Al-Weibdeh" data-i18n="district-jabal-al-weibdeh">Jabal Al-Weibdeh</option>
-<option value="Tla’ Al Ali" data-i18n="district-tlaa-al-ali">Tla’ Al Ali</option>
-<option value="Gardens / Al-Bustan" data-i18n="district-gardens-al-bustan">Gardens / Al-Bustan</option>
-        </select>
+
+  <aside class="pp-sidebar">
+
+      <h2 data-i18n="pp_title">profile_parent</h2>
+
+    <button class="active" data-tab="overview" data-i18n="pp_overview">Overview</button>
+    <button data-tab="children" data-i18n="pp_children">Children</button>
+    <button data-tab="applications" data-i18n="pp_applications">Applications</button>
+    <button data-tab="account" data-i18n="pp_account">Account</button>
+    <button data-tab="settings" data-i18n="pp_settings">Settings</button>
+    <button data-tab="privacy" data-i18n="pp_privacy">Privacy</button>
+    <button class="logout-btn" onclick="logout()" data-i18n="pp_logout">Logout</button>
+  </aside>
+
+  <!-- Main Content --> 
+  <main class="pp-content"> 
+
+    <!-- Overview Section --> 
+    <div class="pp-section active" id="overview">
+      <div class="pp-card">
+        <h3 data-i18n="pp_your_info">Your Information</h3> 
+
+        <div class="pp-grid">
+          <div>
+            <label data-i18n="pp_full_name">Full Name</label> 
+            <input type="text" id="pName" placeholder="Your Name" data-i18n-ph="pp_ph_name"> 
+          </div>
+
+          <div>
+            <label data-i18n="pp_email">Email</label>
+            <input type="email" id="pEmail" placeholder="example@mail.com" data-i18n-ph="pp_ph_email">
+          </div>
+
+          <div>
+            <label data-i18n="pp_phone">Phone</label> 
+            <input type="text" id="pPhone" placeholder="+962-79-0000000" data-i18n-ph="pp_ph_phone">
+          </div>
+        </div>
+
+        <button class="save-btn" onclick="saveParentOverview()" data-i18n="pp_save">Save</button>
+      </div> 
+    </div> 
+
+    <!-- Children Section -->
+    <div class="pp-section" id="children">
+      <div class="pp-card">
+        <h3 data-i18n="pp_children_title">Your Children</h3>
+
+        <div class="pp-grid" style="margin-bottom:20px">
+          <div>
+            <label data-i18n="pp_city">City of Residence</label>
+            <select id="parentCity">
+              <option value="" data-i18n="select">Select...</option>
+              <option value="" data-i18n="all">All</option>
+
+              <!-- districts already translated -->
+              <option value="Khalda" data-i18n="district-khalda">Khalda</option>
+              <option value="Tabarbour" data-i18n="district-tabarbour">Tabarbour</option>
+              <option value="Jabal Amman" data-i18n="district-jabal-amman">Jabal Amman</option>
+              <option value="Jabal Al-Hussein" data-i18n="district-jabal-al-hussein">Jabal Al-Hussein</option>
+              <option value="Al-Jubaiha" data-i18n="district-al-jubaiha">Al-Jubaiha</option>
+              <option value="Deir Ghbar" data-i18n="district-deir-ghbar">Deir Ghbar</option>
+              <option value="Dabouq" data-i18n="district-dabouq">Dabouq</option>
+              <option value="Mecca Street" data-i18n="district-mecca-street">Mecca Street</option>
+              <option value="Airport Road" data-i18n="district-airport-road">Airport Road</option>
+              <option value="Naour / West Amman" data-i18n="district-naour-west-amman">Naour / West Amman</option>
+              <option value="Shmeisani" data-i18n="district-shmeisani">Shmeisani</option>
+              <option value="Wadi Essir" data-i18n="district-wadi-essir">Wadi Essir</option>
+              <option value="Jabal Al-Weibdeh" data-i18n="district-jabal-al-weibdeh">Jabal Al-Weibdeh</option>
+              <option value="Tla’ Al Ali" data-i18n="district-tlaa-al-ali">Tla’ Al Ali</option>
+              <option value="Gardens / Al-Bustan" data-i18n="district-gardens-al-bustan">Gardens / Al-Bustan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pp-grid" style="margin-bottom:20px">
+          <div>
+            <label data-i18n="pp_children_count">Number of Children</label>
+            <select id="childrenCount">
+              <option value="" data-i18n="select">Select...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="childrenForms"></div>
+
+        <button class="save-btn" onclick="saveChildren()" data-i18n="pp_save_children">Save Children</button>
       </div>
     </div>
 
-    <!-- عدد الأطفال -->
-    <div class="pp-grid" style="margin-bottom:20px">
-      <div>
-        <label>Number of Children</label>
-        <select id="childrenCount">
-          <option value="">Select...</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+    <!-- Applications Section -->
+    <div class="pp-section" id="applications">
+      <div class="pp-card">
+        <h3 data-i18n="pp_applications">Applications</h3>
+        <div id="parentApplications"></div>
       </div>
     </div>
 
-    <!-- فورم الأطفال -->
-    <div id="childrenForms"></div>
+    <!-- Account Section --> 
+    <div class="pp-section" id="account">
+      <div class="pp-card">
+        <h3 data-i18n="pp_account_settings">Account Settings</h3>
 
-    <button class="save-btn" onclick="saveChildren()">Save Children</button>
-  </div>
-</div>
-                
+        <label data-i18n="pp_new_password">New Password</label>
+        <input type="password" placeholder="Enter new password" data-i18n-ph="pp_ph_new_password">
 
-  <!-- Applications Section -->
-<div class="pp-section" id="applications">
-  <div class="pp-card">
-    <h3>Applications</h3>
+        <label data-i18n="pp_confirm_password">Confirm Password</label>
+        <input type="password" placeholder="Confirm password" data-i18n-ph="pp_ph_confirm_password">
 
-    <!-- Dynamic Applications will be injected here -->
-    <div id="parentApplications"></div>
+        <button class="save-btn" data-i18n="pp_update_password">Update Password</button>
+      </div>
+    </div>
 
-    
-  </div>
-</div>
-                       <!-- Account Section --> 
-                       <div class="pp-section" id="account"> <div class="pp-card"> <h3>Account Settings</h3> <label>New Password</label> <input type="password" placeholder="Enter new password"> <label>Confirm Password</label> <input type="password" placeholder="Confirm password"> <button class="save-btn">Update Password</button>
-                       </div> </div>
-                        <!-- Settings Section -->
-                        <div class="pp-section" id="settings">
-                         <div class="pp-card"> <h3>General Settings</h3> <label>Language</label> 
-                       <select> <option>English</option> <option>Arabic</option> </select> <label>Notifications</label>
-                        <select>
-                         <option>All notifications</option> 
-                         <option>Email only</option> 
-                         <option>Off</option> 
-                        </select>
-                        <button class="save-btn">Save Settings</button> 
-                      </div> 
-                    </div>
-                        <!-- Privacy Section --> 
-                       <div class="pp-section" id="privacy">
-                        
+    <!-- Settings Section -->
+    <div class="pp-section" id="settings">
+      <div class="pp-card">
+        <h3 data-i18n="pp_general_settings">General Settings</h3>
 
+        <label data-i18n="pp_language">Language</label>
+        <select>
+          <option data-i18n="lang_en">English</option>
+          <option data-i18n="lang_ar">Arabic</option>
+        </select>
+
+        <label data-i18n="pp_notifications">Notifications</label>
+        <select>
+          <option data-i18n="pp_notify_all">All notifications</option>
+          <option data-i18n="pp_notify_email">Email only</option>
+          <option data-i18n="pp_notify_off">Off</option>
+        </select>
+
+        <button class="save-btn" data-i18n="pp_save_settings">Save Settings</button>
+      </div>
+    </div>
+
+    <!-- Privacy Section --> 
+    <div class="pp-section" id="privacy">
       <div class="pp-card danger-zone">
-        <h3 style="color:red;">Danger Zone</h3>
-        <p class="muted">Once you delete your account, all data will be removed forever.</p>
-        <button class="delete-btn">Delete Account</button>
+        <h3 style="color:red;" data-i18n="pp_danger">Danger Zone</h3>
+        <p class="muted" data-i18n="pp_delete_warning">
+          Once you delete your account, all data will be removed forever.
+        </p>
+        <button class="delete-btn" data-i18n="pp_delete_account">Delete Account</button>
       </div>
     </div>
-  </div>
 
-
+  </main>
+</div>
 
 
 
@@ -1007,46 +1115,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<!-- School Profile -->
+<div id="profile_school" class="hide">
 
-  <!-- School Profile -->
-  <div id="profile_school" class="hide">
-    <!-- Sidebar -->
+  <!-- Sidebar -->
   <aside class="sp-sidebar">
-    <h2>School Dashboard</h2>
 
-    <button class="active" data-tab="overview">Overview</button>
-    <button data-tab="info">School Info</button>
-    <button data-tab="programs">Programs</button>
-    <button data-tab="fees">Tuition Fees</button>
-    <button data-tab="gallery">Gallery</button>
-    <button data-tab="location">Location</button>
-    <button data-tab="admissions">Admissions</button>
-    <button data-tab="settings">Settings</button>
 
-    <button class="logout-btn" onclick="logout()">Logout</button>
+    <h2 data-i18n="sp_dashboard">Profile School</h2>
+
+
+
+    <button class="active" data-tab="overview" data-i18n="sp_overview">Overview</button>
+    <button data-tab="info" data-i18n="sp_info">School Info</button>
+    <button data-tab="programs" data-i18n="sp_programs">Programs</button>
+    <button data-tab="fees" data-i18n="sp_fees">Tuition Fees</button>
+    <button data-tab="gallery" data-i18n="sp_gallery">Gallery</button>
+    <button data-tab="location" data-i18n="sp_location">Location</button>
+    <button data-tab="admissions" data-i18n="sp_admissions">Admissions</button>
+    <button data-tab="settings" data-i18n="sp_settings">Settings</button>
+
+    <button class="logout-btn" onclick="logout()" data-i18n="sp_logout">Logout</button>
   </aside>
 
   <!-- Main Content -->
   <main class="sp-content">
 
-    <!-- Overview Section -->
+    <!-- Overview -->
     <div class="sp-section active" id="overview">
       <div class="sp-card">
-        <h3>Welcome to Your School Profile</h3>
-        <p class="muted">Review and manage your school's public information.</p>
+        <h3 data-i18n="sp_welcome">Welcome to Your School Profile</h3>
+        <p class="muted" data-i18n="sp_overview_desc">
+          Review and manage your school's public information.
+        </p>
 
         <div class="sp-grid">
+
           <div class="sp-stat">
             <h4>0</h4>
-            <p class="muted">Profile Visits</p>
+            <p class="muted" data-i18n="sp_applications_received">
+              Profile Visits
+            </p>
           </div>
           <div class="sp-stat">
             <h4>0</h4>
-            <p class="muted">Applications Received</p>
+            <p class="muted" data-i18n="sp_applications_received">
+              Applications Received
+            </p>
           </div>
+
           <div class="sp-stat">
             <h4>0</h4>
-            <p class="muted">acceptance</p>
+            <p class="muted" data-i18n="sp_acceptance">Acceptance</p>
           </div>
         </div>
       </div>
@@ -1055,165 +1175,174 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- School Info -->
     <div class="sp-section" id="info">
       <div class="sp-card">
-        <h3>School Information</h3>
+        <h3 data-i18n="sp_school_info">School Information</h3>
 
-      <label>School Name</label>
-<input type="text" id="name_en" placeholder="Enter school name">
+        
 
-<label>General Description</label>
-<textarea id="description_en" rows="5" placeholder="Write a general introduction..."></textarea>
+        <label data-i18n="sp_school_name">School Name</label>
+        <input type="text" id="name_en" placeholder="Enter school name" data-i18n-ph="sp_ph_school_name">
 
-<label>Email</label>
-<input type="email" id="email" placeholder="info@school.jo">
+        <label data-i18n="sp_school_desc">General Description</label>
+        <textarea id="description_en" rows="5" placeholder="Write a general introduction..." data-i18n-ph="sp_ph_school_desc"></textarea>
 
-<label>Phone</label>
-<input type="text" id="phone" placeholder="+962-6-000000">
+        <label data-i18n="sp_email">Email</label>
+        <input type="email" id="email" placeholder="info@school.jo" data-i18n-ph="sp_ph_email">
 
-<label>Website</label>
-<input type="text" id="website" placeholder="www.school.jo">
+        <label data-i18n="sp_phone">Phone</label>
+        <input type="text" id="phone" placeholder="+962-6-000000" data-i18n-ph="sp_ph_phone">
 
+        <label data-i18n="sp_website">Website</label>
+        <input type="text" id="website" placeholder="www.school.jo" data-i18n-ph="sp_ph_website">
 
+        <button class="save-btn" id="saveSchoolInfo" type="button" data-i18n="sp_save">
+          Save
+        </button>
+      </div>
+    </div>
 
-<button class="save-btn" id="saveSchoolInfo" type="button">Save</button>
+    <!-- Programs -->
+    <div class="sp-section" id="programs">
+      <div class="sp-card">
+        <h3 data-i18n="sp_programs_title">Programs Offered</h3>
+
+        <label data-i18n="sp_select_programs">Select Programs</label>
+        <select id="programs_select" multiple>
+          <option value="IB">IB</option>
+          <option value="IGCSE">IGCSE</option>
+          <option value="SAT">SAT</option>
+          <option value="National">National</option>
+          <option value="Montessori">Montessori</option>
+          <option value="STEM">STEM</option>
+        </select>
+
+        <button class="save-btn" id="savePrograms" type="button" data-i18n="sp_save">
+          Save
+        </button>
+      </div>
+    </div>
+
+    <!-- Fees -->
+    <div class="sp-section" id="fees">
+      <div class="sp-card">
+        <h3 data-i18n="sp_fees_title">Tuition Fees</h3>
+
+        <label data-i18n="sp_fees_by_grade">Fees by Grade</label>
+        <textarea id="fees_text" rows="6" data-i18n-ph="sp_ph_fees"></textarea>
+
+        <div id="feesDisplay"></div>
+
+        <button class="save-btn" id="saveFees" type="button" data-i18n="sp_save">
+          Save
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="sp-section" id="gallery">
+      <div class="sp-card">
+        <h3 data-i18n="sp_gallery_title">Upload Gallery Photos</h3>
+
+        <input type="file" id="galleryInput" multiple accept="image/*">
+
+        <div id="schoolGallery"></div>
+
+        <button class="save-btn" id="saveGallery" type="button" data-i18n="sp_upload">
+          Upload
+        </button>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="sp-section" id="location">
+      <div class="sp-card">
+        <h3 data-i18n="sp_location_title">School Location</h3>
+
+        <label data-i18n="sp_address">Address</label>
+        <input type="text" id="address" placeholder="Amman - Khalda - Beside ..." data-i18n-ph="sp_ph_address">
+
+        <label data-i18n="sp_lat">Latitude</label>
+        <input type="text" id="lat">
+
+        <label data-i18n="sp_lng">Longitude</label>
+        <input type="text" id="lng">
+
+        <div class="map-box"></div>
+
+        <button class="save-btn" id="saveLocation" type="button" data-i18n="sp_save_location">
+          Save Location
+        </button>
       </div>
     </div>
 
 
 
 
-<!-- Programs -->
-<div class="sp-section" id="programs">
-  <div class="sp-card">
-    <h3>Programs Offered</h3>
-
-    <label>Select Programs</label>
-    <select id="programs_select" multiple>
-      <option value="IB">IB</option>
-      <option value="IGCSE">IGCSE</option>
-      <option value="SAT">SAT</option>
-      <option value="National">National</option>
-      <option value="Montessori">Montessori</option>
-      <option value="STEM">STEM</option>
-    </select>
-
-    <label>Description</label>
-    <textarea id="programs_desc" rows="4" placeholder="Describe your programs"></textarea>
-
-    <button class="save-btn" id="savePrograms" type="button">Save</button>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- Fees -->
-<div class="sp-section" id="fees">
-  <div class="sp-card">
-    <h3>Tuition Fees</h3>
-
-    <label>Fees by Grade</label>
-    <textarea
-      id="fees_text"
-      rows="6"
-      placeholder="KG1–KG2: 2000 JOD
-Grade 1–3: 2600 JOD
-Grade 4–6: 3000 JOD
-Grade 7–9: 3400 JOD
-Grade 10–12: 3800 JOD"></textarea>
-
-    <div id="feesDisplay"></div>
-
-    <button class="save-btn" id="saveFees" type="button">Save</button>
-  </div>
-</div>
-
-<!-- Gallery -->
-  <div class="sp-section" id="gallery">
-    <div class="sp-card">
-      <h3>Upload Gallery Photos</h3>
-
-      <input type="file" id="galleryInput" multiple accept="image/*">
-
-      <!-- مكان عرض الصور -->
-      <div id="schoolGallery">
-        <!-- الصور تنحط هون -->
-      </div>
-
-      <button class="save-btn" id="saveGallery" type="button">Upload</button>
-    </div>
-  </div>
-
-<!-- Location -->
-<div class="sp-section" id="location">
-  <div class="sp-card">
-    <h3>School Location</h3>
-
-    <label>Address</label>
-    <input type="text" id="address" placeholder="Amman - Khalda - Beside ...">
-
-    <label>Latitude</label>
-    <input type="text" id="lat">
-
-    <label>Longitude</label>
-    <input type="text" id="lng">
-
-    <div class="map-box"></div>
-
-    <!-- ✔ زر خاص بالموقع -->
-    <button class="save-btn" id="saveLocation" type="button">Save Location</button>
-  </div>
-</div>
-
-    <!-- Admissions -->
     <div class="sp-section" id="admissions">
+
       <div class="sp-card">
         <h3>Received Applications</h3>
-
-        <div class="application-item">
-          <div>
-            <strong>Mohammad Yousef</strong>
-            <p class="muted">Applied for Grade 1 — Jan 20, 2025</p>
-          </div>
-          <span class="status pending">Pending</span>
-        </div>
-
-        <div class="application-item">
-          <div>
-            <strong>Sara Khaled</strong>
-            <p class="muted">Applied for KG2 — Dec 2, 2024</p>
-          </div>
-          <span class="status accepted">Accepted</span>
-        </div>
+        <div id="applicationsList"></div>
+        
       </div>
     </div>
+
+
+
+
+
+
+
+     <!-- Privacy Section --> 
+      <div class="sp-section" id="settings">
+      
+    <!-- <div class="pp-section" id="privacy"> -->
+      <div class="pp-card danger-zone">
+        <h3 style="color:red;" data-i18n="pp_danger">Danger Zone</h3>
+        <p class="muted" data-i18n="pp_delete_warning">
+          Once you delete your account, all data will be removed forever.
+        </p>
+<button class="delete-btn" id="deleteSchoolAccount" data-i18n="pp_delete_account">
+  Delete Account
+</button>
+      </div>
+    </div>
+
+
+
 
     <!-- Settings -->
-    <div class="sp-section" id="settings">
+    <!-- <div class="sp-section" id="settings">
+      
       <div class="sp-card">
-        <h3>Settings</h3>
+        <h3 data-i18n="sp_settings_title">Settings</h3>
 
-        <label>Profile Visibility</label>
+        <label data-i18n="sp_visibility">Profile Visibility</label>
         <select>
-          <option>Public</option>
-          <option>Private</option>
+          <option data-i18n="sp_public">Public</option>
+          <option data-i18n="sp_private">Private</option>
         </select>
 
-        <label>Notifications</label>
+        <label data-i18n="sp_notifications">Notifications</label>
         <select>
-          <option>All</option>
-          <option>Email Only</option>
-          <option>Off</option>
+          <option data-i18n="sp_notify_all">All</option>
+          <option data-i18n="sp_notify_email">Email Only</option>
+          <option data-i18n="sp_notify_off">Off</option>
         </select>
 
-        <button class="save-btn">Save Settings</button>
+        <button class="save-btn" data-i18n="sp_save_settings">
+          Save Settings
+        </button>
       </div>
-    </div>
+    </div> -->
+
+
+
+
+
+
 
   </main>
-
-  </div>
+</div>
 
 
 
@@ -1238,19 +1367,21 @@ Grade 10–12: 3800 JOD"></textarea>
 
 
    <!-- =============================================== profile_admin=============================================== -->
+<!-- Admin Profile -->
+<div id="profile_admin" class="hide">
 
-  <!-- Admin Profile -->
-  <div id="profile_admin" class="hide">
-   <h2>Admin Panel</h2>
-<aside>
-    <button class="active" data-tab="overview">Overview</button>
-    <button data-tab="schools">Manage Schools</button>
-    <button data-tab="parents">Manage Parents</button>
-    <button data-tab="applications">Applications</button>
-    <button data-tab="reports">Reports</button>
-    <button data-tab="settings">Settings</button>
 
-    <button class="logout-btn" onclick="logout()">Logout</button>
+  <aside>
+      <h2 data-i18n="ap_title">Admin Panel</h2>
+
+    <button class="active" data-tab="overview" data-i18n="ap_overview">Overview</button>
+    <button data-tab="schools" data-i18n="ap_schools">Manage Schools</button>
+    <button data-tab="parents" data-i18n="ap_parents">Manage Parents</button>
+    <button data-tab="applications" data-i18n="ap_applications">Applications</button>
+    <button data-tab="reports" data-i18n="ap_reports">Reports</button>
+    <button data-tab="settings" data-i18n="ap_settings">Settings</button>
+
+    <button class="logout-btn" onclick="logout()" data-i18n="ap_logout">Logout</button>
   </aside>
 
   <!-- Main Content -->
@@ -1259,20 +1390,20 @@ Grade 10–12: 3800 JOD"></textarea>
     <!-- Overview -->
     <div class="ap-section active" id="overview">
       <div class="ap-card">
-        <h3>Platform Overview</h3>
+        <h3 data-i18n="ap_platform_overview">Platform Overview</h3>
 
         <div class="ap-grid3">
           <div class="ap-stat">
             <h4>132</h4>
-            <p class="muted">Registered Schools</p>
+            <p class="muted" data-i18n="ap_registered_schools">Registered Schools</p>
           </div>
           <div class="ap-stat">
             <h4>418</h4>
-            <p class="muted">Parents Accounts</p>
+            <p class="muted" data-i18n="ap_parent_accounts">Parents Accounts</p>
           </div>
           <div class="ap-stat">
             <h4>164</h4>
-            <p class="muted">Total Applications</p>
+            <p class="muted" data-i18n="ap_total_applications">Total Applications</p>
           </div>
         </div>
       </div>
@@ -1281,14 +1412,14 @@ Grade 10–12: 3800 JOD"></textarea>
     <!-- Manage Schools -->
     <div class="ap-section" id="schools">
       <div class="ap-card">
-        <h3>Schools List</h3>
+        <h3 data-i18n="ap_schools_list">Schools List</h3>
 
         <div class="list-item">
           <div>
             <strong>International Academy Amman</strong>
             <p class="muted">IB • Amman</p>
           </div>
-          <button class="list-btn">Edit</button>
+          <button class="list-btn" data-i18n="ap_edit">Edit</button>
         </div>
 
         <div class="list-item">
@@ -1296,91 +1427,95 @@ Grade 10–12: 3800 JOD"></textarea>
             <strong>Amman Academy</strong>
             <p class="muted">IB • Amman</p>
           </div>
-          <button class="list-btn">Edit</button>
+          <button class="list-btn" data-i18n="ap_edit">Edit</button>
         </div>
-
       </div>
     </div>
 
     <!-- Manage Parents -->
     <div class="ap-section" id="parents">
       <div class="ap-card">
-        <h3>Parents Accounts</h3>
+        <h3 data-i18n="ap_parents_accounts">Parents Accounts</h3>
 
         <div class="list-item">
           <div>
             <strong>Mohammad Khaled</strong>
-            <p class="muted">2 Children</p>
+            <p class="muted" data-i18n="ap_children_2">2 Children</p>
           </div>
-          <button class="list-btn">View</button>
+          <button class="list-btn" data-i18n="ap_view">View</button>
         </div>
 
         <div class="list-item">
           <div>
             <strong>Sara Ahmad</strong>
-            <p class="muted">1 Child</p>
+            <p class="muted" data-i18n="ap_children_1">1 Child</p>
           </div>
-          <button class="list-btn">View</button>
+          <button class="list-btn" data-i18n="ap_view">View</button>
         </div>
-
       </div>
     </div>
 
     <!-- Applications -->
     <div class="ap-section" id="applications">
       <div class="ap-card">
-        <h3>Applications</h3>
+        <h3 data-i18n="ap_applications">Applications</h3>
 
         <div class="list-item">
           <div>
             <strong>International Academy</strong>
-            <p class="muted">From: Ali Hassan — Grade 1</p>
+            <p class="muted" data-i18n="ap_app_from_1">
+              From: Ali Hassan — Grade 1
+            </p>
           </div>
-          <span class="status pending">Pending</span>
+          <span class="status pending" data-i18n="status_pending">Pending</span>
         </div>
 
         <div class="list-item">
           <div>
             <strong>Amman Academy</strong>
-            <p class="muted">From: Lara Shaheen — KG2</p>
+            <p class="muted" data-i18n="ap_app_from_2">
+              From: Lara Shaheen — KG2
+            </p>
           </div>
-          <span class="status accepted">Accepted</span>
+          <span class="status accepted" data-i18n="status_accepted">Accepted</span>
         </div>
-
       </div>
     </div>
 
     <!-- Reports -->
     <div class="ap-section" id="reports">
       <div class="ap-card">
-        <h3>Reports</h3>
-        <p class="muted">Performance, insights, and overall system analytics.</p>
+        <h3 data-i18n="ap_reports">Reports</h3>
+        <p class="muted" data-i18n="ap_reports_desc">
+          Performance, insights, and overall system analytics.
+        </p>
 
-        <textarea rows="6" placeholder="Write admin notes here..."></textarea>
+        <textarea rows="6" placeholder="Write admin notes here..." data-i18n-ph="ap_ph_notes"></textarea>
 
-        <button class="save-btn">Save Notes</button>
+        <button class="save-btn" data-i18n="ap_save_notes">Save Notes</button>
       </div>
     </div>
 
     <!-- Settings -->
     <div class="ap-section" id="settings">
       <div class="ap-card">
-        <h3>Platform Settings</h3>
+        <h3 data-i18n="ap_platform_settings">Platform Settings</h3>
 
-        <label>System Mode</label>
+        <label data-i18n="ap_system_mode">System Mode</label>
         <select>
-          <option>Normal</option>
-          <option>Maintenance Mode</option>
+          <option data-i18n="ap_mode_normal">Normal</option>
+          <option data-i18n="ap_mode_maintenance">Maintenance Mode</option>
         </select>
 
-        <label>Admin Email</label>
-        <input type="email" placeholder="admin@educhoice.jo">
+        <label data-i18n="ap_admin_email">Admin Email</label>
+        <input type="email" placeholder="admin@educhoice.jo" data-i18n-ph="ap_ph_admin_email">
 
-        <button class="save-btn">Save Settings</button>
+        <button class="save-btn" data-i18n="ap_save_settings">Save Settings</button>
       </div>
     </div>
 
-  </div>
+  </main>
+</div>
 
 </section>
 
