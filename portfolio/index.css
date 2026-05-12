@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root{
+  --bg:#0f0f11;
+  --surface:#18181b;
+  --surface-2:#212125;
+
+  --text:#ffffff;
+  --text-soft:#a1a1aa;
+
+  --border:#2a2a31;
+
+  --primary:#ffffff;
+  --secondary:#7c3aed;
+
+  --radius:24px;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+    radial-gradient(circle at top left,
+      rgba(16, 32, 173, 0.582),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(14, 25, 173, 0.418),
+      transparent 30%),
+
+    var(--bg);
+
+  color:var(--text);
+
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  overflow-x:hidden;
+
+  line-height:1.6;
+
+  letter-spacing:-0.02em;
+}
+
+#root{
+  width:100%;
+}
+
+.container{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding-inline:28px;
+}
+
+section{
+  width:100%;
+  padding:120px 0;
+  position:relative;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+h1,
+h2,
+h3{
+  line-height:1.05;
+  letter-spacing:-0.04em;
+}
+
+h1{
+  font-weight:700;
+}
+
+h2{
+  font-weight:700;
+}
+
+p{
+  color:var(--text-soft);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  cursor:pointer;
+  border:none;
+  outline:none;
+  font-family:inherit;
+}
+
+input,
+textarea{
+  font-family:inherit;
+  color:white;
+}
+
+::selection{
+  background:#7c3aed;
+  color:white;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#111114;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#2a2a31;
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#3a3a45;
+}
+
+/* SMOOTH CARDS */
+
+.card{
+  background:rgba(255,255,255,0.03);
+
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  border-radius:var(--radius);
+}
+
+/* PREMIUM GLOW */
+
+.glow{
+  position:absolute;
+  width:400px;
+  height:400px;
+
+  border-radius:999px;
+
+  background:rgba(124, 58, 237, 0.12);
+
+  filter:blur(120px);
+
+  z-index:-1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  section{
+    padding:90px 0;
+  }
+
+  .container{
+    padding-inline:20px;
+  }
+
+}
